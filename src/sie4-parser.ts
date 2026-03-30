@@ -93,6 +93,7 @@ export function parseSIE4(fileBuffer: Buffer): ParsedSIE4 {
           result.accounts.push({
             account_number: parseInt(fields[1]),
             name: fields[2] || '',
+            account_type: null,
           })
           break
         case '#SRU':

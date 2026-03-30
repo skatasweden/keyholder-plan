@@ -25,6 +25,7 @@ export interface ParsedSIE4 {
   accounts: Array<{
     account_number: number
     name: string
+    account_type: 'T' | 'S' | 'K' | 'I' | null
   }>
   sru_codes: Array<{
     account_number: number
