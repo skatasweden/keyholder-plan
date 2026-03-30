@@ -8,15 +8,7 @@ import { KontoplanPage } from '@/features/kontoplan/KontoplanPage'
 import { VoucherListPage } from '@/features/verifikationer/VoucherListPage'
 import { HuvudbokPage } from '@/features/huvudbok/HuvudbokPage'
 import { ValidationPage } from '@/features/validation/ValidationPage'
-
-function Placeholder({ title }: { title: string }) {
-  return (
-    <div className="py-8">
-      <h1 className="font-display font-bold text-2xl text-brown">{title}</h1>
-      <p className="text-text-muted mt-2">Coming soon...</p>
-    </div>
-  )
-}
+import { DimensionsPage } from '@/features/dimensions/DimensionsPage'
 
 export function App() {
   return (
@@ -29,7 +21,7 @@ export function App() {
       <Route path="/company/:companyId/balansrapport" element={<AppLayout><BalansrapportPage /></AppLayout>} />
       <Route path="/company/:companyId/resultatrapport" element={<AppLayout><ResultatrapportPage /></AppLayout>} />
       <Route path="/company/:companyId/validering" element={<AppLayout><ValidationPage /></AppLayout>} />
-      <Route path="/company/:companyId/dimensioner" element={<AppLayout><Placeholder title="Dimensioner" /></AppLayout>} />
+      <Route path="/company/:companyId/dimensioner" element={<AppLayout><DimensionsPage /></AppLayout>} />
       <Route path="*" element={<Navigate to="/import" replace />} />
     </Routes>
   )
