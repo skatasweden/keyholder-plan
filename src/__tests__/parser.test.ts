@@ -43,6 +43,27 @@ describe('parseSIE4', () => {
     it('should have no parse errors', () => {
       expect(parsed.parse_errors).toHaveLength(0)
     })
+
+    // Phase 5: optional metadata
+    it('should parse #BKOD (SNI code)', () => {
+      expect(parsed.meta.sni_code).toBe('62010')
+    })
+
+    it('should parse #FTYP (company type)', () => {
+      expect(parsed.meta.company_type).toBe('AB')
+    })
+
+    it('should parse #PROSA (comment)', () => {
+      expect(parsed.meta.comment).toBe('Exporterad fran TestGen')
+    })
+
+    it('should parse #TAXAR (tax year)', () => {
+      expect(parsed.meta.tax_year).toBe(2026)
+    })
+
+    it('should parse #VALUTA (currency)', () => {
+      expect(parsed.meta.currency).toBe('SEK')
+    })
   })
 
   describe('financial years', () => {
@@ -72,12 +93,21 @@ describe('parseSIE4', () => {
       const acc1510 = parsed.accounts.find(a => a.account_number === 1510)
       expect(acc1510?.name).toBe('Kundfordringar')
     })
+
+    // Phase 5: #ENHET quantity unit
+    it('should parse #ENHET quantity unit', () => {
+      const acc5420 = parsed.accounts.find(a => a.account_number === 5420)
+      expect(acc5420?.quantity_unit).toBe('st')
+
+      const acc1510 = parsed.accounts.find(a => a.account_number === 1510)
+      expect(acc1510?.quantity_unit).toBeNull()
+    })
   })
 
   describe('dimensions and objects', () => {
-    it('should parse 2 dimensions', () => {
-      expect(parsed.dimensions).toHaveLength(2)
-      expect(parsed.dimensions.map(d => d.dimension_number).sort()).toEqual([1, 6])
+    it('should parse 3 dimensions (2 DIM + 1 UNDERDIM)', () => {
+      expect(parsed.dimensions).toHaveLength(3)
+      expect(parsed.dimensions.map(d => d.dimension_number).sort((a, b) => a - b)).toEqual([1, 6, 21])
     })
 
     it('should parse 2 objects (both dim 6)', () => {
@@ -85,6 +115,18 @@ describe('parseSIE4', () => {
       expect(parsed.objects[0].dimension_number).toBe(6)
       expect(parsed.objects[0].object_number).toBe('P100')
       expect(parsed.objects[0].name).toBe('Projekt Alpha')
+    })
+
+    // Phase 6: #UNDERDIM
+    it('should parse #UNDERDIM with parent_dimension', () => {
+      const underdim = parsed.dimensions.find(d => d.dimension_number === 21)
+      expect(underdim?.name).toBe('Underavdelning')
+      expect(underdim?.parent_dimension).toBe(1)
+    })
+
+    it('should have null parent_dimension for regular #DIM', () => {
+      const dim1 = parsed.dimensions.find(d => d.dimension_number === 1)
+      expect(dim1?.parent_dimension).toBeNull()
     })
   })
 
@@ -97,13 +139,13 @@ describe('parseSIE4', () => {
   })
 
   describe('opening balances', () => {
-    it('should parse 3 opening balances', () => {
-      expect(parsed.opening_balances).toHaveLength(3)
+    it('should parse 4 opening balances (3 IB + 1 OIB)', () => {
+      expect(parsed.opening_balances).toHaveLength(4)
     })
 
-    it('should have correct amounts', () => {
+    it('should have correct amounts for aggregate balances', () => {
       const ib1510 = parsed.opening_balances.find(
-        ib => ib.year_index === 0 && ib.account_number === 1510
+        ib => ib.year_index === 0 && ib.account_number === 1510 && ib.dimension_number === null
       )
       expect(ib1510?.amount).toBe(50000)
 
@@ -117,16 +159,27 @@ describe('parseSIE4', () => {
       )
       expect(ibPrev?.amount).toBe(40000)
     })
+
+    // Phase 7: #OIB
+    it('should parse #OIB object-level opening balance', () => {
+      const oib = parsed.opening_balances.find(
+        ib => ib.dimension_number === 6 && ib.object_number === 'P100'
+      )
+      expect(oib).toBeDefined()
+      expect(oib?.amount).toBe(15000)
+      expect(oib?.year_index).toBe(0)
+      expect(oib?.account_number).toBe(1510)
+    })
   })
 
   describe('closing balances', () => {
-    it('should parse 3 closing balances', () => {
-      expect(parsed.closing_balances).toHaveLength(3)
+    it('should parse 4 closing balances (3 UB + 1 OUB)', () => {
+      expect(parsed.closing_balances).toHaveLength(4)
     })
 
-    it('should have correct amounts', () => {
+    it('should have correct amounts for aggregate balances', () => {
       const ub1510 = parsed.closing_balances.find(
-        ub => ub.year_index === 0 && ub.account_number === 1510
+        ub => ub.year_index === 0 && ub.account_number === 1510 && ub.dimension_number === null
       )
       expect(ub1510?.amount).toBe(60000)
 
@@ -134,6 +187,17 @@ describe('parseSIE4', () => {
         ub => ub.year_index === 0 && ub.account_number === 1930
       )
       expect(ub1930?.amount).toBe(120000)
+    })
+
+    // Phase 7: #OUB
+    it('should parse #OUB object-level closing balance', () => {
+      const oub = parsed.closing_balances.find(
+        ub => ub.dimension_number === 6 && ub.object_number === 'P100'
+      )
+      expect(oub).toBeDefined()
+      expect(oub?.amount).toBe(18000)
+      expect(oub?.year_index).toBe(0)
+      expect(oub?.account_number).toBe(1510)
     })
   })
 
@@ -152,17 +216,51 @@ describe('parseSIE4', () => {
   })
 
   describe('period balances (#PSALDO)', () => {
-    it('should parse 2 period balances', () => {
-      expect(parsed.period_balances).toHaveLength(2)
+    // Phase 4: now includes per-object entries
+    it('should parse 4 period balances (2 aggregate + 2 per-object)', () => {
+      expect(parsed.period_balances).toHaveLength(4)
     })
 
-    it('should have correct period and amount', () => {
-      const ps1 = parsed.period_balances.find(p => p.period === 202501)
+    it('should have correct period and amount for aggregate entries', () => {
+      const ps1 = parsed.period_balances.find(
+        p => p.period === 202501 && p.dimension_number === null
+      )
       expect(ps1?.account_number).toBe(1510)
       expect(ps1?.amount).toBe(55000)
 
-      const ps2 = parsed.period_balances.find(p => p.period === 202502)
+      const ps2 = parsed.period_balances.find(
+        p => p.period === 202502 && p.dimension_number === null
+      )
       expect(ps2?.amount).toBe(58000)
+    })
+
+    it('should parse per-object PSALDO entries', () => {
+      const psP100 = parsed.period_balances.find(
+        p => p.dimension_number === 6 && p.object_number === 'P100'
+      )
+      expect(psP100?.amount).toBe(12000)
+      expect(psP100?.period).toBe(202501)
+
+      const psP200 = parsed.period_balances.find(
+        p => p.dimension_number === 6 && p.object_number === 'P200'
+      )
+      expect(psP200?.amount).toBe(43000)
+    })
+  })
+
+  // Phase 8: #PBUDGET
+  describe('period budgets (#PBUDGET)', () => {
+    it('should parse 1 period budget', () => {
+      expect(parsed.period_budgets).toHaveLength(1)
+    })
+
+    it('should have correct values', () => {
+      const pb = parsed.period_budgets[0]
+      expect(pb.year_index).toBe(0)
+      expect(pb.period).toBe(202501)
+      expect(pb.account_number).toBe(3001)
+      expect(pb.amount).toBe(-50000)
+      expect(pb.dimension_number).toBeNull()
     })
   })
 
@@ -182,6 +280,14 @@ describe('parseSIE4', () => {
       expect(v.rows[1].amount).toBe(-10000)
     })
 
+    // Phase 2: transdat
+    it('should parse #TRANS transdat (transaction date)', () => {
+      const v = parsed.vouchers.find(v => v.series === 'A' && v.voucher_number === 1)!
+      expect(v.rows[0].transaction_date).toBe('2025-01-16')
+      // Second TRANS has empty transdat
+      expect(v.rows[1].transaction_date).toBeNull()
+    })
+
     it('should parse voucher A-2 (with dimension)', () => {
       const v = parsed.vouchers.find(v => v.series === 'A' && v.voucher_number === 2)!
       expect(v.rows).toHaveLength(3)
@@ -199,12 +305,12 @@ describe('parseSIE4', () => {
       expect(btrans).toHaveLength(1)
       expect(btrans[0].amount).toBe(-5000)
       expect(btrans[0].description).toBe('Borttagen rad')
-      expect(btrans[0].name).toBe('Anna Testsson')
+      expect(btrans[0].sign).toBe('Anna Testsson')
 
       const rtrans = v.rows.filter(r => r.type === 'rtrans')
       expect(rtrans).toHaveLength(1)
       expect(rtrans[0].amount).toBe(-3000)
-      expect(rtrans[0].name).toBe('Anna Testsson')
+      expect(rtrans[0].sign).toBe('Anna Testsson')
     })
 
     it('should parse escaped quotes in voucher description', () => {
@@ -228,19 +334,32 @@ describe('parseSIE4', () => {
   })
 
   describe('edge cases', () => {
-    it('should handle multi-dimension block (takes first pair)', () => {
+    // Phase 3: multi-dimension now stores ALL pairs
+    it('should store all dimension pairs from multi-dim block', () => {
       const v = parsed.vouchers.find(v => v.series === 'A' && v.voucher_number === 3)!
       const multiDimRow = v.rows[0]
-      // Parser takes first dim pair from {1 "100" 6 "P100"}
+      // First pair still in dim_number/object_number for backward compat
       expect(multiDimRow.dim_number).toBe(1)
       expect(multiDimRow.object_number).toBe('100')
       expect(multiDimRow.amount).toBe(2000)
+      // All pairs in dimensions array
+      expect(multiDimRow.dimensions).toHaveLength(2)
+      expect(multiDimRow.dimensions[0]).toEqual({ dim_number: 1, object_number: '100' })
+      expect(multiDimRow.dimensions[1]).toEqual({ dim_number: 6, object_number: 'P100' })
     })
 
     it('should handle empty dimension block', () => {
       const v = parsed.vouchers.find(v => v.series === 'A' && v.voucher_number === 1)!
       expect(v.rows[0].dim_number).toBeNull()
       expect(v.rows[0].object_number).toBeNull()
+      expect(v.rows[0].dimensions).toHaveLength(0)
+    })
+
+    it('should have single-dim in dimensions array for simple dim block', () => {
+      const v = parsed.vouchers.find(v => v.series === 'A' && v.voucher_number === 2)!
+      const dimRow = v.rows.find(r => r.dim_number === 6)!
+      expect(dimRow.dimensions).toHaveLength(1)
+      expect(dimRow.dimensions[0]).toEqual({ dim_number: 6, object_number: 'P100' })
     })
 
     it('should not crash on malformed line', () => {
@@ -249,6 +368,22 @@ describe('parseSIE4', () => {
       const result = parseSIE4(buf)
       // Unknown tag is silently skipped, not an error
       expect(result.meta.company_name).toBe('OK')
+    })
+  })
+
+  // Phase 9: CRC-32
+  describe('CRC-32 (#KSUMMA)', () => {
+    it('should set crc_verified to null when no #KSUMMA present', () => {
+      expect(parsed.crc_verified).toBeNull()
+    })
+
+    it('should detect CRC mismatch', () => {
+      const content = '#FLAGGA 0\n#KSUMMA\n#FNAMN "Test"\n#KSUMMA 999999\n'
+      const buf = Buffer.from(content, 'utf-8')
+      const result = parseSIE4(buf)
+      expect(result.crc_verified).toBe(false)
+      expect(result.parse_errors.length).toBeGreaterThan(0)
+      expect(result.parse_errors[0].error).toContain('CRC-32 mismatch')
     })
   })
 })

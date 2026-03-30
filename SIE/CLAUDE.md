@@ -4,7 +4,7 @@ This directory contains everything related to SIE (Standard Import Export) file 
 
 ## Purpose
 
-Import SIE4 accounting files exported from Fortnox into Supabase, and verify correctness by matching our generated reports against Fortnox's own balance/result reports.
+Import SIE4 accounting files from any Swedish accounting system (Fortnox, Visma, etc.) into Supabase, and verify correctness. Full SIE 4C spec compliance (2025-08-06). 14 DB tables, 47 unit tests + 6 integration + 16 Fortnox crosscheck.
 
 ## Test Companies (Real Fortnox Exports)
 
@@ -74,6 +74,7 @@ SIE 5 adds capabilities not in SIE 4: customer/supplier invoices, fixed assets, 
 
 - All Fortnox SIE4 files use CP437 encoding (`#FORMAT PC8`) and EUBAS97 account plan
 - The pipeline is a CLI tool: `.se` file -> TypeScript parser -> Supabase PostgreSQL
-- Database has 12 tables with UUID PKs, natural key UNIQUEs, and RLS policies
-- Parser handles: quoted strings with escapes, multi-line BTRANS/RTRANS blocks, dimension arrays
-- 52 automated tests: 30 unit + 6 integration + 16 Fortnox crosscheck (DB values verified against PDF reports to öre precision)
+- Database has 14 tables (10 migrations) with UUID PKs, natural key UNIQUEs, and RLS policies
+- Parser handles ALL SIE 4C tags: metadata, accounts, dimensions (incl. hierarchical), balances (incl. per-object), PSALDO (incl. per-object), PBUDGET, vouchers with multi-dim support, CRC-32 verification
+- 69 automated tests: 47 unit + 6 integration + 16 Fortnox crosscheck (DB values verified against PDF reports to öre precision)
+- Full technical reference: `SIE4-PIPELINE-CONTEXT.md`

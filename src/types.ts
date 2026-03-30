@@ -16,6 +16,12 @@ export interface ParsedSIE4 {
     }
     balance_date: string
     account_plan_type: string
+    // Phase 5: optional metadata
+    sni_code: string | null       // #BKOD
+    company_type: string | null   // #FTYP
+    comment: string | null        // #PROSA
+    tax_year: number | null       // #TAXAR
+    currency: string              // #VALUTA (default 'SEK')
   }
   financial_years: Array<{
     year_index: number
@@ -26,6 +32,7 @@ export interface ParsedSIE4 {
     account_number: number
     name: string
     account_type: 'T' | 'S' | 'K' | 'I' | null
+    quantity_unit: string | null  // #ENHET
   }>
   sru_codes: Array<{
     account_number: number
@@ -34,6 +41,7 @@ export interface ParsedSIE4 {
   dimensions: Array<{
     dimension_number: number
     name: string
+    parent_dimension: number | null  // #UNDERDIM
   }>
   objects: Array<{
     dimension_number: number
@@ -44,13 +52,17 @@ export interface ParsedSIE4 {
     year_index: number
     account_number: number
     amount: number
-    quarter: number
+    quantity: number
+    dimension_number: number | null  // #OIB
+    object_number: string | null     // #OIB
   }>
   closing_balances: Array<{
     year_index: number
     account_number: number
     amount: number
-    quarter: number
+    quantity: number
+    dimension_number: number | null  // #OUB
+    object_number: string | null     // #OUB
   }>
   period_results: Array<{
     year_index: number
@@ -62,7 +74,18 @@ export interface ParsedSIE4 {
     period: number
     account_number: number
     amount: number
-    quarter: number
+    quantity: number
+    dimension_number: number | null  // PSALDO per-object
+    object_number: string | null     // PSALDO per-object
+  }>
+  period_budgets: Array<{
+    year_index: number
+    period: number
+    account_number: number
+    amount: number
+    quantity: number
+    dimension_number: number | null
+    object_number: string | null
   }>
   vouchers: Array<{
     series: string
@@ -75,10 +98,12 @@ export interface ParsedSIE4 {
       account_number: number
       dim_number: number | null
       object_number: string | null
+      dimensions: Array<{ dim_number: number; object_number: string }>  // All dimension pairs
       amount: number
       description: string
-      quarter: number
-      name: string | null
+      transaction_date: string | null  // #TRANS transdat
+      quantity: number
+      sign: string | null
     }>
   }>
   parse_errors: Array<{
@@ -86,6 +111,7 @@ export interface ParsedSIE4 {
     line: string
     error: string
   }>
+  crc_verified: boolean | null  // null = no #KSUMMA, true = match, false = mismatch
 }
 
 export interface ImportResult {
@@ -101,8 +127,10 @@ export interface ImportResult {
     closing_balances: number
     period_results: number
     period_balances: number
+    period_budgets: number
     vouchers: number
     voucher_rows: number
+    voucher_row_objects: number
   }
   parse_errors: Array<{ line_number: number; line: string; error: string }>
   import_errors: Array<{ stage: string; error: string }>

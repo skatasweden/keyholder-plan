@@ -19,13 +19,15 @@ export async function importToSupabase(
     closing_balances: 0,
     period_results: 0,
     period_balances: 0,
+    period_budgets: 0,
     vouchers: 0,
     voucher_rows: 0,
+    voucher_row_objects: 0,
   }
   const import_errors: ImportResult['import_errors'] = []
 
   try {
-    // 1. company_info
+    // 1. company_info (Phase 5: includes optional metadata)
     const { error: companyErr } = await client
       .from('company_info')
       .upsert({
@@ -38,6 +40,11 @@ export async function importToSupabase(
         address_phone: parsed.meta.address.phone,
         account_plan_type: parsed.meta.account_plan_type,
         balance_date: parsed.meta.balance_date || null,
+        sni_code: parsed.meta.sni_code,
+        company_type: parsed.meta.company_type,
+        comment: parsed.meta.comment,
+        tax_year: parsed.meta.tax_year,
+        currency: parsed.meta.currency,
       }, { onConflict: 'org_number' })
     if (companyErr) throw new Error(`company_info: ${companyErr.message}`)
     stats.company_info = 1
@@ -63,11 +70,12 @@ export async function importToSupabase(
       fyMap.set(fy.year_index, fy.id)
     }
 
-    // 3. dimensions
+    // 3. dimensions (Phase 6: includes parent_dimension from #UNDERDIM)
     if (parsed.dimensions.length > 0) {
       const dimRows = parsed.dimensions.map(d => ({
         dimension_number: d.dimension_number,
         name: d.name,
+        parent_dimension: d.parent_dimension,
       }))
       await upsertBatched(client, 'dimensions', dimRows, 'dimension_number')
       stats.dimensions = dimRows.length
@@ -86,13 +94,14 @@ export async function importToSupabase(
     }
     log('objects', stats.objects)
 
-    // 5. accounts — also auto-create any accounts referenced in balances/vouchers
+    // 5. accounts (Phase 5: includes quantity_unit from #ENHET)
     const knownAccounts = new Set(parsed.accounts.map(a => a.account_number))
     const allRefAccounts = [
       ...parsed.opening_balances.map(r => r.account_number),
       ...parsed.closing_balances.map(r => r.account_number),
       ...parsed.period_results.map(r => r.account_number),
       ...parsed.period_balances.map(r => r.account_number),
+      ...parsed.period_budgets.map(r => r.account_number),
       ...parsed.vouchers.flatMap(v => v.rows.map(r => r.account_number)),
     ]
     const extraAccounts = [...new Set(allRefAccounts.filter(a => !knownAccounts.has(a)))]
@@ -101,11 +110,13 @@ export async function importToSupabase(
         account_number: a.account_number,
         name: a.name,
         account_type: a.account_type,
+        quantity_unit: a.quantity_unit,
       })),
       ...extraAccounts.map(a => ({
         account_number: a,
         name: `Account ${a}`,
         account_type: null,
+        quantity_unit: null,
       })),
     ]
     await upsertBatched(client, 'accounts', accRows, 'account_number')
@@ -123,28 +134,32 @@ export async function importToSupabase(
     }
     log('sru_codes', stats.sru_codes)
 
-    // 7. opening_balances
+    // 7. opening_balances (Phase 7: includes #OIB dimension data)
     if (parsed.opening_balances.length > 0) {
       const ibRows = parsed.opening_balances.map(ib => ({
         financial_year_id: fyMap.get(ib.year_index),
         account_number: ib.account_number,
         amount: ib.amount,
-        quarter: ib.quarter,
+        quantity: ib.quantity,
+        dimension_number: ib.dimension_number,
+        object_number: ib.object_number,
       }))
-      await upsertBatched(client, 'opening_balances', ibRows, 'financial_year_id,account_number')
+      await upsertBatched(client, 'opening_balances', ibRows, 'financial_year_id,account_number,dimension_number,object_number')
       stats.opening_balances = ibRows.length
     }
     log('opening_balances', stats.opening_balances)
 
-    // 8. closing_balances
+    // 8. closing_balances (Phase 7: includes #OUB dimension data)
     if (parsed.closing_balances.length > 0) {
       const ubRows = parsed.closing_balances.map(ub => ({
         financial_year_id: fyMap.get(ub.year_index),
         account_number: ub.account_number,
         amount: ub.amount,
-        quarter: ub.quarter,
+        quantity: ub.quantity,
+        dimension_number: ub.dimension_number,
+        object_number: ub.object_number,
       }))
-      await upsertBatched(client, 'closing_balances', ubRows, 'financial_year_id,account_number')
+      await upsertBatched(client, 'closing_balances', ubRows, 'financial_year_id,account_number,dimension_number,object_number')
       stats.closing_balances = ubRows.length
     }
     log('closing_balances', stats.closing_balances)
@@ -161,22 +176,39 @@ export async function importToSupabase(
     }
     log('period_results', stats.period_results)
 
-    // 10. period_balances
+    // 10. period_balances (Phase 4: includes PSALDO per-object dimension data)
     if (parsed.period_balances.length > 0) {
       const pbRows = parsed.period_balances.map(pb => ({
         financial_year_id: fyMap.get(pb.year_index),
         account_number: pb.account_number,
         period: pb.period,
         amount: pb.amount,
-        quarter: pb.quarter,
+        quantity: pb.quantity,
+        dimension_number: pb.dimension_number,
+        object_number: pb.object_number,
       }))
-      await upsertBatched(client, 'period_balances', pbRows, 'financial_year_id,account_number,period')
+      await upsertBatched(client, 'period_balances', pbRows, 'financial_year_id,account_number,period,dimension_number,object_number')
       stats.period_balances = pbRows.length
     }
     log('period_balances', stats.period_balances)
 
-    // 11. vouchers — need to map date to financial year
-    // Build date range lookup for financial years
+    // 11. period_budgets (Phase 8)
+    if (parsed.period_budgets.length > 0) {
+      const budgetRows = parsed.period_budgets.map(pb => ({
+        financial_year_id: fyMap.get(pb.year_index),
+        account_number: pb.account_number,
+        period: pb.period,
+        amount: pb.amount,
+        quantity: pb.quantity,
+        dimension_number: pb.dimension_number,
+        object_number: pb.object_number,
+      }))
+      await upsertBatched(client, 'period_budgets', budgetRows, 'financial_year_id,account_number,period,dimension_number,object_number')
+      stats.period_budgets = budgetRows.length
+    }
+    log('period_budgets', stats.period_budgets)
+
+    // 12. vouchers — need to map date to financial year
     const fyRanges = parsed.financial_years.map(fy => ({
       year_index: fy.year_index,
       start: fy.start_date,
@@ -199,7 +231,7 @@ export async function importToSupabase(
     stats.vouchers = voucherRows.length
     log('vouchers', voucherRows.length)
 
-    // 12. voucher_rows — look up voucher IDs (paginated), delete existing rows, insert fresh
+    // 13. voucher_rows — look up voucher IDs (paginated), delete existing rows, insert fresh
     const voucherMap = new Map<string, string>()
     let vOffset = 0
     const PAGE = 1000
@@ -218,7 +250,7 @@ export async function importToSupabase(
     }
 
     // Delete all existing voucher_rows for these vouchers (idempotency)
-    // Use small batches to avoid URI length limits with .in() filter
+    // CASCADE will also delete voucher_row_objects
     const DELETE_BATCH = 50
     const voucherIds = Array.from(voucherMap.values())
     for (let i = 0; i < voucherIds.length; i += DELETE_BATCH) {
@@ -230,8 +262,11 @@ export async function importToSupabase(
       if (delErr) throw new Error(`voucher_rows delete: ${delErr.message}`)
     }
 
-    // Insert fresh voucher rows
+    // Insert fresh voucher rows (Phase 2: includes transaction_date)
     const allVoucherRows: Record<string, unknown>[] = []
+    // Track which rows have multi-dim data for Phase 3
+    const rowDimensions: Array<Array<{ dim_number: number; object_number: string }>> = []
+
     for (const v of parsed.vouchers) {
       const fyId = findFinancialYear(v.date, fyRanges)
       const voucherId = voucherMap.get(`${v.series}:${v.voucher_number}:${fyId}`)
@@ -244,19 +279,56 @@ export async function importToSupabase(
           object_number: row.object_number,
           amount: row.amount,
           description: row.description || null,
-          quarter: row.quarter,
-          name: row.name,
+          transaction_date: row.transaction_date,
+          quantity: row.quantity,
+          sign: row.sign,
           transaction_type: row.type,
         })
+        rowDimensions.push(row.dimensions)
       }
     }
+
+    // Insert voucher rows in batches, collecting IDs for junction table
+    const insertedRowIds: string[] = []
     for (let i = 0; i < allVoucherRows.length; i += BATCH_SIZE) {
       const batch = allVoucherRows.slice(i, i + BATCH_SIZE)
-      const { error: insertErr } = await client.from('voucher_rows').insert(batch)
+      const { data: inserted, error: insertErr } = await client
+        .from('voucher_rows')
+        .insert(batch)
+        .select('id')
       if (insertErr) throw new Error(`voucher_rows insert: ${insertErr.message}`)
+      if (inserted) {
+        for (const row of inserted) {
+          insertedRowIds.push(row.id)
+        }
+      }
     }
     stats.voucher_rows = allVoucherRows.length
     log('voucher_rows', allVoucherRows.length)
+
+    // Phase 3: Insert voucher_row_objects junction table entries
+    const allObjRows: Record<string, unknown>[] = []
+    for (let j = 0; j < insertedRowIds.length; j++) {
+      const dims = rowDimensions[j]
+      if (dims && dims.length > 0) {
+        for (const d of dims) {
+          allObjRows.push({
+            voucher_row_id: insertedRowIds[j],
+            dimension_number: d.dim_number,
+            object_number: d.object_number,
+          })
+        }
+      }
+    }
+    if (allObjRows.length > 0) {
+      for (let i = 0; i < allObjRows.length; i += BATCH_SIZE) {
+        const batch = allObjRows.slice(i, i + BATCH_SIZE)
+        const { error: objErr } = await client.from('voucher_row_objects').insert(batch)
+        if (objErr) throw new Error(`voucher_row_objects insert: ${objErr.message}`)
+      }
+    }
+    stats.voucher_row_objects = allObjRows.length
+    log('voucher_row_objects', allObjRows.length)
 
   } catch (err) {
     const errMsg = err instanceof Error ? err.message : JSON.stringify(err)

@@ -1,0 +1,70 @@
+
+ RUN  v4.1.2 /Volumes/23 nov /Project/KEYHOLDER
+
+ ✓ src/__tests__/fortnox-html-crosscheck.test.ts > Fortnox HTML Parser — Sanity Checks > Balans: parses accounts 1ms
+ ✓ src/__tests__/fortnox-html-crosscheck.test.ts > Fortnox HTML Parser — Sanity Checks > Resultat: parses accounts 0ms
+ ✓ src/__tests__/fortnox-html-crosscheck.test.ts > Fortnox HTML Parser — Sanity Checks > Verifikationslista: 4434 vouchers 0ms
+ ✓ src/__tests__/fortnox-html-crosscheck.test.ts > Fortnox HTML Parser — Sanity Checks > Verifikationslista: 13528 transaction rows (= SIE #TRANS count) 0ms
+ ✓ src/__tests__/fortnox-html-crosscheck.test.ts > Fortnox HTML Parser — Sanity Checks > Verifikationslista: omslutning debet = kredit = 267,213,209.07 0ms
+ ✓ src/__tests__/fortnox-html-crosscheck.test.ts > Fortnox HTML Parser — Sanity Checks > Huvudbok: 160 accounts 0ms
+ ✓ src/__tests__/fortnox-html-crosscheck.test.ts > Fortnox HTML Parser — Sanity Checks > Huvudbok: total omslutning matches Verifikationslista 0ms
+ ✓ src/__tests__/fortnox-html-crosscheck.test.ts > Fortnox HTML Parser — Sanity Checks > Every voucher balances (debet = kredit) 1ms
+stdout | src/__tests__/fortnox-html-crosscheck.test.ts > Fortnox HTML Crosscheck — Byggnadsställningsentreprenad
+✓ company_info (1 row)
+
+stdout | src/__tests__/fortnox-html-crosscheck.test.ts > Fortnox HTML Crosscheck — Byggnadsställningsentreprenad
+✓ financial_years (2 rows)
+
+stdout | src/__tests__/fortnox-html-crosscheck.test.ts > Fortnox HTML Crosscheck — Byggnadsställningsentreprenad
+✓ dimensions (2 rows)
+
+stdout | src/__tests__/fortnox-html-crosscheck.test.ts > Fortnox HTML Crosscheck — Byggnadsställningsentreprenad
+✓ objects (123 rows)
+
+stdout | src/__tests__/fortnox-html-crosscheck.test.ts > Fortnox HTML Crosscheck — Byggnadsställningsentreprenad
+✓ accounts (509 rows)
+
+stdout | src/__tests__/fortnox-html-crosscheck.test.ts > Fortnox HTML Crosscheck — Byggnadsställningsentreprenad
+✓ sru_codes (485 rows)
+
+stdout | src/__tests__/fortnox-html-crosscheck.test.ts > Fortnox HTML Crosscheck — Byggnadsställningsentreprenad
+✓ opening_balances (128 rows)
+
+stdout | src/__tests__/fortnox-html-crosscheck.test.ts > Fortnox HTML Crosscheck — Byggnadsställningsentreprenad
+✓ closing_balances (128 rows)
+
+stdout | src/__tests__/fortnox-html-crosscheck.test.ts > Fortnox HTML Crosscheck — Byggnadsställningsentreprenad
+✓ period_results (169 rows)
+
+stdout | src/__tests__/fortnox-html-crosscheck.test.ts > Fortnox HTML Crosscheck — Byggnadsställningsentreprenad
+✓ period_balances (4,838 rows)
+✓ period_budgets (0 rows)
+
+stdout | src/__tests__/fortnox-html-crosscheck.test.ts > Fortnox HTML Crosscheck — Byggnadsställningsentreprenad
+✓ vouchers (4,434 rows)
+
+stdout | src/__tests__/fortnox-html-crosscheck.test.ts > Fortnox HTML Crosscheck — Byggnadsställningsentreprenad
+✓ voucher_rows (14,228 rows)
+
+stdout | src/__tests__/fortnox-html-crosscheck.test.ts > Fortnox HTML Crosscheck — Byggnadsställningsentreprenad
+✓ voucher_row_objects (3,943 rows)
+
+ ✓ src/__tests__/fortnox-html-crosscheck.test.ts > Fortnox HTML Crosscheck — Byggnadsställningsentreprenad > Balans HTML vs DB > every account utgBalans matches DB closing_balances 0ms
+ ✓ src/__tests__/fortnox-html-crosscheck.test.ts > Fortnox HTML Crosscheck — Byggnadsställningsentreprenad > Balans HTML vs DB > every account ingBalans matches DB opening_balances 0ms
+ ✓ src/__tests__/fortnox-html-crosscheck.test.ts > Fortnox HTML Crosscheck — Byggnadsställningsentreprenad > Balans HTML vs DB > SUMMA TILLGÅNGAR matches 0ms
+ ✓ src/__tests__/fortnox-html-crosscheck.test.ts > Fortnox HTML Crosscheck — Byggnadsställningsentreprenad > Resultat HTML vs DB > every account period matches DB period_results (sign-inverted) 0ms
+ ✓ src/__tests__/fortnox-html-crosscheck.test.ts > Fortnox HTML Crosscheck — Byggnadsställningsentreprenad > Resultat HTML vs DB > BERÄKNAT RESULTAT matches 0ms
+ ✓ src/__tests__/fortnox-html-crosscheck.test.ts > Fortnox HTML Crosscheck — Byggnadsställningsentreprenad > Huvudbok HTML vs DB > IB per account matches DB opening_balances 0ms
+ ✓ src/__tests__/fortnox-html-crosscheck.test.ts > Fortnox HTML Crosscheck — Byggnadsställningsentreprenad > Huvudbok HTML vs DB > Utgående saldo per account matches DB closing_balances 0ms
+ ✓ src/__tests__/fortnox-html-crosscheck.test.ts > Fortnox HTML Crosscheck — Byggnadsställningsentreprenad > Huvudbok HTML vs DB > Omslutning per account matches sum of DB voucher_rows 1ms
+ ✓ src/__tests__/fortnox-html-crosscheck.test.ts > Fortnox HTML Crosscheck — Byggnadsställningsentreprenad > Verifikationslista HTML vs DB > total voucher count matches DB 0ms
+ ✓ src/__tests__/fortnox-html-crosscheck.test.ts > Fortnox HTML Crosscheck — Byggnadsställningsentreprenad > Verifikationslista HTML vs DB > every voucher exists in DB with correct series, number, date 1ms
+ ✓ src/__tests__/fortnox-html-crosscheck.test.ts > Fortnox HTML Crosscheck — Byggnadsställningsentreprenad > Verifikationslista HTML vs DB > every voucher row has correct account and amount 13ms
+ ✓ src/__tests__/fortnox-html-crosscheck.test.ts > Fortnox HTML Crosscheck — Byggnadsställningsentreprenad > Verifikationslista HTML vs DB > total debet sum matches HTML omslutning 1ms
+ ✓ src/__tests__/fortnox-html-crosscheck.test.ts > Fortnox HTML Crosscheck — Byggnadsställningsentreprenad > Verifikationslista HTML vs DB > total kredit sum matches HTML omslutning 2ms
+
+ Test Files  1 passed (1)
+      Tests  21 passed (21)
+   Start at  23:42:15
+   Duration  2.75s (transform 48ms, setup 0ms, import 1.33s, tests 1.36s, environment 0ms)
+

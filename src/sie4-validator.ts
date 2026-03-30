@@ -50,27 +50,30 @@ export async function validateImport(
     actual: dbRowCount ?? 0,
   })
 
-  // Look up financial_year_id for year_index 0
-  const { data: fyData } = await client
-    .from('financial_years')
-    .select('id')
-    .eq('year_index', 0)
-    .single()
-  const currentFyId = fyData?.id
+  // Look up all financial years
+  const { data: allFyData } = await client.from('financial_years').select('id, year_index')
+  const fyIdToIndex = new Map<string, number>()
+  for (const fy of allFyData || []) {
+    fyIdToIndex.set(fy.id, fy.year_index)
+  }
+  const currentFyId = (allFyData || []).find(fy => fy.year_index === 0)?.id
 
-  // 4. Opening balance amounts (current year only)
+  // 4. Opening balance amounts (current year, aggregate only)
   const { data: dbIB } = await client
     .from('opening_balances')
-    .select('account_number, amount')
+    .select('account_number, amount, dimension_number')
     .eq('financial_year_id', currentFyId)
   const dbIBMap = new Map<number, number>()
   for (const row of dbIB || []) {
-    dbIBMap.set(row.account_number, parseFloat(row.amount))
+    // Only check aggregate balances (no dimension) for backward compat
+    if (row.dimension_number === null) {
+      dbIBMap.set(row.account_number, parseFloat(row.amount))
+    }
   }
   let ibMatch = true
   let ibChecked = 0
   for (const ib of parsed.opening_balances) {
-    if (ib.year_index !== 0) continue // Only check current year
+    if (ib.year_index !== 0 || ib.dimension_number !== null) continue
     ibChecked++
     const dbAmount = dbIBMap.get(ib.account_number)
     if (dbAmount === undefined || Math.abs(dbAmount - ib.amount) > 0.005) {
@@ -85,19 +88,21 @@ export async function validateImport(
     details: ibMatch ? `${ibChecked} accounts checked` : undefined,
   })
 
-  // 5. Closing balance amounts (current year only)
+  // 5. Closing balance amounts (current year, aggregate only)
   const { data: dbUB } = await client
     .from('closing_balances')
-    .select('account_number, amount')
+    .select('account_number, amount, dimension_number')
     .eq('financial_year_id', currentFyId)
   const dbUBMap = new Map<number, number>()
   for (const row of dbUB || []) {
-    dbUBMap.set(row.account_number, parseFloat(row.amount))
+    if (row.dimension_number === null) {
+      dbUBMap.set(row.account_number, parseFloat(row.amount))
+    }
   }
   let ubMatch = true
   let ubChecked = 0
   for (const ub of parsed.closing_balances) {
-    if (ub.year_index !== 0) continue
+    if (ub.year_index !== 0 || ub.dimension_number !== null) continue
     ubChecked++
     const dbAmount = dbUBMap.get(ub.account_number)
     if (dbAmount === undefined || Math.abs(dbAmount - ub.amount) > 0.005) {
@@ -133,11 +138,6 @@ export async function validateImport(
 
   // 7. Period results (RES) amounts
   const dbRES = await fetchAll(client, 'period_results', 'account_number, amount, financial_year_id')
-  const { data: allFyData } = await client.from('financial_years').select('id, year_index')
-  const fyIdToIndex = new Map<string, number>()
-  for (const fy of allFyData || []) {
-    fyIdToIndex.set(fy.id, fy.year_index)
-  }
   const dbRESMap = new Map<string, number>()
   for (const row of dbRES) {
     const yi = fyIdToIndex.get(row.financial_year_id as string)
@@ -159,18 +159,20 @@ export async function validateImport(
     actual: resMatch ? `${resChecked} accounts` : 'mismatch',
   })
 
-  // 8. Period balances (PSALDO) amounts
-  const dbPSALDO = await fetchAll(client, 'period_balances', 'account_number, period, amount, financial_year_id')
+  // 8. Period balances (PSALDO) — includes dimension-tagged entries
+  const dbPSALDO = await fetchAll(client, 'period_balances', 'account_number, period, amount, financial_year_id, dimension_number, object_number')
   const dbPSMap = new Map<string, number>()
   for (const row of dbPSALDO) {
     const yi = fyIdToIndex.get(row.financial_year_id as string)
-    dbPSMap.set(`${yi}:${row.period}:${row.account_number}`, parseFloat(row.amount as string))
+    const key = `${yi}:${row.period}:${row.account_number}:${row.dimension_number ?? ''}:${row.object_number ?? ''}`
+    dbPSMap.set(key, parseFloat(row.amount as string))
   }
   let psMatch = true
   let psChecked = 0
   for (const p of parsed.period_balances) {
     psChecked++
-    const dbAmount = dbPSMap.get(`${p.year_index}:${p.period}:${p.account_number}`)
+    const key = `${p.year_index}:${p.period}:${p.account_number}:${p.dimension_number ?? ''}:${p.object_number ?? ''}`
+    const dbAmount = dbPSMap.get(key)
     if (dbAmount === undefined || Math.abs(dbAmount - p.amount) > 0.005) {
       psMatch = false
     }

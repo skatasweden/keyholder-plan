@@ -24,7 +24,8 @@ try {
 async function truncateAll(c: SupabaseClient) {
   // Delete in reverse FK order
   const tables = [
-    'voucher_rows', 'vouchers', 'period_balances', 'period_results',
+    'voucher_row_objects', 'voucher_rows', 'vouchers',
+    'period_budgets', 'period_balances', 'period_results',
     'closing_balances', 'opening_balances', 'sru_codes', 'accounts',
     'objects', 'dimensions', 'financial_years', 'company_info',
   ]
