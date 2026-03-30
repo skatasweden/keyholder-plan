@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KEYHOLDER — Projektkarta</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    background: #f0e9df;
+    color: #1a0f09;
+    line-height: 1.6;
+    padding: 2rem 1rem;
+  }
+
+  .container { max-width: 900px; margin: 0 auto; }
+
+  h1 {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    margin-bottom: 0.3rem;
+  }
+
+  .subtitle {
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    color: #62493e;
+    margin-bottom: 2rem;
+  }
+
+  /* Info box */
+  .info-box {
+    background: #fff8f0;
+    border: 1px solid #d9cec4;
+    border-left: 4px solid #f04e3e;
+    border-radius: 8px;
+    padding: 1.2rem 1.4rem;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+    color: #362318;
+  }
+  .info-box strong { color: #1a0f09; }
+
+  /* Section */
+  .section {
+    background: #fff;
+    border: 1px solid #d9cec4;
+    border-radius: 10px;
+    margin-bottom: 1.2rem;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+  }
+  .section:hover { box-shadow: 0 2px 12px rgba(26,15,9,0.07); }
+
+  .section-header {
+    background: #1a0f09;
+    color: #f0e9df;
+    padding: 0.8rem 1.2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+  }
+  .section-header h2 {
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    font-weight: 600;
+  }
+  .section-header .badge {
+    background: #f04e3e;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 0.15rem 0.6rem;
+    border-radius: 50px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .section-header .arrow {
+    font-size: 1.2rem;
+    transition: transform 0.2s;
+    margin-left: 0.8rem;
+  }
+  .section.open .arrow { transform: rotate(180deg); }
+
+  .section-body {
+    display: none;
+    padding: 1rem 1.2rem;
+  }
+  .section.open .section-body { display: block; }
+
+  /* File list */
+  .file-list { list-style: none; }
+  .file-list li {
+    padding: 0.45rem 0;
+    border-bottom: 1px solid #ece5dc;
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+  }
+  .file-list li:last-child { border-bottom: none; }
+
+  .fname {
+    font-family: 'SF Mono', 'Menlo', 'Consolas', monospace;
+    font-size: 0.82rem;
+    color: #1a0f09;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .fdesc { color: #62493e; }
+
+  /* Folder indicator */
+  .folder .fname { color: #f04e3e; }
+  .folder .fname::before { content: '📁 '; }
+  .file .fname::before { content: '  '; }
+
+  /* Sub-section label */
+  .sub-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #7a6358;
+    margin-top: 0.8rem;
+    margin-bottom: 0.3rem;
+    padding-top: 0.5rem;
+    border-top: 1px dashed #d9cec4;
+  }
+  .sub-label:first-child { border-top: none; margin-top: 0; }
+
+  /* Quick ref table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+  th {
+    text-align: left;
+    background: #f0e9df;
+    padding: 0.5rem 0.7rem;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #7a6358;
+  }
+  td {
+    padding: 0.5rem 0.7rem;
+    border-bottom: 1px solid #ece5dc;
+    vertical-align: top;
+  }
+  td:first-child { font-weight: 500; }
+  code {
+    font-family: 'SF Mono', 'Menlo', 'Consolas', monospace;
+    font-size: 0.82rem;
+    background: #f5efe8;
+    padding: 0.1rem 0.4rem;
+    border-radius: 3px;
+  }
+
+  /* Status bar */
+  .status-bar {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+  .stat {
+    background: #fff;
+    border: 1px solid #d9cec4;
+    border-radius: 8px;
+    padding: 0.7rem 1.1rem;
+    flex: 1;
+    min-width: 140px;
+    text-align: center;
+  }
+  .stat-number {
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    font-weight: 700;
+    color: #f04e3e;
+  }
+  .stat-label {
+    font-size: 0.78rem;
+    color: #7a6358;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  /* Companies */
+  .company-cards { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+  .company-card {
+    flex: 1;
+    min-width: 200px;
+    background: #f5efe8;
+    border-radius: 8px;
+    padding: 0.9rem 1rem;
+  }
+  .company-card h4 { font-size: 0.9rem; margin-bottom: 0.3rem; }
+  .company-card p { font-size: 0.82rem; color: #62493e; margin: 0.15rem 0; }
+  .company-card .tag {
+    display: inline-block;
+    background: #fce0dd;
+    color: #c93526;
+    font-size: 0.72rem;
+    padding: 0.1rem 0.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    margin-top: 0.3rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <h1>KEYHOLDER — Projektkarta</h1>
+  <p class="subtitle">En enkel guide till alla mappar och filer. Klicka p&aring; en sektion f&ouml;r att &ouml;ppna den.</p>
+
+  <!-- Status -->
+  <div class="status-bar">
+    <div class="stat">
+      <div class="stat-number">104</div>
+      <div class="stat-label">Tester (alla gr&ouml;na)</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">14</div>
+      <div class="stat-label">Databastabeller</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">11</div>
+      <div class="stat-label">Migreringar</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">3</div>
+      <div class="stat-label">Testf&ouml;retag</div>
+    </div>
+  </div>
+
+  <!-- What is this -->
+  <div class="info-box">
+    <strong>Vad &auml;r det h&auml;r?</strong><br>
+    Ett verktyg som l&auml;ser svenska bokf&ouml;ringsfiler (SIE4-format), l&auml;gger in datan i en databas (Supabase) och genererar finansiella rapporter (<em>Balansrapport</em> + <em>Resultatrapport</em>) som matchar Fortnox exakt &mdash; p&aring; &ouml;ret.
+  </div>
+
+  <!-- ───── src/ ───── -->
+  <div class="section open">
+    <div class="section-header" onclick="this.parentElement.classList.toggle('open')">
+      <h2>src/ &mdash; All kod</h2>
+      <div><span class="badge">6 filer + 6 tester</span><span class="arrow">&#9660;</span></div>
+    </div>
+    <div class="section-body">
+      <p class="sub-label">Huvudfiler</p>
+      <ul class="file-list">
+        <li class="file"><span class="fname">cli.ts</span> <span class="fdesc">&mdash; Startpunkt. K&ouml;r: <code>npx tsx src/cli.ts fil.se</code></span></li>
+        <li class="file"><span class="fname">sie4-parser.ts</span> <span class="fdesc">&mdash; L&auml;ser en .se-fil och g&ouml;r om den till strukturerad data</span></li>
+        <li class="file"><span class="fname">sie4-importer.ts</span> <span class="fdesc">&mdash; Tar parsad data och l&auml;gger in den i databasen</span></li>
+        <li class="file"><span class="fname">sie4-validator.ts</span> <span class="fdesc">&mdash; Kontrollerar att databasen matchar den parsade filen (10 kontroller)</span></li>
+        <li class="file"><span class="fname">fortnox-html-parser.ts</span> <span class="fdesc">&mdash; Parsar Fortnox HTML-rapporter f&ouml;r korsvalidering</span></li>
+        <li class="file"><span class="fname">types.ts</span> <span class="fdesc">&mdash; TypeScript-typdefinitioner som delas av alla filer</span></li>
+      </ul>
+      <p class="sub-label">Tester (__tests__/)</p>
+      <ul class="file-list">
+        <li class="file"><span class="fname">parser.test.ts</span> <span class="fdesc">&mdash; 47 tester &mdash; l&auml;ser parsern filer korrekt?</span></li>
+        <li class="file"><span class="fname">integration.test.ts</span> <span class="fdesc">&mdash; 6 tester &mdash; fungerar hela fl&ouml;det fr&aring;n fil till databas?</span></li>
+        <li class="file"><span class="fname">fortnox-crosscheck.test.ts</span> <span class="fdesc">&mdash; 16 tester &mdash; matchar DB-v&auml;rden Fortnox-PDF:erna?</span></li>
+        <li class="file"><span class="fname">fortnox-html-crosscheck.test.ts</span> <span class="fdesc">&mdash; 20 tester &mdash; matchar DB-v&auml;rden Fortnox HTML-exporter?</span></li>
+        <li class="file"><span class="fname">reports.test.ts</span> <span class="fdesc">&mdash; 15 tester &mdash; ger SQL-rapportfunktionerna r&auml;tt totaler?</span></li>
+        <li class="file"><span class="fname">test-fixture.ts</span> <span class="fdesc">&mdash; Fiktiv bokf&ouml;ringsdata f&ouml;r parser- och integrationstester</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ───── supabase/ ───── -->
+  <div class="section">
+    <div class="section-header" onclick="this.parentElement.classList.toggle('open')">
+      <h2>supabase/ &mdash; Databasen</h2>
+      <div><span class="badge">11 migreringar</span><span class="arrow">&#9660;</span></div>
+    </div>
+    <div class="section-body">
+      <ul class="file-list">
+        <li class="file"><span class="fname">config.toml</span> <span class="fdesc">&mdash; Lokal Supabase-konfiguration</span></li>
+        <li class="file"><span class="fname">SUPABASE-LOCAL.md</span> <span class="fdesc">&mdash; Guide: hur du k&ouml;r Supabase lokalt</span></li>
+      </ul>
+      <p class="sub-label">Migreringar (k&ouml;rs i ordning n&auml;r du k&ouml;r <code>npx supabase db reset</code>)</p>
+      <ul class="file-list">
+        <li class="file"><span class="fname">00001_sie_schema.sql</span> <span class="fdesc">&mdash; Skapar alla tabeller</span></li>
+        <li class="file"><span class="fname">00002_sie_hardening.sql</span> <span class="fdesc">&mdash; L&auml;gger till s&auml;kerhetskontroller</span></li>
+        <li class="file"><span class="fname">00003_rename_columns.sql</span> <span class="fdesc">&mdash; Fixar kolumnnamn</span></li>
+        <li class="file"><span class="fname">00004_voucher_row_transdat.sql</span> <span class="fdesc">&mdash; L&auml;gger till transaktionsdatum</span></li>
+        <li class="file"><span class="fname">00005_voucher_row_objects.sql</span> <span class="fdesc">&mdash; St&ouml;d f&ouml;r flera dimensioner</span></li>
+        <li class="file"><span class="fname">00006_period_balance_dimensions.sql</span> <span class="fdesc">&mdash; Dimensioner p&aring; periodsaldon</span></li>
+        <li class="file"><span class="fname">00007_company_metadata.sql</span> <span class="fdesc">&mdash; Extra f&ouml;retagsinformation</span></li>
+        <li class="file"><span class="fname">00008_dimension_hierarchy.sql</span> <span class="fdesc">&mdash; &Ouml;ver-/underdimensioner</span></li>
+        <li class="file"><span class="fname">00009_object_level_balances.sql</span> <span class="fdesc">&mdash; Saldon per objekt (kostnadsst&auml;lle/projekt)</span></li>
+        <li class="file"><span class="fname">00010_period_budgets.sql</span> <span class="fdesc">&mdash; Budgettabell</span></li>
+        <li class="file"><span class="fname">00011_report_views.sql</span> <span class="fdesc">&mdash; <strong>Balansrapport + Resultatrapport</strong> SQL-funktioner</span></li>
+      </ul>
+      <p style="margin-top:0.6rem; font-size:0.85rem; color:#7a6358;">N&auml;sta migrering: <strong>00012</strong></p>
+    </div>
+  </div>
+
+  <!-- ───── SIE/ ───── -->
+  <div class="section">
+    <div class="section-header" onclick="this.parentElement.classList.toggle('open')">
+      <h2>SIE/ &mdash; Bokf&ouml;ringsfiler &amp; referensdokumentation</h2>
+      <div><span class="badge">3 testf&ouml;retag</span><span class="arrow">&#9660;</span></div>
+    </div>
+    <div class="section-body">
+      <p class="sub-label">SIE4-filer (importeras av verktyget)</p>
+      <ul class="file-list">
+        <li class="file"><span class="fname">RevILAB...165333.se</span> <span class="fdesc">&mdash; RevIL AB (406 verifikationer)</span></li>
+        <li class="file"><span class="fname">SkataSwedenAB...170222.se</span> <span class="fdesc">&mdash; Skata Sweden AB (66 verifikationer)</span></li>
+        <li class="file"><span class="fname">Byggnadsst&auml;llnings...170428.se</span> <span class="fdesc">&mdash; Byggnadsst&auml;llningsentreprenad (4 434 verifikationer)</span></li>
+        <li class="file"><span class="fname">SIE4 Exempelfil.SE</span> <span class="fdesc">&mdash; Exempelfil fr&aring;n Visma</span></li>
+      </ul>
+      <p class="sub-label">Dokumentation (f&ouml;r AI och utvecklare)</p>
+      <ul class="file-list">
+        <li class="file"><span class="fname">SIE4-PIPELINE-CONTEXT.md</span> <span class="fdesc">&mdash; <strong>HUVUDDOKUMENT</strong> &mdash; l&auml;s detta f&ouml;rst f&ouml;r full teknisk &ouml;versikt</span></li>
+        <li class="file"><span class="fname">SIE-STANDARD-CONTEXT.md</span> <span class="fdesc">&mdash; Referens f&ouml;r SIE-filformatet</span></li>
+        <li class="file"><span class="fname">CLAUDE.md</span> <span class="fdesc">&mdash; Kort &ouml;versikt f&ouml;r AI-assistenter</span></li>
+      </ul>
+      <p class="sub-label">FORTNOX-CORRECT-DATA/ &mdash; PDF-rapporter fr&aring;n Fortnox (facit)</p>
+      <ul class="file-list">
+        <li class="folder"><span class="fname">Bygg-Balans-Resultat-Rapport/</span> <span class="fdesc">&mdash; Balans + Resultat-PDF f&ouml;r Byggnadsst&auml;llnings&shy;entrepre&shy;nad</span></li>
+        <li class="folder"><span class="fname">REVIL-Balans-Resultat-Rapport/</span> <span class="fdesc">&mdash; Balans + Resultat-PDF f&ouml;r RevIL AB</span></li>
+        <li class="folder"><span class="fname">Skata-Balans-Resultat-Rapport/</span> <span class="fdesc">&mdash; Balans + Resultat-PDF f&ouml;r Skata Sweden AB</span></li>
+      </ul>
+      <p class="sub-label">BYGG-VALIDATION-MATERIALL/ &mdash; HTML-exporter f&ouml;r korsvalidering</p>
+      <ul class="file-list">
+        <li class="file"><span class="fname">Balans.html</span> <span class="fdesc">&mdash; Fortnox Balansrapport som HTML</span></li>
+        <li class="file"><span class="fname">Resultat.html</span> <span class="fdesc">&mdash; Fortnox Resultatrapport som HTML</span></li>
+        <li class="file"><span class="fname">Report-huvudbok.html</span> <span class="fdesc">&mdash; Fortnox Huvudbok som HTML</span></li>
+        <li class="file"><span class="fname">Report-verfikationslista-alla.html</span> <span class="fdesc">&mdash; Alla verifikationer som HTML</span></li>
+        <li class="file"><span class="fname">VALIDATION-REPORT.md</span> <span class="fdesc">&mdash; Resultat fr&aring;n validering</span></li>
+        <li class="folder"><span class="fname">code/</span> <span class="fdesc">&mdash; Parser + testkod f&ouml;r HTML-korsvalidering</span></li>
+      </ul>
+      <p class="sub-label">&Ouml;vrigt</p>
+      <ul class="file-list">
+        <li class="folder"><span class="fname">SIE1-4/</span> <span class="fdesc">&mdash; Officiell SIE4-specifikation (PDF) + extrafiler</span></li>
+        <li class="folder"><span class="fname">SIE5/</span> <span class="fdesc">&mdash; SIE5-spec (XML-format, anv&auml;nds inte &auml;n)</span></li>
+        <li class="folder"><span class="fname">TODO/</span> <span class="fdesc">&mdash; Framtida uppgifter</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ───── reports/ ───── -->
+  <div class="section">
+    <div class="section-header" onclick="this.parentElement.classList.toggle('open')">
+      <h2>reports/ &mdash; Rapportdokumentation</h2>
+      <div><span class="badge">3 filer</span><span class="arrow">&#9660;</span></div>
+    </div>
+    <div class="section-body">
+      <ul class="file-list">
+        <li class="file"><span class="fname">REPORTS-CONTEXT.md</span> <span class="fdesc">&mdash; Full referens f&ouml;r SQL-rapportfunktionerna (start h&auml;r)</span></li>
+        <li class="file"><span class="fname">balans/BALANSRAPPORT.md</span> <span class="fdesc">&mdash; Balansrapport: kontogrupper, teckenkonvention, verifierade v&auml;rden</span></li>
+        <li class="file"><span class="fname">resultat/RESULTATRAPPORT.md</span> <span class="fdesc">&mdash; Resultatrapport: kontogrupper, teckenkonvention, verifierade v&auml;rden</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ───── Root files ───── -->
+  <div class="section">
+    <div class="section-header" onclick="this.parentElement.classList.toggle('open')">
+      <h2>Rotfiler</h2>
+      <div><span class="arrow">&#9660;</span></div>
+    </div>
+    <div class="section-body">
+      <p class="sub-label">Projektfiler</p>
+      <ul class="file-list">
+        <li class="file"><span class="fname">package.json</span> <span class="fdesc">&mdash; Projektberoenden (installera med <code>npm install</code>)</span></li>
+        <li class="file"><span class="fname">tsconfig.json</span> <span class="fdesc">&mdash; TypeScript-inst&auml;llningar</span></li>
+        <li class="file"><span class="fname">vitest.config.ts</span> <span class="fdesc">&mdash; Testk&ouml;rarens inst&auml;llningar</span></li>
+        <li class="file"><span class="fname">.env</span> <span class="fdesc">&mdash; Databasl&ouml;senord (hemlig, finns inte i git)</span></li>
+        <li class="file"><span class="fname">.env.example</span> <span class="fdesc">&mdash; Mall f&ouml;r .env</span></li>
+      </ul>
+      <p class="sub-label">Dokument</p>
+      <ul class="file-list">
+        <li class="file"><span class="fname">Aff&auml;rsplan.md</span> <span class="fdesc">&mdash; Aff&auml;rsplan f&ouml;r projektet</span></li>
+        <li class="file"><span class="fname">AI-CONTEXT.md</span> <span class="fdesc">&mdash; Allm&auml;n AI-kontextfil</span></li>
+        <li class="file"><span class="fname">NEXT-TASK-REPORTS.md</span> <span class="fdesc">&mdash; Uppgiftsspec som anv&auml;ndes f&ouml;r att bygga rapportfunktionerna</span></li>
+        <li class="file"><span class="fname">PROJECT-MAP.md</span> <span class="fdesc">&mdash; Samma karta som denna sida, i Markdown-format</span></li>
+        <li class="file"><span class="fname">PROJECT-MAP.html</span> <span class="fdesc">&mdash; Denna fil</span></li>
+      </ul>
+      <p class="sub-label">&Ouml;vrigt</p>
+      <ul class="file-list">
+        <li class="folder"><span class="fname">REVIL AB/</span> <span class="fdesc">&mdash; &Auml;ldre SIE-exporter f&ouml;r RevIL AB (backup, inte huvudfiler)</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ───── Test companies ───── -->
+  <div class="section open">
+    <div class="section-header" onclick="this.parentElement.classList.toggle('open')">
+      <h2>De 3 testf&ouml;retagen</h2>
+      <div><span class="arrow">&#9660;</span></div>
+    </div>
+    <div class="section-body">
+      <div class="company-cards">
+        <div class="company-card">
+          <h4>RevIL AB</h4>
+          <p>406 verifikationer</p>
+          <p>Tillg&aring;ngar: 3 952 190 kr</p>
+          <p>Resultat: 869 955 kr</p>
+          <span class="tag">Liten</span>
+        </div>
+        <div class="company-card">
+          <h4>Skata Sweden AB</h4>
+          <p>66 verifikationer</p>
+          <p>Tillg&aring;ngar: 430 608 kr</p>
+          <p>Resultat: 58 796 kr</p>
+          <span class="tag">Minimal</span>
+        </div>
+        <div class="company-card">
+          <h4>Byggnadsst&auml;llnings&shy;entre&shy;prenad</h4>
+          <p>4 434 verifikationer</p>
+          <p>Tillg&aring;ngar: 20 646 659 kr</p>
+          <p>Resultat: 2 886 185 kr</p>
+          <span class="tag">Stor</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ───── Quick ref ───── -->
+  <div class="section open">
+    <div class="section-header" onclick="this.parentElement.classList.toggle('open')">
+      <h2>Snabbreferens &mdash; &rdquo;Jag vill...&rdquo;</h2>
+      <div><span class="arrow">&#9660;</span></div>
+    </div>
+    <div class="section-body">
+      <table>
+        <thead>
+          <tr><th>Jag vill...</th><th>G&aring; till</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>K&ouml;ra importverktyget</td><td><code>npx tsx src/cli.ts SIE/fil.se</code></td></tr>
+          <tr><td>K&ouml;ra alla tester</td><td><code>npm test</code></td></tr>
+          <tr><td>&Aring;terst&auml;lla databasen</td><td><code>npx supabase db reset</code></td></tr>
+          <tr><td>F&ouml;rst&aring; hela pipelinen</td><td><code>SIE/SIE4-PIPELINE-CONTEXT.md</code></td></tr>
+          <tr><td>F&ouml;rst&aring; rapportfunktionerna</td><td><code>reports/REPORTS-CONTEXT.md</code></td></tr>
+          <tr><td>Se Fortnox-facit</td><td><code>SIE/FORTNOX-CORRECT-DATA/</code> (PDF:er)</td></tr>
+          <tr><td>Se vilka konton som h&ouml;r var</td><td><code>reports/balans/</code> eller <code>reports/resultat/</code></td></tr>
+          <tr><td>L&auml;gga till en ny databastabell</td><td>Skapa <code>supabase/migrations/00012_*.sql</code></td></tr>
+          <tr><td>Kolla testv&auml;rden</td><td><code>src/__tests__/fortnox-crosscheck.test.ts</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

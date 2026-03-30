@@ -3,7 +3,7 @@
 > Everything an AI or developer with zero context needs to understand, run,
 > test, and extend the SIE4-to-Supabase import pipeline.
 >
-> **Last verified:** 2026-03-30 (69/69 tests passing, all 3 Fortnox companies match to ore)
+> **Last verified:** 2026-03-30 (104/104 tests passing, all 3 Fortnox companies match to ore)
 > **Branch:** `main`
 
 ---
@@ -16,7 +16,7 @@ A CLI tool that reads Swedish SIE4 accounting files (exported from Fortnox or an
 .se file (CP437) -> Parser -> TypeScript objects -> Supabase upserts -> Validation (10 checks)
 ```
 
-**Status:** Full SIE 4C spec compliance (version 2025-08-06). 47 unit tests + 6 integration tests + 16 Fortnox crosscheck tests = **69 tests, all passing**. All SIE4 post types parsed. Multi-dimension support. Per-object period balances. CRC-32 verification. Tested against 3 real Fortnox SIE4 exports. DB values verified against Fortnox PDF reports to the ore.
+**Status:** Full SIE 4C spec compliance (version 2025-08-06). 47 unit tests + 6 integration tests + 16 Fortnox crosscheck tests + 15 report function tests + 20 HTML crosscheck tests = **104 tests, all passing**. All SIE4 post types parsed. Multi-dimension support. Per-object period balances. CRC-32 verification. SQL report functions (Balansrapport + Resultatrapport). Tested against 3 real Fortnox SIE4 exports. DB values verified against Fortnox PDF reports to the ore.
 
 ---
 
@@ -43,6 +43,13 @@ KEYHOLDER/
 |       +-- 00008_dimension_hierarchy.sql   # #UNDERDIM parent_dimension
 |       +-- 00009_object_level_balances.sql # #OIB/#OUB dimension columns
 |       +-- 00010_period_budgets.sql        # #PBUDGET table
+|       +-- 00011_report_views.sql         # Balansrapport + Resultatrapport SQL functions
++-- reports/
+|   +-- REPORTS-CONTEXT.md        # Full report functions reference (start here for reports)
+|   +-- balans/
+|   |   +-- BALANSRAPPORT.md      # Balance sheet: grouping, sign convention, verified values
+|   +-- resultat/
+|       +-- RESULTATRAPPORT.md    # Income statement: grouping, sign convention, verified values
 +-- src/
 |   +-- types.ts              # ParsedSIE4, ImportResult, ValidationReport
 |   +-- sie4-parser.ts        # CP437 decoding + line-by-line parser (all SIE4 tags)
@@ -54,6 +61,8 @@ KEYHOLDER/
 |       +-- parser.test.ts            # 47 parser unit tests (no DB needed)
 |       +-- integration.test.ts       # 6 integration tests (needs local Supabase)
 |       +-- fortnox-crosscheck.test.ts # 16 tests: DB values vs Fortnox PDF reports
+|       +-- fortnox-html-crosscheck.test.ts # 20 tests: HTML report vs DB crosscheck
+|       +-- reports.test.ts               # 15 tests: SQL report functions vs Fortnox totals
 +-- SIE/
 |   +-- RevILAB20260330_165333.se                                     # Test file 1 (small: 406 vouchers)
 |   +-- SkataSwedenAB20260330_170222.se                               # Test file 2 (medium: 66 vouchers)
@@ -96,7 +105,7 @@ SUPABASE_SERVICE_KEY=<the SERVICE_ROLE_KEY JWT from above>
 ### Apply database migrations
 ```bash
 npx supabase db reset
-# Applies all 10 migrations (00001-00010)
+# Applies all 11 migrations (00001-00011)
 ```
 
 ### Import a SIE file
@@ -106,17 +115,17 @@ npx tsx src/cli.ts SIE/RevILAB20260330_165333.se
 
 ### Run tests
 ```bash
-npm test              # All 69 tests (parser + integration + crosscheck)
+npm test              # All 104 tests (parser + integration + crosscheck + reports + html-crosscheck)
 npm run test:watch    # Watch mode
 ```
 
 ### Expected test output (when everything works)
 ```
- Test Files  3 passed (3)
-      Tests  69 passed (69)
+ Test Files  5 passed (5)
+      Tests  104 passed (104)
 ```
 
-If you see `22 skipped` or `2 skipped (3)`, the DB tests are not running. Check:
+If you see skipped tests, the DB tests are not running. Check:
 1. Is Docker running? (`docker info`)
 2. Is Supabase running? (`npx supabase status`)
 3. Does `.env` exist with correct `SUPABASE_SERVICE_KEY`?
@@ -124,7 +133,7 @@ If you see `22 skipped` or `2 skipped (3)`, the DB tests are not running. Check:
 
 ---
 
-## 4. Database Schema (14 tables, 10 migrations)
+## 4. Database Schema (14 tables + 2 functions, 11 migrations)
 
 All tables use UUID PKs, natural key UNIQUE constraints for upserts, and RLS with `authenticated_read` policy.
 
@@ -161,8 +170,24 @@ All tables use UUID PKs, natural key UNIQUE constraints for upserts, and RLS wit
 | **00008** | Adds `parent_dimension integer` to dimensions (#UNDERDIM hierarchy) |
 | **00009** | Adds `dimension_number`, `object_number` to opening/closing_balances; updates UNIQUEs |
 | **00010** | Creates `period_budgets` table (#PBUDGET) |
+| **00011** | Creates `report_balansrapport()` and `report_resultatrapport()` SQL functions |
 
-### Next migration number: 00011
+### SQL Functions (Migration 00011)
+
+Two parameterized PostgreSQL functions callable via Supabase `client.rpc()`:
+
+| Function | Input | Returns | Purpose |
+|----------|-------|---------|---------|
+| `report_balansrapport(p_financial_year_id uuid)` | Financial year UUID | Rows: account_number, account_name, ing_balans, period, utg_balans | Balance sheet (accounts 1000-2999) |
+| `report_resultatrapport(p_financial_year_id uuid)` | Financial year UUID | Rows: account_number, account_name, period, ackumulerat, period_fg_ar | Income statement (accounts 3000-8999) |
+
+Key details:
+- Balansrapport filters `dimension_number IS NULL` on opening/closing_balances (aggregate only)
+- Resultatrapport negates all amounts (`-1 * db_amount`) per Fortnox display convention
+- Resultatrapport auto-resolves previous year via `year_index - 1` subquery
+- Full documentation: `reports/REPORTS-CONTEXT.md`
+
+### Next migration number: 00012
 
 ---
 
@@ -356,6 +381,17 @@ Uses `fetchAll()` helper that paginates Supabase queries at 1000 rows/page.
 
 ## 8. Test Suite
 
+### Test file overview
+
+| Test File | Count | Requires Supabase |
+|-----------|-------|-------------------|
+| `parser.test.ts` | 47 | No |
+| `integration.test.ts` | 6 | Yes |
+| `fortnox-crosscheck.test.ts` | 16 | Yes |
+| `fortnox-html-crosscheck.test.ts` | 20 | Yes |
+| `reports.test.ts` | 15 | Yes |
+| **Total** | **104** | |
+
 ### How .env loading works
 `vitest.config.ts` uses Vite's `loadEnv()` to inject `.env` variables into `process.env` before tests run. Without this, the top-level `await` in test files that checks Supabase connectivity would run before env vars are available, causing all DB tests to be skipped silently.
 
@@ -439,6 +475,18 @@ Proves parser-to-SOURCE accuracy by comparing DB values against hardcoded number
 
 All values match to ore precision (< 0.01 SEK tolerance, some large companies use < 0.02 for rounding).
 
+### Report function tests (`src/__tests__/reports.test.ts`) — 15 tests
+
+Tests the `report_balansrapport()` and `report_resultatrapport()` SQL functions by calling them via Supabase RPC and verifying computed totals against Fortnox PDF values.
+
+| Company | # Tests | Key assertions |
+|---------|---------|----------------|
+| RevIL AB | 6 | SUMMA TILLGANGAR, BERAKNAT RESULTAT (from both balans + resultat), SUMMA RORELSENS INTAKTER, account-level columns, period=ackumulerat |
+| Skata Sweden AB | 4 | SUMMA TILLGANGAR, BERAKNAT RESULTAT (both), SUMMA RORELSENS INTAKTER |
+| Byggnadsst. | 4 | Same structure with 0.02 tolerance |
+
+Tests validate the accounting identity: BERAKNAT RESULTAT from balansrapport = BERAKNAT RESULTAT from resultatrapport.
+
 ---
 
 ## 9. TypeScript Types (`src/types.ts`)
@@ -511,16 +559,21 @@ The parser's output. Contains:
 
 ## 12. What to Do Next
 
+### Completed features
+1. ~~**Report SQL functions**~~ — Done (migration 00011). `report_balansrapport()` and `report_resultatrapport()` produce Fortnox-matching output. See `reports/REPORTS-CONTEXT.md` for full documentation.
+
 ### Likely next features (based on KEYHOLDER's Fortnox-mirroring goal)
-1. **Report SQL views** — Balansrapport + Resultatrapport views (see `NEXT-TASK-REPORTS.md` for spec). Next migration = `00011_*.sql`
-2. **Supabase Edge Function** — Accept SIE4 file upload, run parser + importer server-side
-3. **Generate TypeScript types** — `npx supabase gen types typescript` for type-safe frontend queries
-4. **Fortnox API integration** — Pull SIE4 exports programmatically instead of manual file upload
-5. **Multi-company support** — Add company_id FK if moving away from one-project-per-customer
-6. **SIE5 support** — XML-based format, spec in `SIE/SIE5/`. Not widely adopted yet
+1. **Report grouping/subtotals** — Current functions return per-account rows. Add wrapper functions or client-side logic for Fortnox-style group headers and subtotal rows (SUMMA TILLGANGAR, RORELSERESULTAT, etc.)
+2. **Monthly/quarterly period reports** — Current functions return annual totals only. Add period parameter and compute from `period_balances` (PSALDO) for sub-year periods.
+3. **HTML/PDF report rendering** — Build a renderer that takes RPC output and produces Fortnox-style formatted reports.
+4. **Supabase Edge Function** — Accept SIE4 file upload, run parser + importer server-side
+5. **Generate TypeScript types** — `npx supabase gen types typescript` for type-safe frontend queries
+6. **Fortnox API integration** — Pull SIE4 exports programmatically instead of manual file upload
+7. **Multi-company support** — Add company_id FK if moving away from one-project-per-customer
+8. **SIE5 support** — XML-based format, spec in `SIE/SIE5/`. Not widely adopted yet
 
 ### Schema evolution
-New migrations: `supabase/migrations/00011_*.sql` etc. Apply with `npx supabase db reset` (full reset) or `npx supabase migration up` (incremental).
+New migrations: `supabase/migrations/00012_*.sql` etc. Apply with `npx supabase db reset` (full reset) or `npx supabase migration up` (incremental).
 
 ---
 
