@@ -32,6 +32,8 @@ export function parseSIE4(fileBuffer: Buffer): ParsedSIE4 {
     parse_errors: [],
   }
 
+  const accountTypes = new Map<number, string>()
+
   let i = 0
   while (i < lines.length) {
     const line = lines[i].trim()
@@ -95,6 +97,9 @@ export function parseSIE4(fileBuffer: Buffer): ParsedSIE4 {
             name: fields[2] || '',
             account_type: null,
           })
+          break
+        case '#KTYP':
+          accountTypes.set(parseInt(fields[1]), fields[2] || '')
           break
         case '#SRU':
           result.sru_codes.push({
@@ -220,6 +225,14 @@ export function parseSIE4(fileBuffer: Buffer): ParsedSIE4 {
         line,
         error: String(err),
       })
+    }
+  }
+
+  // Merge #KTYP data into accounts
+  for (const account of result.accounts) {
+    const type = accountTypes.get(account.account_number)
+    if (type === 'T' || type === 'S' || type === 'K' || type === 'I') {
+      account.account_type = type
     }
   }
 
