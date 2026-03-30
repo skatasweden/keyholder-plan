@@ -114,8 +114,13 @@ export interface ParsedSIE4 {
   crc_verified: boolean | null  // null = no #KSUMMA, true = match, false = mismatch
 }
 
+export interface ImportOptions {
+  companyId?: string  // If provided, use this company; otherwise upsert by org_number
+}
+
 export interface ImportResult {
   success: boolean
+  companyId?: string
   stats: {
     company_info: number
     financial_years: number

@@ -1,11 +1,12 @@
 import type { SupabaseClient } from '@supabase/supabase-js'
-import type { ParsedSIE4, ImportResult } from './types.js'
+import type { ParsedSIE4, ImportResult, ImportOptions } from './types.js'
 
 const BATCH_SIZE = 500
 
 export async function importToSupabase(
   parsed: ParsedSIE4,
-  client: SupabaseClient
+  client: SupabaseClient,
+  options?: ImportOptions
 ): Promise<ImportResult> {
   const start = Date.now()
   const stats: ImportResult['stats'] = {
@@ -25,10 +26,11 @@ export async function importToSupabase(
     voucher_row_objects: 0,
   }
   const import_errors: ImportResult['import_errors'] = []
+  let companyId: string | undefined
 
   try {
     // 1. company_info (Phase 5: includes optional metadata)
-    const { error: companyErr } = await client
+    const { data: companyResult, error: companyErr } = await client
       .from('company_info')
       .upsert({
         fortnox_number: parsed.meta.fortnox_number,
@@ -46,7 +48,10 @@ export async function importToSupabase(
         tax_year: parsed.meta.tax_year,
         currency: parsed.meta.currency,
       }, { onConflict: 'org_number' })
+      .select('id')
     if (companyErr) throw new Error(`company_info: ${companyErr.message}`)
+    companyId = options?.companyId ?? companyResult?.[0]?.id
+    if (!companyId) throw new Error('Failed to get company_id after upsert')
     stats.company_info = 1
     log('company_info', 1)
 
@@ -55,8 +60,9 @@ export async function importToSupabase(
       year_index: fy.year_index,
       start_date: fy.start_date,
       end_date: fy.end_date,
+      company_id: companyId,
     }))
-    await upsertBatched(client, 'financial_years', fyRows, 'year_index')
+    await upsertBatched(client, 'financial_years', fyRows, 'company_id,year_index')
     stats.financial_years = fyRows.length
     log('financial_years', fyRows.length)
 
@@ -64,6 +70,7 @@ export async function importToSupabase(
     const { data: fyData, error: fyLookupErr } = await client
       .from('financial_years')
       .select('id, year_index')
+      .eq('company_id', companyId)
     if (fyLookupErr) throw new Error(`financial_years lookup: ${fyLookupErr.message}`)
     const fyMap = new Map<number, string>()
     for (const fy of fyData || []) {
@@ -76,8 +83,9 @@ export async function importToSupabase(
         dimension_number: d.dimension_number,
         name: d.name,
         parent_dimension: d.parent_dimension,
+        company_id: companyId,
       }))
-      await upsertBatched(client, 'dimensions', dimRows, 'dimension_number')
+      await upsertBatched(client, 'dimensions', dimRows, 'company_id,dimension_number')
       stats.dimensions = dimRows.length
     }
     log('dimensions', stats.dimensions)
@@ -88,8 +96,9 @@ export async function importToSupabase(
         dimension_number: o.dimension_number,
         object_number: o.object_number,
         name: o.name,
+        company_id: companyId,
       }))
-      await upsertBatched(client, 'objects', objRows, 'dimension_number,object_number')
+      await upsertBatched(client, 'objects', objRows, 'company_id,dimension_number,object_number')
       stats.objects = objRows.length
     }
     log('objects', stats.objects)
@@ -111,15 +120,17 @@ export async function importToSupabase(
         name: a.name,
         account_type: a.account_type,
         quantity_unit: a.quantity_unit,
+        company_id: companyId,
       })),
       ...extraAccounts.map(a => ({
         account_number: a,
         name: `Account ${a}`,
         account_type: null,
         quantity_unit: null,
+        company_id: companyId,
       })),
     ]
-    await upsertBatched(client, 'accounts', accRows, 'account_number')
+    await upsertBatched(client, 'accounts', accRows, 'company_id,account_number')
     stats.accounts = accRows.length
     log('accounts', accRows.length)
 
@@ -128,8 +139,9 @@ export async function importToSupabase(
       const sruRows = parsed.sru_codes.map(s => ({
         account_number: s.account_number,
         sru_code: s.sru_code,
+        company_id: companyId,
       }))
-      await upsertBatched(client, 'sru_codes', sruRows, 'account_number')
+      await upsertBatched(client, 'sru_codes', sruRows, 'company_id,account_number')
       stats.sru_codes = sruRows.length
     }
     log('sru_codes', stats.sru_codes)
@@ -143,6 +155,7 @@ export async function importToSupabase(
         quantity: ib.quantity,
         dimension_number: ib.dimension_number,
         object_number: ib.object_number,
+        company_id: companyId,
       }))
       await upsertBatched(client, 'opening_balances', ibRows, 'financial_year_id,account_number,dimension_number,object_number')
       stats.opening_balances = ibRows.length
@@ -158,6 +171,7 @@ export async function importToSupabase(
         quantity: ub.quantity,
         dimension_number: ub.dimension_number,
         object_number: ub.object_number,
+        company_id: companyId,
       }))
       await upsertBatched(client, 'closing_balances', ubRows, 'financial_year_id,account_number,dimension_number,object_number')
       stats.closing_balances = ubRows.length
@@ -170,6 +184,7 @@ export async function importToSupabase(
         financial_year_id: fyMap.get(r.year_index),
         account_number: r.account_number,
         amount: r.amount,
+        company_id: companyId,
       }))
       await upsertBatched(client, 'period_results', resRows, 'financial_year_id,account_number')
       stats.period_results = resRows.length
@@ -186,6 +201,7 @@ export async function importToSupabase(
         quantity: pb.quantity,
         dimension_number: pb.dimension_number,
         object_number: pb.object_number,
+        company_id: companyId,
       }))
       await upsertBatched(client, 'period_balances', pbRows, 'financial_year_id,account_number,period,dimension_number,object_number')
       stats.period_balances = pbRows.length
@@ -202,6 +218,7 @@ export async function importToSupabase(
         quantity: pb.quantity,
         dimension_number: pb.dimension_number,
         object_number: pb.object_number,
+        company_id: companyId,
       }))
       await upsertBatched(client, 'period_budgets', budgetRows, 'financial_year_id,account_number,period,dimension_number,object_number')
       stats.period_budgets = budgetRows.length
@@ -225,6 +242,7 @@ export async function importToSupabase(
         description: v.description,
         registration_date: isValidDate(v.registration_date) ? v.registration_date : null,
         financial_year_id: fyId,
+        company_id: companyId,
       }
     })
     await upsertBatched(client, 'vouchers', voucherRows, 'series,voucher_number,financial_year_id')
@@ -337,6 +355,7 @@ export async function importToSupabase(
 
   return {
     success: import_errors.length === 0,
+    companyId,
     stats,
     parse_errors: parsed.parse_errors,
     import_errors,
