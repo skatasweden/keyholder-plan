@@ -8,7 +8,7 @@ import { validateImport } from '../sie4-validator.js'
 import { createTestSIE4Buffer } from './test-fixture.js'
 
 const SUPABASE_URL = process.env.SUPABASE_URL || 'http://127.0.0.1:54421'
-const SUPABASE_KEY = process.env.SUPABASE_SERVICE_KEY || '$SUPABASE_SERVICE_KEY'
+const SUPABASE_KEY = process.env.SUPABASE_SERVICE_KEY || ''
 
 // Check if Supabase is running before all tests
 let client: SupabaseClient
