@@ -1,0 +1,20 @@
+{
+  "name": "keyholder-server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch index.ts"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.13.0",
+    "@supabase/supabase-js": "^2.49.0",
+    "hono": "^4.7.0",
+    "iconv-lite": "^0.6.3"
+  },
+  "devDependencies": {
+    "cheerio": "^1.2.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
 import { AppLayout } from '@/components/layout/AppLayout'
+import { ImportPage } from '@/features/import/ImportPage'
 
 function Placeholder({ title }: { title: string }) {
   return (
@@ -13,7 +14,7 @@ function Placeholder({ title }: { title: string }) {
 export function App() {
   return (
     <Routes>
-      <Route path="/import" element={<AppLayout><Placeholder title="Importera SIE4" /></AppLayout>} />
+      <Route path="/import" element={<AppLayout><ImportPage /></AppLayout>} />
       <Route path="/company/:companyId" element={<AppLayout><Placeholder title="Oversikt" /></AppLayout>} />
       <Route path="/company/:companyId/kontoplan" element={<AppLayout><Placeholder title="Kontoplan" /></AppLayout>} />
       <Route path="/company/:companyId/huvudbok" element={<AppLayout><Placeholder title="Huvudbok" /></AppLayout>} />
