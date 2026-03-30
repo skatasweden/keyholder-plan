@@ -7,7 +7,7 @@ import { importToSupabase } from '../src/sie4-importer.js'
 
 const app = new Hono()
 
-app.use('/*', cors({ origin: ['http://localhost:5173'] }))
+app.use('/*', cors({ origin: ['http://localhost:5173', 'http://localhost:5174'] }))
 
 const supabase = createClient(
   process.env.SUPABASE_URL ?? 'http://127.0.0.1:54421',
