@@ -2,6 +2,8 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import { AppLayout } from '@/components/layout/AppLayout'
 import { ImportPage } from '@/features/import/ImportPage'
 import { OverviewPage } from '@/features/overview/OverviewPage'
+import { BalansrapportPage } from '@/features/balansrapport/BalansrapportPage'
+import { ResultatrapportPage } from '@/features/resultatrapport/ResultatrapportPage'
 
 function Placeholder({ title }: { title: string }) {
   return (
@@ -20,8 +22,8 @@ export function App() {
       <Route path="/company/:companyId/kontoplan" element={<AppLayout><Placeholder title="Kontoplan" /></AppLayout>} />
       <Route path="/company/:companyId/huvudbok" element={<AppLayout><Placeholder title="Huvudbok" /></AppLayout>} />
       <Route path="/company/:companyId/verifikationer" element={<AppLayout><Placeholder title="Verifikationer" /></AppLayout>} />
-      <Route path="/company/:companyId/balansrapport" element={<AppLayout><Placeholder title="Balansrapport" /></AppLayout>} />
-      <Route path="/company/:companyId/resultatrapport" element={<AppLayout><Placeholder title="Resultatrapport" /></AppLayout>} />
+      <Route path="/company/:companyId/balansrapport" element={<AppLayout><BalansrapportPage /></AppLayout>} />
+      <Route path="/company/:companyId/resultatrapport" element={<AppLayout><ResultatrapportPage /></AppLayout>} />
       <Route path="/company/:companyId/validering" element={<AppLayout><Placeholder title="Validering" /></AppLayout>} />
       <Route path="/company/:companyId/dimensioner" element={<AppLayout><Placeholder title="Dimensioner" /></AppLayout>} />
       <Route path="*" element={<Navigate to="/import" replace />} />
