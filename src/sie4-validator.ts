@@ -131,6 +131,91 @@ export async function validateImport(
     actual: unbalancedCount === 0 ? `${totalVouchers} balanced` : `${unbalancedCount} unbalanced`,
   })
 
+  // 7. Period results (RES) amounts
+  const dbRES = await fetchAll(client, 'period_results', 'account_number, amount, financial_year_id')
+  const { data: allFyData } = await client.from('financial_years').select('id, year_index')
+  const fyIdToIndex = new Map<string, number>()
+  for (const fy of allFyData || []) {
+    fyIdToIndex.set(fy.id, fy.year_index)
+  }
+  const dbRESMap = new Map<string, number>()
+  for (const row of dbRES) {
+    const yi = fyIdToIndex.get(row.financial_year_id as string)
+    dbRESMap.set(`${yi}:${row.account_number}`, parseFloat(row.amount as string))
+  }
+  let resMatch = true
+  let resChecked = 0
+  for (const r of parsed.period_results) {
+    resChecked++
+    const dbAmount = dbRESMap.get(`${r.year_index}:${r.account_number}`)
+    if (dbAmount === undefined || Math.abs(dbAmount - r.amount) > 0.005) {
+      resMatch = false
+    }
+  }
+  checks.push({
+    name: 'Period results (RES) match',
+    status: resMatch ? 'pass' : 'fail',
+    expected: `${resChecked} accounts`,
+    actual: resMatch ? `${resChecked} accounts` : 'mismatch',
+  })
+
+  // 8. Period balances (PSALDO) amounts
+  const dbPSALDO = await fetchAll(client, 'period_balances', 'account_number, period, amount, financial_year_id')
+  const dbPSMap = new Map<string, number>()
+  for (const row of dbPSALDO) {
+    const yi = fyIdToIndex.get(row.financial_year_id as string)
+    dbPSMap.set(`${yi}:${row.period}:${row.account_number}`, parseFloat(row.amount as string))
+  }
+  let psMatch = true
+  let psChecked = 0
+  for (const p of parsed.period_balances) {
+    psChecked++
+    const dbAmount = dbPSMap.get(`${p.year_index}:${p.period}:${p.account_number}`)
+    if (dbAmount === undefined || Math.abs(dbAmount - p.amount) > 0.005) {
+      psMatch = false
+    }
+  }
+  checks.push({
+    name: 'Period balances (PSALDO) match',
+    status: psMatch ? 'pass' : 'fail',
+    expected: `${psChecked} entries`,
+    actual: psMatch ? `${psChecked} entries` : 'mismatch',
+  })
+
+  // 9. Object count
+  const { count: dbObjectCount } = await client
+    .from('objects')
+    .select('*', { count: 'exact', head: true })
+  checks.push({
+    name: 'Object count',
+    status: (dbObjectCount ?? 0) === parsed.objects.length ? 'pass' : 'fail',
+    expected: parsed.objects.length,
+    actual: dbObjectCount ?? 0,
+  })
+
+  // 10. BTRANS/RTRANS type flags
+  const parsedBtrans = parsed.vouchers.reduce(
+    (sum, v) => sum + v.rows.filter(r => r.type === 'btrans').length, 0
+  )
+  const parsedRtrans = parsed.vouchers.reduce(
+    (sum, v) => sum + v.rows.filter(r => r.type === 'rtrans').length, 0
+  )
+  const { count: dbBtrans } = await client
+    .from('voucher_rows')
+    .select('*', { count: 'exact', head: true })
+    .eq('transaction_type', 'btrans')
+  const { count: dbRtrans } = await client
+    .from('voucher_rows')
+    .select('*', { count: 'exact', head: true })
+    .eq('transaction_type', 'rtrans')
+  const typeMatch = (dbBtrans ?? 0) === parsedBtrans && (dbRtrans ?? 0) === parsedRtrans
+  checks.push({
+    name: 'BTRANS/RTRANS type flags',
+    status: typeMatch ? 'pass' : 'fail',
+    expected: `${parsedBtrans} btrans, ${parsedRtrans} rtrans`,
+    actual: `${dbBtrans ?? 0} btrans, ${dbRtrans ?? 0} rtrans`,
+  })
+
   // Print report
   console.log('\nValidation Report')
   console.log('─────────────────')
