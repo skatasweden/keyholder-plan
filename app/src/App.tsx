@@ -7,6 +7,7 @@ import { ResultatrapportPage } from '@/features/resultatrapport/ResultatrapportP
 import { KontoplanPage } from '@/features/kontoplan/KontoplanPage'
 import { VoucherListPage } from '@/features/verifikationer/VoucherListPage'
 import { HuvudbokPage } from '@/features/huvudbok/HuvudbokPage'
+import { ValidationPage } from '@/features/validation/ValidationPage'
 
 function Placeholder({ title }: { title: string }) {
   return (
@@ -27,7 +28,7 @@ export function App() {
       <Route path="/company/:companyId/verifikationer" element={<AppLayout><VoucherListPage /></AppLayout>} />
       <Route path="/company/:companyId/balansrapport" element={<AppLayout><BalansrapportPage /></AppLayout>} />
       <Route path="/company/:companyId/resultatrapport" element={<AppLayout><ResultatrapportPage /></AppLayout>} />
-      <Route path="/company/:companyId/validering" element={<AppLayout><Placeholder title="Validering" /></AppLayout>} />
+      <Route path="/company/:companyId/validering" element={<AppLayout><ValidationPage /></AppLayout>} />
       <Route path="/company/:companyId/dimensioner" element={<AppLayout><Placeholder title="Dimensioner" /></AppLayout>} />
       <Route path="*" element={<Navigate to="/import" replace />} />
     </Routes>
