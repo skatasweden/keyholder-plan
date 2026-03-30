@@ -1,0 +1,3854 @@
+#FLAGGA 0
+#FORMAT PC8
+#SIETYP 4
+#PROGRAM "Fortnox" 3.60.16
+#GEN 20260330
+#FNR 355614
+#FNAMN "RevIL AB"
+#ADRESS "Ingrid Lindegren" "Nackagatan 22 1103" "116 47 Stockholm" "0708-318292" 
+#RAR 0 20250101 20251231
+#RAR -1 20240101 20241231
+#ORGNR 556065-1258
+#OMFATTN 20251231
+#KPTYP EUBAS97
+
+#KONTO 1010 "Balanserade utgifter"
+#SRU 1010 234
+#KONTO 1030 "Patent"
+#SRU 1030 234
+#KONTO 1039 "Ack avskrivn patent"
+#SRU 1039 234
+#KONTO 1060 "HyresrÑtt"
+#SRU 1060 234
+#KONTO 1069 "Ack avskrivn hyresrÑtt"
+#SRU 1069 234
+#KONTO 1070 "Goodwill"
+#SRU 1070 234
+#KONTO 1079 "Ack avskrivn goodwill"
+#SRU 1079 234
+#KONTO 1110 "Byggnader"
+#SRU 1110 237
+#KONTO 1118 "Ack nedskrivn byggnader"
+#SRU 1118 237
+#KONTO 1119 "Ack avskrivn byggnader"
+#SRU 1119 237
+#KONTO 1130 "Mark"
+#SRU 1130 235
+#KONTO 1140 "Tomter, markomr obebyggda"
+#SRU 1140 235
+#KONTO 1150 "MarkanlÑggningar"
+#SRU 1150 237
+#KONTO 1158 "Ack nedskrivn markanlÑggn"
+#SRU 1158 237
+#KONTO 1159 "Ack avskrivn markanlÑggn"
+#SRU 1159 237
+#KONTO 1210 "Maskiner och andra tekniska anlÑggningar"
+#SRU 1210 236
+#KONTO 1211 "Arbetsmaskiner"
+#SRU 1211 236
+#KONTO 1218 "Ack nedskrivn maskiner/tekn anl"
+#SRU 1218 236
+#KONTO 1219 "Ack avskrivn arb.maskiner"
+#SRU 1219 236
+#KONTO 1220 "Inventarier och verktyg"
+#SRU 1220 236
+#KONTO 1221 "Inventarier"
+#SRU 1221 236
+#KONTO 1222 "Byggnadsinventarier"
+#SRU 1222 236
+#KONTO 1223 "Markinventarier"
+#SRU 1223 236
+#KONTO 1225 "Verktyg"
+#SRU 1225 236
+#KONTO 1228 "Ack nedskrivn inv/verktyg"
+#SRU 1228 236
+#KONTO 1229 "Ack avskrivn inv/verktyg"
+#SRU 1229 236
+#KONTO 1240 "Bilar och andra transportmedel"
+#SRU 1240 236
+#KONTO 1241 "Personbilar"
+#SRU 1241 236
+#KONTO 1242 "Lastbilar"
+#SRU 1242 236
+#KONTO 1243 "Truckar"
+#SRU 1243 236
+#KONTO 1244 "Arbetsmaskiner"
+#SRU 1244 236
+#KONTO 1245 "Traktorer"
+#SRU 1245 236
+#KONTO 1246 "Motorcyklar, mopeder och skotrar"
+#SRU 1246 236
+#KONTO 1247 "BÜtar, flygplan och helikoptrar"
+#SRU 1247 236
+#KONTO 1248 "Ack nedskr bilar/transportmedel"
+#SRU 1248 236
+#KONTO 1249 "Ack avskr bilar/transportmedel"
+#SRU 1249 236
+#KONTO 1250 "Datorer"
+#SRU 1250 236
+#KONTO 1251 "Datorer, fîretaget"
+#SRU 1251 236
+#KONTO 1257 "Datorer, personal"
+#SRU 1257 236
+#KONTO 1258 "Ack nedskrivn datorer"
+#SRU 1258 236
+#KONTO 1259 "Ack avskrivn datorer"
+#SRU 1259 236
+#KONTO 1291 "Konst o ej avskrivn invent"
+#SRU 1291 235
+#KONTO 1298 "Ack nedskrivn îvr maskiner/inv"
+#SRU 1298 236
+#KONTO 1311 "Aktier sv dotterfîretag"
+#SRU 1311 230
+#KONTO 1312 "Aktier utl dotterfîretag"
+#SRU 1312 231
+#KONTO 1314 "Aktier/and îvr utl konc.ftg"
+#SRU 1314 231
+#KONTO 1318 "Ack nedskrivn andelar koncern"
+#SRU 1318 231
+#KONTO 1330 "Aktier, andra sv fîretag"
+#SRU 1330 230
+#KONTO 1338 "Ack nedskrivn andelar int.ftg"
+#SRU 1338 230
+#KONTO 1350 "Andelar/vÑrdepapper andra ftg"
+#SRU 1350 233
+#KONTO 1354 "Obligationer, vÑrdepapper"
+#SRU 1354 233
+#KONTO 1358 "Ack nedskrivn andel/vÑrdepapper"
+#SRU 1358 233
+#KONTO 1360 "Finansiella instrument"
+#SRU 1360 233
+#KONTO 1368 "Ack nedskrivn îvr finans instr"
+#SRU 1368 233
+#KONTO 1370 "Uppskjuten skattefordran"
+#SRU 1370 233
+#KONTO 1380 "LÜngfristiga fordringar"
+#SRU 1380 233
+#KONTO 1382 "Fordringar hos anstÑllda"
+#SRU 1382 233
+#KONTO 1383 "Depositioner"
+#SRU 1383 233
+#KONTO 1386 "Fîrutbetald leasingavgift"
+#SRU 1386 2
+#KONTO 1390 "Ack nedskr lÜngfr fordr"
+#SRU 1390 233
+#KONTO 1400 "Lager"
+#SRU 1400 219
+#KONTO 1402 "Varor pÜ vÑg"
+#SRU 1402 219
+#KONTO 1440 "Produkter i arbete"
+#SRU 1440 219
+#KONTO 1470 "PÜgÜende arbete"
+#SRU 1470 219
+#KONTO 1480 "Fîrskott till leverantîr"
+#SRU 1480 219
+#KONTO 1510 "Kundfordringar"
+#SRU 1510 204
+#KONTO 1512 "BelÜnade fordringar"
+#SRU 1512 204
+#KONTO 1515 "OsÑkra kundfordringar"
+#SRU 1515 204
+#KONTO 1580 "Kontokort och kuponger"
+#SRU 1580 204
+#KONTO 1610 "Fîrskott"
+#SRU 1610 220
+#KONTO 1611 "Resefîrskott"
+#SRU 1611 220
+#KONTO 1613 "ôvriga fîrskott"
+#SRU 1613 220
+#KONTO 1619 "ôvr fordringar hos anstÑllda"
+#SRU 1619 220
+#KONTO 1630 "AvrÑkn skatter och avgifter"
+#SRU 1630 220
+#KONTO 1640 "Skattefordringar"
+#SRU 1640 206
+#KONTO 1650 "Fordran moms"
+#SRU 1650 207
+#KONTO 1660 "Kortfr fordringar koncernfîretag"
+#KONTO 1680 "Placering i kortfristiga rÑntepapper"
+#SRU 1680 220
+#KONTO 1681 "UtlÑgg fîr kunder "
+#KONTO 1684 "Fordring hos leverantîr"
+#SRU 1684 220
+#KONTO 1685 "Fordring hos nÑrstÜende"
+#SRU 1685 220
+#KONTO 1690 "îvriga fordringar"
+#KONTO 1710 "Fîrutbetalda hyror"
+#SRU 1710 205
+#KONTO 1720 "Fîrutbetalda leasingavgifte"
+#KONTO 1740 "Fîrutbet rÑnteutgifter"
+#SRU 1740 205
+#KONTO 1750 "Upplupna hyresinkomster"
+#SRU 1750 205
+#KONTO 1760 "Upplupna inkomstrÑntor"
+#SRU 1760 205
+#KONTO 1790 "ôvriga fîrutbetalda kostnader och upplupna intÑkter"
+#SRU 1790 205
+#KONTO 1820 "Obligationer, vÑrdepapper"
+#SRU 1820 203
+#KONTO 1860 "ôvr finansiella instrument"
+#SRU 1860 203
+#KONTO 1869 "Nedskrivn finansiella instr"
+#SRU 1869 203
+#KONTO 1910 "Kassa"
+#SRU 1910 200
+#KONTO 1920 "Skattekonto"
+#SRU 1920 200
+#KONTO 1930 "Fîretagskonto"
+#SRU 1930 200
+#KONTO 1931 "Fîreningssparbanken"
+#KONTO 1932 "LÑnsfîrsÑkringar"
+#KONTO 1933 "Swedbank konto 8150- 5 74 000 019-5"
+#KONTO 1934 "bank konto 90212555881"
+#KONTO 1940 "ôvriga bankkonto"
+#SRU 1940 200
+#KONTO 1980 "Valutakonton"
+#SRU 1980 200
+#KONTO 2081 "Aktiekapital"
+#SRU 2081 350
+#KONTO 2086 "Reservfond"
+#SRU 2086 351
+#KONTO 2091 "Balanserad vinst/fîrlust"
+#SRU 2091 354
+#KONTO 2094 "Egna aktier"
+#SRU 2094 354
+#KONTO 2098 "Vinst/fîrlust fîreg Ür"
+#SRU 2098 354
+#KONTO 2099 "Redovisat resultat"
+#SRU 2099 354
+#KONTO 2118 "Periodiseringsfond TAX 98"
+#SRU 2118 348
+#KONTO 2119 "Periodiseringsfond TAX 99"
+#SRU 2119 349
+#KONTO 2120 "Periodiseringsfond TAX 2000"
+#SRU 2120 340
+#KONTO 2121 "Periodiseringsfond TAX 2001"
+#SRU 2121 341
+#KONTO 2122 "Periodiseringsfond TAX 2002"
+#SRU 2122 342
+#KONTO 2123 "Periodiseringsfond TAX 2003"
+#SRU 2123 343
+#KONTO 2124 "Periodiseringsfond TAX 2004"
+#SRU 2124 344
+#KONTO 2150 "Ack îveravskrivningar"
+#SRU 2150 330
+#KONTO 2151 "Ack îveravskr imm anl.tillg"
+#SRU 2151 330
+#KONTO 2152 "Ack îveravskr pÜ byggn/markanl"
+#SRU 2152 330
+#KONTO 2153 "Ack îveravskr maskiner/inv"
+#SRU 2153 330
+#KONTO 2190 "ôvr obeskattade reserver"
+#SRU 2190 339
+#KONTO 2195 "Valutakursreserv"
+#SRU 2195 337
+#KONTO 2196 "Lagerreserv"
+#SRU 2196 339
+#KONTO 2210 "Avsatt till pensioner"
+#SRU 2210 320
+#KONTO 2211 "AvsÑttningar fîr PRI-pensioner"
+#SRU 2211 320
+#KONTO 2219 "AvsÑttningar fîr îvr pensioner"
+#SRU 2219 320
+#KONTO 2220 "Garantiskulder"
+#SRU 2220 304
+#KONTO 2330 "CheckrÑkningskredit"
+#SRU 2330 329
+#KONTO 2350 "ReverslÜn"
+#SRU 2350 329
+#KONTO 2355 "LÜn i utlÑndsk valuta"
+#SRU 2355 329
+#KONTO 2393 "LÜn frÜn aktieÑgare"
+#SRU 2393 321
+#KONTO 2395 "Andra lÜn i utl valuta"
+#SRU 2395 329
+#KONTO 2399 "ôvr lÜngfristiga skulder"
+#SRU 2399 329
+#KONTO 2420 "Fîrskott frÜn kunder"
+#SRU 2420 310
+#KONTO 2440 "Leverantîrsskulder"
+#SRU 2440 300
+#KONTO 2441 "Lev skuld Krupa Gandhi"
+#KONTO 2445 "Tvistiga LS"
+#SRU 2445 2
+#KONTO 2499 "Andra îvr kortfrist skulder"
+#SRU 2499 300
+#KONTO 2510 "Skatteskuld"
+#SRU 2510 301
+#KONTO 2511 "Slutskatt tax 2011"
+#KONTO 2512 "Slutskatt tax 2012"
+#KONTO 2513 "Slutskatt tax 2013"
+#KONTO 2611 "Utg moms fîrsÑljning 25% sv"
+#SRU 2611 307
+#KONTO 2612 "Utg moms egna uttag 25%"
+#SRU 2612 307
+#KONTO 2613 "Utg moms uthyrning ored"
+#SRU 2613 307
+#KONTO 2614 "Ber moms tjfîrv 25% utl"
+#SRU 2614 307
+#KONTO 2615 "Ber moms varufîrv 25% EU"
+#SRU 2615 307
+#KONTO 2621 "Utg moms fîrsÑljning 12% Sv"
+#SRU 2621 307
+#KONTO 2622 "Utg moms egna uttag 12%"
+#SRU 2622 307
+#KONTO 2624 "Ber moms tjfîrv 12% utl"
+#SRU 2624 307
+#KONTO 2631 "Utg moms fîrsÑljning 6% Sv"
+#SRU 2631 307
+#KONTO 2632 "Utg moms egna uttag 6%"
+#SRU 2632 307
+#KONTO 2634 "Ber moms tjfîrv 6% utl"
+#SRU 2634 307
+#KONTO 2641 "IngÜende moms"
+#SRU 2641 307
+#KONTO 2642 "Vilande ingÜende moms"
+#KONTO 2645 "IngÜende moms utland"
+#SRU 2645 307
+#KONTO 2646 "Ing moms uthyrning"
+#SRU 2646 307
+#KONTO 2648 "Vilande ingÜende moms"
+#KONTO 2650 "Moms redovisningskonto"
+#SRU 2650 307
+#KONTO 2651 "Moms"
+#KONTO 2660 "SÑrskilda punktskatter"
+#SRU 2660 301
+#KONTO 2710 "Personalens kÑllskatt"
+#SRU 2710 301
+#KONTO 2730 "Lagstadgade sociala avgifter"
+#SRU 2730 2
+#KONTO 2731 "AvrÑkn sociala avgifter"
+#SRU 2731 301
+#KONTO 2732 "AvrÑkn sÑrsk lînesk pens"
+#SRU 2732 301
+#KONTO 2750 "UtmÑtning i lîn mm"
+#SRU 2750 319
+#KONTO 2790 "ôvriga lîneavdrag"
+#SRU 2790 319
+#KONTO 2792 "Lînsparande"
+#SRU 2792 319
+#KONTO 2793 "KollektivfîrsÑkring mm"
+#SRU 2793 319
+#KONTO 2794 "Fackfîreningsavgifter"
+#SRU 2794 319
+#KONTO 2795 "Granskningsavgifter"
+#SRU 2795 319
+#KONTO 2840 "LÜneskulder"
+#SRU 2840 319
+#KONTO 2850 "AvrÑkn skatter/avgifter"
+#SRU 2850 319
+#KONTO 2890 "Lîneskuld Erik Wennberg"
+#SRU 2890 319
+#KONTO 2891 "KFM"
+#KONTO 2893 "Skulder nÑrstÜende personer"
+#SRU 2893 321
+#KONTO 2894 "Birgitta Myrle"
+#KONTO 2895 "Lindered "
+#KONTO 2910 "Upplupna lîner"
+#SRU 2910 305
+#KONTO 2920 "Upplupna semlîner"
+#SRU 2920 305
+#KONTO 2921 "Upplupna soc.avg sem.lîn"
+#SRU 2921 305
+#KONTO 2941 "Upplupna sociala avgifter"
+#SRU 2941 305
+#KONTO 2950 "Upplupna avtalade soc avg"
+#SRU 2950 305
+#KONTO 2960 "Upplupna utgiftsrÑntor"
+#SRU 2960 305
+#KONTO 2970 "Fîrutbetalda hyresinkomster"
+#SRU 2970 305
+#KONTO 2990 "ôvr interimsskulder"
+#SRU 2990 305
+#KONTO 2995 "Skuld inkomna fîljesedlar"
+#SRU 2995 305
+#KONTO 2999 "OBS konto"
+#SRU 2999 305
+#KONTO 3020 "FîrsÑljning VMB varor"
+#SRU 3020 400
+#KONTO 3028 "Positiv VM omfîringskonto"
+#SRU 3028 400
+#KONTO 3030 "Positiv VM"
+#SRU 3030 400
+#KONTO 3041 "FîrsÑljn tjÑnst 25% sv"
+#SRU 3041 400
+#KONTO 3042 "FîrsÑljn tjÑnst 12% sv"
+#SRU 3042 400
+#KONTO 3043 "FîrsÑljn tjÑnst 6% sv"
+#SRU 3043 400
+#KONTO 3044 "FîrsÑljn tjÑnst sv momsfri"
+#SRU 3044 400
+#KONTO 3045 "FîrsÑlj tjÑnst utanfîr EU"
+#SRU 3045 400
+#KONTO 3046 "FîrsÑljn tjÑnst till EU"
+#SRU 3046 400
+#KONTO 3048 "FîrsÑljn tjÑnst EU momsfri"
+#SRU 3048 400
+#KONTO 3051 "FîrsÑljn varor 25% sv"
+#SRU 3051 400
+#KONTO 3052 "FîrsÑljn varor 12% sv"
+#SRU 3052 400
+#KONTO 3053 "FîrsÑljn varor 6% sv"
+#SRU 3053 400
+#KONTO 3054 "FîrsÑljn varor sv momsfri"
+#SRU 3054 400
+#KONTO 3055 "FîrsÑljn varor utanfîr EU"
+#SRU 3055 400
+#KONTO 3056 "FîrsÑljn varor till EU"
+#SRU 3056 400
+#KONTO 3058 "FîrsÑljn varor EU momsfri"
+#SRU 3058 400
+#KONTO 3059 "Momspl uttag av fast.tj"
+#SRU 3059 400
+#KONTO 3062 "Fîrs varor nÑrst fîretag"
+#SRU 3062 400
+#KONTO 3099 "îvriga intÑkter"
+#KONTO 3100 "HyresintÑkt skattepl"
+#SRU 3100 400
+#KONTO 3510 "Emballage"
+#SRU 3510 400
+#KONTO 3520 "Frakter"
+#SRU 3520 400
+#KONTO 3521 "Frakter export"
+#SRU 3521 400
+#KONTO 3522 "Frakter EU"
+#SRU 3522 400
+#KONTO 3530 "Fakt tull och spedition"
+#SRU 3530 400
+#KONTO 3540 "Faktureringsavgifter"
+#SRU 3540 400
+#KONTO 3541 "Faktureringsavgifter export"
+#SRU 3541 400
+#KONTO 3542 "Faktureringsavgifter EU"
+#SRU 3542 400
+#KONTO 3550 "Fakt resekostnader"
+#SRU 3550 400
+#KONTO 3561 "Fakt kostn moderftg"
+#SRU 3561 400
+#KONTO 3562 "Fakt kostn dotterftg"
+#SRU 3562 400
+#KONTO 3563 "Fakt kostn andra koncernftg"
+#SRU 3563 400
+#KONTO 3590 "ôvr fakt kostnader"
+#SRU 3590 400
+#KONTO 3610 "FîrsÑljning material"
+#SRU 3610 400
+#KONTO 3670 "IntÑkt vÑrdepapper"
+#SRU 3670 400
+#KONTO 3671 "FîrsÑljning vÑrdepapper"
+#SRU 3671 400
+#KONTO 3672 "Utdeln vÑrdepapper"
+#SRU 3672 400
+#KONTO 3679 "ôvr intÑkter vÑrdepapper"
+#SRU 3679 400
+#KONTO 3690 "ôvriga sidointÑkter"
+#SRU 3690 400
+#KONTO 3731 "Kassarabatter"
+#SRU 3731 400
+#KONTO 3736 "Kassarabatter export"
+#SRU 3736 400
+#KONTO 3737 "Kassarabatter EU"
+#SRU 3737 400
+#KONTO 3740 "ôres- och kronutjÑmning"
+#SRU 3740 400
+#KONTO 3840 "Aktiverat arbete (material)"
+#SRU 3840 402
+#KONTO 3850 "Aktiverat arbete (omkostnader)"
+#SRU 3850 402
+#KONTO 3870 "Aktiverat arbete (personal)"
+#SRU 3870 402
+#KONTO 3911 "HyresintÑkter"
+#SRU 3911 401
+#KONTO 3921 "ProvisionsintÑkter"
+#SRU 3921 401
+#KONTO 3950 "ètervunna kundfîrluster"
+#SRU 3950 401
+#KONTO 3960 "Kursvinst rîrelsen"
+#SRU 3960 401
+#KONTO 3970 "Vinst avyttr imm/mat anl.tillg"
+#SRU 3970 552
+#KONTO 3972 "Vinst avyttr fastigheter"
+#SRU 3972 552
+#KONTO 3973 "Vinst avyttr maskiner/inv"
+#SRU 3973 552
+#KONTO 3985 "ErhÜllna statliga bidrag"
+#SRU 3985 401
+#KONTO 3987 "ErhÜllna kommunala bidrag"
+#SRU 3987 401
+#KONTO 3989 "ôvriga erhÜllna bidrag"
+#SRU 3989 401
+#KONTO 3990 "ôvr ersÑttn och intÑker"
+#SRU 3990 401
+#KONTO 3994 "FîrsÑkringsersÑttningar"
+#SRU 3994 401
+#KONTO 4010 "Inkîp materiel och varor"
+#SRU 4010 500
+#KONTO 4020 "Inkîp VMB varor"
+#SRU 4020 500
+#KONTO 4028 "Negativ VM omfîringskonto"
+#SRU 4028 500
+#KONTO 4030 "Negativ VM"
+#SRU 4030 500
+#KONTO 4055 "Trepartsfîrv varor fr EU"
+#SRU 4055 500
+#KONTO 4056 "Inkîp varor 25% EU"
+#SRU 4056 500
+#KONTO 4057 "Inkîp varor 12% EU"
+#SRU 4057 500
+#KONTO 4058 "Inkîp varor EU momsfri"
+#SRU 4058 500
+#KONTO 4100 "Kostn uthyrn lokal sk.pl"
+#SRU 4100 500
+#KONTO 4535 "Inkîp av tjÑnster frÜn annat EU-land, 25 % "
+#KONTO 4599 "Justering, omvÑnd moms"
+#SRU 4599 7511
+#KONTO 4600 "Legoarbeten, underentrepr"
+#SRU 4600 501
+#KONTO 4731 "ErhÜllna kassarabatter"
+#SRU 4731 500
+#KONTO 4733 "ErhÜllet aktivitetsstîd"
+#SRU 4733 500
+#KONTO 4940 "FîrÑndr produkter i arbete"
+#SRU 4940 509
+#KONTO 4950 "FîrÑndr lager fÑrdigvaror"
+#SRU 4950 509
+#KONTO 4970 "FîrÑndr pÜg arbete"
+#SRU 4970 509
+#KONTO 4980 "FîrÑndr VÑrdepapper"
+#SRU 4980 509
+#KONTO 4981 "SÜlda VÑrdepappers ansk.kostn"
+#SRU 4981 509
+#KONTO 4987 "Nedskrivn VÑrdepapper"
+#SRU 4987 509
+#KONTO 4990 "LagerfîrÑndring"
+#SRU 4990 509
+#KONTO 5010 "Lokalhyra"
+#SRU 5010 528
+#KONTO 5013 "hyra fîr lagerlokal"
+#KONTO 5020 "El hyrd lokal"
+#SRU 5020 528
+#KONTO 5030 "VÑrme hyrd lokal"
+#SRU 5030 528
+#KONTO 5050 "Lokaltillbehîr hyrd lokal"
+#SRU 5050 528
+#KONTO 5060 "StÑdning, renhÜllning hyrd lokal"
+#SRU 5060 528
+#KONTO 5070 "Reparationer hyrd lokal"
+#SRU 5070 528
+#KONTO 5090 "ôvr kostnader hyrd lokal"
+#SRU 5090 528
+#KONTO 5120 "Belysning"
+#SRU 5120 528
+#KONTO 5130 "VÑrme"
+#SRU 5130 528
+#KONTO 5132 "Sotning"
+#SRU 5132 528
+#KONTO 5140 "Vatten och avlopp"
+#SRU 5140 528
+#KONTO 5160 "RenhÜlln och stÑdning"
+#SRU 5160 528
+#KONTO 5170 "Rep och underhÜll fastighet"
+#SRU 5170 526
+#KONTO 5191 "Fastighetsskatt"
+#SRU 5191 528
+#KONTO 5192 "FîrsÑkringsprem fastighet"
+#SRU 5192 528
+#KONTO 5193 "Fastighetsskîtsel och fîrvaltn"
+#SRU 5193 528
+#KONTO 5199 "ôvr fastighetskostnader"
+#SRU 5199 528
+#KONTO 5210 "Hyra arbetsmaskiner"
+#SRU 5210 529
+#KONTO 5220 "Hyra inventarier"
+#SRU 5220 529
+#KONTO 5290 "ôvr hyreskostn anl tillg"
+#SRU 5290 529
+#KONTO 5310 "El fîr drift"
+#SRU 5310 530
+#KONTO 5380 "Vatten"
+#SRU 5380 530
+#KONTO 5390 "ôvriga brÑnslen"
+#SRU 5390 530
+#KONTO 5410 "Fîrbrukningsinventarier"
+#SRU 5410 531
+#KONTO 5420 "Programvaror"
+#SRU 5420 3
+#KONTO 5460 "Fîrbrukningsmaterial"
+#SRU 5460 531
+#KONTO 5480 "ArbetsklÑder o skyddsmtrl"
+#SRU 5480 531
+#KONTO 5500 "Reparation och underhÜll"
+#SRU 5500 530
+#KONTO 5600 "Kostnader fîr transportmedel"
+#SRU 5600 3
+#KONTO 5610 "Personbilskostnader"
+#SRU 5610 3
+#KONTO 5611 "Drivmedel personbilar"
+#SRU 5611 536
+#KONTO 5612 "Skatt fîrsÑkr personbilar"
+#SRU 5612 536
+#KONTO 5613 "Reparation personbilar"
+#SRU 5613 536
+#KONTO 5615 "Leasingavg personbilar"
+#SRU 5615 536
+#KONTO 5616 "TrÑngselskatt"
+#SRU 5616 3
+#KONTO 5690 "ôvr transportmedel"
+#SRU 5690 538
+#KONTO 5710 "Frakt och transport"
+#SRU 5710 538
+#KONTO 5720 "Tull- och speditionskost"
+#SRU 5720 538
+#KONTO 5800 "Resekostnader"
+#SRU 5800 538
+#KONTO 5830 "kost och logi"
+#KONTO 5900 "PR & Reklam"
+#KONTO 5910 "Annonsering"
+#SRU 5910 541
+#KONTO 5930 "Reklamtrycksaker"
+#SRU 5930 541
+#KONTO 5940 "UtstÑllning och mÑssor"
+#SRU 5940 541
+#KONTO 5990 "ôvrig reklam"
+#SRU 5990 541
+#KONTO 6010 "Kataloger och prislistor"
+#SRU 6010 530
+#KONTO 6040 "Kontokortsavgifter"
+#SRU 6040 530
+#KONTO 6050 "FîrsÑljningsprovision"
+#SRU 6050 530
+#KONTO 6060 "KreditfîrsÑljningskostnad"
+#SRU 6060 530
+#KONTO 6063 "KreditfîrsÑkringspremier"
+#SRU 6063 530
+#KONTO 6064 "Factoringavgifter"
+#SRU 6064 530
+#KONTO 6069 "ôvr kreditfîrsÑljnkostnader"
+#SRU 6069 530
+#KONTO 6071 "Repr avdr.gill"
+#SRU 6071 530
+#KONTO 6072 "Repr ej avdr.gill"
+#SRU 6072 530
+#KONTO 6080 "Bankgarantier"
+#SRU 6080 530
+#KONTO 6090 "ôvr fîrsÑljningskostnader"
+#SRU 6090 530
+#KONTO 6100 "Kontorsmaterial och trycksaker"
+#SRU 6100 3
+#KONTO 6110 "Kontorsmaterial"
+#SRU 6110 530
+#KONTO 6150 "Trycksaker"
+#SRU 6150 530
+#KONTO 6211 "Fast telefoni"
+#SRU 6211 530
+#KONTO 6212 "Mobiltelefon"
+#SRU 6212 530
+#KONTO 6213 "Mobilsîkning"
+#SRU 6213 530
+#KONTO 6214 "Fax"
+#SRU 6214 530
+#KONTO 6230 "Datakommunikation"
+#KONTO 6250 "Porto"
+#SRU 6250 530
+#KONTO 6310 "FîretagsfîrsÑkringar"
+#SRU 6310 530
+#KONTO 6320 "SjÑlvrisker"
+#SRU 6320 530
+#KONTO 6350 "Kundfîrluster"
+#SRU 6350 530
+#KONTO 6390 "ôvriga riskkostnader"
+#SRU 6390 530
+#KONTO 6410 "Styrelsearvode"
+#SRU 6410 530
+#KONTO 6420 "Revisionsarvode"
+#SRU 6420 530
+#KONTO 6430 "Management fees"
+#SRU 6430 530
+#KONTO 6440 "èrsredovisn, delÜrsrapporter"
+#SRU 6440 530
+#KONTO 6450 "BolagsstÑmma"
+#SRU 6450 530
+#KONTO 6490 "ôvr fîrvaltningskostnader"
+#SRU 6490 530
+#KONTO 6530 "RedovisningstjÑnster"
+#SRU 6530 530
+#KONTO 6540 "IT-tjÑnster"
+#SRU 6540 530
+#KONTO 6550 "Konsultarvoden"
+#SRU 6550 530
+#KONTO 6570 "Bankkostnader"
+#SRU 6570 530
+#KONTO 6580 "Advokatkostnader"
+#SRU 6580 530
+#KONTO 6590 "ôvr frÑmmande tjÑnster"
+#SRU 6590 530
+#KONTO 6800 "Inhyrd personal"
+#SRU 6800 530
+#KONTO 6970 "Tidningar, facklitteratur"
+#SRU 6970 530
+#KONTO 6981 "Fîreningsavg avdr gill"
+#SRU 6981 530
+#KONTO 6982 "Fîreningsavg ej avdr gill"
+#SRU 6982 530
+#KONTO 6991 "ôvr avdr gill kostn"
+#SRU 6991 530
+#KONTO 6992 "ôvr ej avdr gill kostn"
+#SRU 6992 530
+#KONTO 6993 "LÑmnade bidrag och gÜvor"
+#SRU 6993 530
+#KONTO 7010 "Lîn kollektivanstÑllda"
+#SRU 7010 512
+#KONTO 7013 "Lîn kollektivanst utland"
+#SRU 7013 512
+#KONTO 7081 "Sjuklîn kollektivanstÑllda"
+#SRU 7081 512
+#KONTO 7082 "Semesterlîn"
+#SRU 7082 512
+#KONTO 7083 "FîrÑldraers kollektivanstÑllda"
+#SRU 7083 512
+#KONTO 7089 "ôvr lîner kollektivanst ej arb tid"
+#SRU 7089 512
+#KONTO 7090 "FîrÑndr sem lîneskuld"
+#SRU 7090 512
+#KONTO 7210 "Lîn tjÑnstemÑn"
+#SRU 7210 512
+#KONTO 7211 "Lîn Extra sÑljare"
+#SRU 7211 512
+#KONTO 7213 "Lîn tjÑnstemÑn, utland"
+#SRU 7213 512
+#KONTO 7220 "Lîn fîretagsledare"
+#SRU 7220 512
+#KONTO 7223 "Lîn fîretagsledare, utland"
+#SRU 7223 512
+#KONTO 7225 "Lîn fîretagsledare, lîneskatt"
+#SRU 7225 512
+#KONTO 7281 "Sjuklîn tjÑnstemÑn"
+#SRU 7281 512
+#KONTO 7282 "Sjuklîner till ftgledare"
+#SRU 7282 512
+#KONTO 7283 "FîrÑldraers tjÑnstemÑn"
+#SRU 7283 512
+#KONTO 7284 "FîrÑldraers ftgledare"
+#SRU 7284 512
+#KONTO 7285 "Semesterlîn tjÑnstemÑn"
+#SRU 7285 512
+#KONTO 7286 "Semesterlîn ftgledare"
+#SRU 7286 512
+#KONTO 7288 "ôvr lîner tjÑnstemÑn ej arb tid"
+#SRU 7288 512
+#KONTO 7289 "ôvr lîner ftgledare ej arb tid"
+#SRU 7289 512
+#KONTO 7290 "FîrÑndr sem lîneskuld"
+#SRU 7290 512
+#KONTO 7310 "Kontanta extra ersÑttn"
+#SRU 7310 514
+#KONTO 7321 "Skattefria trakt Sverige"
+#SRU 7321 514
+#KONTO 7322 "Skattepl trakt Sverige"
+#SRU 7322 514
+#KONTO 7323 "Skattefria trakt utland"
+#SRU 7323 514
+#KONTO 7324 "Skattepl trakt utland"
+#SRU 7324 514
+#KONTO 7331 "Skattefri bilersÑttning"
+#SRU 7331 514
+#KONTO 7332 "Skattepl bilersÑttning"
+#SRU 7332 514
+#KONTO 7380 "kostnader fîr fîrmÜn till anstÑllda"
+#SRU 7380 3
+#KONTO 7381 "Kostn fîr fri bostad"
+#SRU 7381 514
+#KONTO 7382 "Kostn fria/subv mÜltider"
+#SRU 7382 514
+#KONTO 7385 "Kostn fîr fri bil"
+#SRU 7385 514
+#KONTO 7389 "ôvriga kostn naturafîrm"
+#SRU 7389 514
+#KONTO 7390 "ôvr kostnadsersÑttningar"
+#SRU 7390 514
+#KONTO 7399 "Motkontering av fîrmÜn"
+#SRU 7399 514
+#KONTO 7411 "Kollektiv pensionsfîrsÑkr"
+#SRU 7411 524
+#KONTO 7412 "Indiv pensionsfîrsÑkring"
+#SRU 7412 524
+#KONTO 7490 "ôvriga pensionskostnader"
+#SRU 7490 524
+#KONTO 7510 "Arbetsgivaravgifter"
+#SRU 7510 520
+#KONTO 7519 "Soc.avgifter semesterlîn"
+#SRU 7519 520
+#KONTO 7531 "Lîneskatt"
+#SRU 7531 520
+#KONTO 7533 "SÑrsk lîneskatt pensionsk"
+#SRU 7533 520
+#KONTO 7570 "AMF enl avtal"
+#SRU 7570 511
+#KONTO 7583 "GruppolycksfallsfîrsÑkringspremier"
+#SRU 7583 520
+#KONTO 7589 "ôvr gruppfîrsÑkringspremier"
+#SRU 7589 520
+#KONTO 7610 "Utbildning"
+#SRU 7610 527
+#KONTO 7620 "Sjuk- och hÑlsovÜrd"
+#SRU 7620 527
+#KONTO 7621 "sjuk- och hÑlsovÜrd avdragsgill "
+#KONTO 7650 "SjuklînefîrsÑkring"
+#SRU 7650 527
+#KONTO 7690 "ôvr personalkostnader"
+#SRU 7690 527
+#KONTO 7699 "ôvriga personalkostnader"
+#SRU 7699 3
+#KONTO 7813 "Avskrivningar patent"
+#SRU 7813 561
+#KONTO 7816 "Avskrivningar hyresrÑtt"
+#SRU 7816 561
+#KONTO 7817 "Avskrivningar goodwill"
+#SRU 7817 561
+#KONTO 7821 "Avskrivn byggnader"
+#SRU 7821 560
+#KONTO 7822 "Avskrivn byggnadsinv"
+#SRU 7822 560
+#KONTO 7824 "Avskrivn markanlÑggn"
+#SRU 7824 560
+#KONTO 7831 "Avskrivn arbetsmaskiner"
+#SRU 7831 559
+#KONTO 7832 "Avskrivn inventarier"
+#SRU 7832 559
+#KONTO 7834 "Avskrivn bilar"
+#SRU 7834 559
+#KONTO 7960 "Kursfîrluster"
+#SRU 7960 530
+#KONTO 7972 "Fîrlust avyttr fastigheter"
+#SRU 7972 556
+#KONTO 7973 "Fîrlust avyttr maskiner/inv"
+#SRU 7973 556
+#KONTO 7974 "Fîrlust avyttr aktier/andel"
+#SRU 7974 556
+#KONTO 8012 "Utdeln andelar dotterbolag"
+#SRU 8012 564
+#KONTO 8014 "Koncernbidrag"
+#SRU 8014 564
+#KONTO 8019 "ôvr utdeln andelar koncernftg"
+#SRU 8019 564
+#KONTO 8020 "Resultat frÜn fîrsÑljning av andelar i koncernfîretag"
+#KONTO 8210 "Utdeln andelar andra fîretag"
+#SRU 8210 565
+#KONTO 8230 "Valutakursdiff lÜngfr fordr"
+#SRU 8230 566
+#KONTO 8270 "Nedskr andel/lf fordr îvr ftg"
+#SRU 8270 570
+#KONTO 8280 "èterf nedskr and/lf ford î ftg"
+#SRU 8280 571
+#KONTO 8300 "RÑnteintÑkter"
+#SRU 8300 568
+#KONTO 8301 "IntÑkter skattekonto"
+#KONTO 8313 "RÑnteintÑkter kundfordringar"
+#SRU 8313 568
+#KONTO 8314 "Skattefria rÑnteintÑkter"
+#SRU 8314 3
+#KONTO 8331 "Valutakursvinster"
+#SRU 8331 566
+#KONTO 8336 "Valutakursfîrluster"
+#SRU 8336 567
+#KONTO 8390 "ôvr finansiella intÑkter"
+#SRU 8390 568
+#KONTO 8400 "RÑntekostnader"
+#SRU 8400 569
+#KONTO 8401 "RÑnta skattekonto"
+#KONTO 8422 "RÑntekostnader levskulder"
+#SRU 8422 569
+#KONTO 8423 "RÑnta skattekonto"
+#KONTO 8431 "Valutakursvinst skulder"
+#SRU 8431 566
+#KONTO 8436 "Valutakursfîrlust skulder"
+#SRU 8436 567
+#KONTO 8490 "ôvr finansiella kostnader"
+#SRU 8490 569
+#KONTO 8811 "AvsÑttning per fond"
+#SRU 8811 586
+#KONTO 8819 "èterfîring av per fond"
+#SRU 8819 589
+#KONTO 8850 "Avskrivn îver/under plan"
+#SRU 8850 578
+#KONTO 8896 "FîrÑndring lagerreserv"
+#SRU 8896 593
+#KONTO 8910 "èrets skattekostnad"
+#SRU 8910 598
+#KONTO 8999 "Redovisat resultat"
+#SRU 8999 596
+
+#DIM 1 "KostnadsstÑlle"
+#DIM 6 "Projekt"
+#OBJEKT 6 "1" "avstÑmning bank "
+#OBJEKT 6 "2" "skattefrÜgor "
+#OBJEKT 6 "3" "iKredit "
+#OBJEKT 6 "4" "Dirgni Development"
+#OBJEKT 6 "5" "Torkapparater "
+
+#IB 0 1210 54500 0
+#UB 0 1210 54500 0
+#IB 0 1221 83860.39 0
+#UB 0 1221 83860.39 0
+#IB 0 1229 -61060.39 0
+#UB 0 1229 -61060.39 0
+#IB 0 1350 188596 0
+#UB 0 1350 188596 0
+#IB 0 1386 120092.96 0
+#UB 0 1386 53305.96 0
+#IB 0 1510 1043895 0
+#UB 0 1510 311269 0
+#IB 0 1630 -19786 0
+#UB 0 1630 -15 0
+#IB 0 1660 265136 0
+#UB 0 1660 265136 0
+#IB 0 1684 0 0
+#UB 0 1684 0 0
+#IB 0 1790 1794231.2 0
+#UB 0 1790 1794231.2 0
+#IB 0 1930 568640.31 0
+#UB 0 1930 1262367.31 0
+#IB 0 2081 -100000 0
+#UB 0 2081 -100000 0
+#IB 0 2091 -937552.85 0
+#UB 0 2091 -937552.85 0
+#IB 0 2099 -351594.9 0
+#UB 0 2099 -351594.9 0
+#IB 0 2118 -500000 0
+#UB 0 2118 -500000 0
+#IB 0 2119 -200000 0
+#UB 0 2119 -200000 0
+#IB 0 2120 -250000 0
+#UB 0 2120 -250000 0
+#IB 0 2123 -110000 0
+#UB 0 2123 -110000 0
+#IB 0 2124 -130000 0
+#UB 0 2124 -130000 0
+#IB 0 2393 0 0
+#UB 0 2393 -3008.14 0
+#IB 0 2440 -154874.43 0
+#UB 0 2440 -170785.65 0
+#IB 0 2510 -81146 0
+#UB 0 2510 -9675 0
+#IB 0 2611 40549.25 0
+#UB 0 2611 -237174.58 0
+#IB 0 2641 0 0
+#UB 0 2641 51790.82 0
+#IB 0 2650 -247137.4 0
+#UB 0 2650 -0.4 0
+#IB 0 2840 -872500 0
+#UB 0 2840 -872500 0
+#IB 0 2850 -209936.67 0
+#UB 0 2850 -209936.67 0
+#IB 0 2893 36556.12 0
+#UB 0 2893 886138.05 0
+#IB 0 2999 29531.41 0
+#UB 0 2999 62063.63 0
+#PSALDO 0 202508 1386 {} -66787 0
+#PSALDO 0 202501 1510 {} -130000 0
+#PSALDO 0 202502 1510 {} -146250 0
+#PSALDO 0 202503 1510 {} -50000 0
+#PSALDO 0 202504 1510 {} -281876 0
+#PSALDO 0 202506 1510 {} 690800 0
+#PSALDO 0 202507 1510 {} -49986 0
+#PSALDO 0 202508 1510 {} -244710 0
+#PSALDO 0 202509 1510 {} 106771 0
+#PSALDO 0 202510 1510 {} -359750 0
+#PSALDO 0 202511 1510 {} 72625 0
+#PSALDO 0 202512 1510 {} -340250 0
+#PSALDO 0 202501 1630 {} 22528 0
+#PSALDO 0 202502 1630 {} 5 0
+#PSALDO 0 202503 1630 {} -64261 0
+#PSALDO 0 202504 1630 {} -3617 0
+#PSALDO 0 202505 1630 {} 65160 0
+#PSALDO 0 202508 1630 {} -247137 0
+#PSALDO 0 202509 1630 {} 249749 0
+#PSALDO 0 202510 1630 {} -2032 0
+#PSALDO 0 202511 1630 {} -624 0
+#PSALDO 0 202503 1684 {} 0 0
+#PSALDO 0 202501 1930 {} 10844 0
+#PSALDO 0 202502 1930 {} 92157 0
+#PSALDO 0 202503 1930 {} 10012 0
+#PSALDO 0 202504 1930 {} 330054 0
+#PSALDO 0 202505 1930 {} -243627 0
+#PSALDO 0 202506 1930 {} -439 0
+#PSALDO 0 202507 1930 {} 288832.57 0
+#PSALDO 0 202508 1930 {} 295128 0
+#PSALDO 0 202509 1930 {} -414458.86 0
+#PSALDO 0 202510 1930 {} 117799 0
+#PSALDO 0 202511 1930 {} 66904.22 0
+#PSALDO 0 202512 1930 {} 140521.07 0
+#PSALDO 0 202504 2393 {} -658.78 0
+#PSALDO 0 202505 2393 {} -401.64 0
+#PSALDO 0 202506 2393 {} -172 0
+#PSALDO 0 202507 2393 {} -574.64 0
+#PSALDO 0 202509 2393 {} -454.83 0
+#PSALDO 0 202510 2393 {} -562.25 0
+#PSALDO 0 202511 2393 {} -184 0
+#PSALDO 0 202501 2440 {} 35672 0
+#PSALDO 0 202502 2440 {} -10108 0
+#PSALDO 0 202503 2440 {} -48349 0
+#PSALDO 0 202504 2440 {} -11725 0
+#PSALDO 0 202505 2440 {} 65124 0
+#PSALDO 0 202506 2440 {} -18550 0
+#PSALDO 0 202507 2440 {} 3344 0
+#PSALDO 0 202508 2440 {} 3403 0
+#PSALDO 0 202509 2440 {} -28202.5 0
+#PSALDO 0 202510 2440 {} 4632.5 0
+#PSALDO 0 202511 2440 {} 7210.78 0
+#PSALDO 0 202512 2440 {} -18363 0
+#PSALDO 0 202501 2510 {} 7208 0
+#PSALDO 0 202503 2510 {} 64263 0
+#PSALDO 0 202504 2611 {} -16875 0
+#PSALDO 0 202506 2611 {} -138160 0
+#PSALDO 0 202507 2611 {} -53463.83 0
+#PSALDO 0 202508 2611 {} -17675 0
+#PSALDO 0 202509 2611 {} -27075 0
+#PSALDO 0 202510 2611 {} 20825 0
+#PSALDO 0 202511 2611 {} -50025 0
+#PSALDO 0 202512 2611 {} 4725 0
+#PSALDO 0 202501 2641 {} 3307.51 0
+#PSALDO 0 202502 2641 {} 1659.08 0
+#PSALDO 0 202503 2641 {} 12331.32 0
+#PSALDO 0 202504 2641 {} 4109.57 0
+#PSALDO 0 202505 2641 {} 2122.4 0
+#PSALDO 0 202506 2641 {} 3592.26 0
+#PSALDO 0 202507 2641 {} 2080.26 0
+#PSALDO 0 202508 2641 {} 2186.89 0
+#PSALDO 0 202509 2641 {} 9229.82 0
+#PSALDO 0 202510 2641 {} 1136.32 0
+#PSALDO 0 202511 2641 {} 1728.92 0
+#PSALDO 0 202512 2641 {} 8306.47 0
+#PSALDO 0 202508 2650 {} 247137 0
+#PSALDO 0 202501 2893 {} 9626.38 0
+#PSALDO 0 202502 2893 {} 44696.21 0
+#PSALDO 0 202503 2893 {} 23300 0
+#PSALDO 0 202504 2893 {} 26408 0
+#PSALDO 0 202505 2893 {} 100000 0
+#PSALDO 0 202507 2893 {} 48299.34 0
+#PSALDO 0 202508 2893 {} 50000 0
+#PSALDO 0 202509 2893 {} 170559 0
+#PSALDO 0 202510 2893 {} 125885 0
+#PSALDO 0 202511 2893 {} 100808 0
+#PSALDO 0 202512 2893 {} 150000 0
+#PSALDO 0 202501 2999 {} 20534 0
+#PSALDO 0 202507 2999 {} 3055.43 0
+#PSALDO 0 202508 2999 {} 1412 0
+#PSALDO 0 202509 2999 {} 2203.86 0
+#PSALDO 0 202511 2999 {} 4340 0
+#PSALDO 0 202512 2999 {} 986.93 0
+#PSALDO 0 202504 3041 {} -37500 0
+#PSALDO 0 202506 3041 {} -552640 0
+#PSALDO 0 202507 3041 {} -175300 0
+#PSALDO 0 202508 3041 {} -43500 0
+#PSALDO 0 202509 3041 {} -83300 0
+#PSALDO 0 202510 3041 {} 83300 0
+#PSALDO 0 202511 3041 {} -144200 0
+#PSALDO 0 202512 3041 {} 110500 0
+#PSALDO 0 202504 3051 {} -30000 0
+#PSALDO 0 202506 3051 {} 0 0
+#PSALDO 0 202507 3051 {} -38555.3 0
+#PSALDO 0 202508 3051 {} -27200 0
+#PSALDO 0 202509 3051 {} -25000 0
+#PSALDO 0 202511 3051 {} -79900 0
+#PSALDO 0 202512 3051 {} -91600 0
+#PSALDO 0 202503 3740 {} -0.63 0
+#PSALDO 0 202504 3740 {} 0.75 0
+#PSALDO 0 202505 3740 {} -0.38 0
+#PSALDO 0 202506 3740 {} -0.13 0
+#PSALDO 0 202507 3740 {} -0.25 0
+#PSALDO 0 202508 3740 {} -0.13 0
+#PSALDO 0 202509 3740 {} -0.25 0
+#PSALDO 0 202510 3740 {} 0.12 0
+#PSALDO 0 202511 3740 {} -0.25 0
+#PSALDO 0 202512 3740 {} 0.18 0
+#PSALDO 0 202512 5013 {} 2477.15 0
+#PSALDO 0 202501 5420 {} 738.5 0
+#PSALDO 0 202502 5420 {} 351.25 0
+#PSALDO 0 202503 5420 {} 387.25 0
+#PSALDO 0 202504 5420 {} 405.25 0
+#PSALDO 0 202505 5420 {} 351.25 0
+#PSALDO 0 202506 5420 {} 441.25 0
+#PSALDO 0 202507 5420 {} 351.25 0
+#PSALDO 0 202508 5420 {} 423.25 0
+#PSALDO 0 202509 5420 {} 351.25 0
+#PSALDO 0 202510 5420 {} 674.25 0
+#PSALDO 0 202511 5420 {} 59.25 0
+#PSALDO 0 202512 5420 {} 183.25 0
+#PSALDO 0 202501 5612 {} 1638 0
+#PSALDO 0 202503 5612 {} 1707 0
+#PSALDO 0 202507 5612 {} 1638 0
+#PSALDO 0 202501 5615 {} 6633.03 0
+#PSALDO 0 202502 5615 {} 6668.99 0
+#PSALDO 0 202503 5615 {} 6589.99 0
+#PSALDO 0 202504 5615 {} 6634.77 0
+#PSALDO 0 202505 5615 {} 6634.77 0
+#PSALDO 0 202506 5615 {} 6634.77 0
+#PSALDO 0 202507 5615 {} 6634.77 0
+#PSALDO 0 202508 5615 {} 44086.89 0
+#PSALDO 0 202509 5615 {} 2180.88 0
+#PSALDO 0 202510 5615 {} 2453.44 0
+#PSALDO 0 202511 5615 {} 2445.3 0
+#PSALDO 0 202512 5615 {} 2449.8 0
+#PSALDO 0 202506 6064 {} 309 0
+#PSALDO 0 202501 6230 {} 607.96 0
+#PSALDO 0 202502 6230 {} 505.68 0
+#PSALDO 0 202503 6230 {} 1021.07 0
+#PSALDO 0 202504 6230 {} 751.66 0
+#PSALDO 0 202505 6230 {} 760.96 0
+#PSALDO 0 202506 6230 {} 1675.6 0
+#PSALDO 0 202507 6230 {} 655.1 0
+#PSALDO 0 202508 6230 {} 619.1 0
+#PSALDO 0 202509 6230 {} 704.8 0
+#PSALDO 0 202510 6230 {} 600.37 0
+#PSALDO 0 202511 6230 {} 457.59 0
+#PSALDO 0 202512 6230 {} 4646.15 0
+#PSALDO 0 202501 6310 {} 508 0
+#PSALDO 0 202502 6310 {} 10079 0
+#PSALDO 0 202503 6310 {} 508 0
+#PSALDO 0 202504 6310 {} 491 0
+#PSALDO 0 202505 6310 {} 1162 0
+#PSALDO 0 202507 6310 {} 584 0
+#PSALDO 0 202508 6310 {} 584 0
+#PSALDO 0 202509 6310 {} 567 0
+#PSALDO 0 202510 6310 {} 584 0
+#PSALDO 0 202511 6310 {} 567 0
+#PSALDO 0 202512 6310 {} 584 0
+#PSALDO 0 202503 6430 {} 39772 0
+#PSALDO 0 202504 6430 {} 7513 0
+#PSALDO 0 202505 6430 {} 1633 0
+#PSALDO 0 202506 6430 {} 1633 0
+#PSALDO 0 202507 6430 {} 1633 0
+#PSALDO 0 202508 6430 {} 2029 0
+#PSALDO 0 202509 6430 {} 1633 0
+#PSALDO 0 202510 6430 {} 1831 0
+#PSALDO 0 202511 6430 {} 1633 0
+#PSALDO 0 202512 6430 {} 8583 0
+#PSALDO 0 202501 6550 {} 6137 0
+#PSALDO 0 202503 6550 {} 2508 0
+#PSALDO 0 202504 6550 {} 2025 0
+#PSALDO 0 202506 6550 {} 4875.25 0
+#PSALDO 0 202508 6550 {} 0 0
+#PSALDO 0 202509 6550 {} 5800 0
+#PSALDO 0 202512 6550 {} 16250 0
+#PSALDO 0 202501 6570 {} 3618 0
+#PSALDO 0 202501 6991 {} 135 0
+#PSALDO 0 202502 6991 {} 240 0
+#PSALDO 0 202503 6991 {} 180 0
+#PSALDO 0 202504 6991 {} 241.78 0
+#PSALDO 0 202505 6991 {} 240.64 0
+#PSALDO 0 202507 6991 {} 486.3 0
+#PSALDO 0 202509 6991 {} 240.83 0
+#PSALDO 0 202510 6991 {} 241.25 0
+#PSALDO 0 202504 6992 {} 625 0
+#PSALDO 0 202511 6992 {} 625 0
+#PSALDO 0 202509 7610 {} 26250 0
+#PSALDO 0 202510 7610 {} 350 0
+#PSALDO 0 202511 7621 {} 15530.19 0
+#PSALDO 0 202507 8300 {} -39714 0
+#PSALDO 0 202501 8422 {} 0.62 0
+#PSALDO 0 202502 8422 {} 0.79 0
+#PSALDO 0 202503 8422 {} 33 0
+#PSALDO 0 202501 8423 {} 264 0
+#PSALDO 0 202502 8423 {} -5 0
+#PSALDO 0 202503 8423 {} -2 0
+#PSALDO 0 202504 8423 {} 2992 0
+#PSALDO 0 202505 8423 {} 840 0
+#PSALDO 0 202509 8423 {} 2251 0
+#PSALDO 0 202510 8423 {} 2032 0
+#PSALDO 0 202511 8423 {} -1 0
+#PSALDO -1 202408 1210 {} 54500 0
+#PSALDO -1 202412 1229 {} -19200 0
+#PSALDO -1 202412 1350 {} 1400 0
+#PSALDO -1 202401 1510 {} -202750 0
+#PSALDO -1 202402 1510 {} -99625 0
+#PSALDO -1 202405 1510 {} -58750 0
+#PSALDO -1 202406 1510 {} 67375 0
+#PSALDO -1 202407 1510 {} -220500 0
+#PSALDO -1 202409 1510 {} -26875 0
+#PSALDO -1 202410 1510 {} 583563 0
+#PSALDO -1 202411 1510 {} 57312 0
+#PSALDO -1 202412 1510 {} -57750 0
+#PSALDO -1 202401 1630 {} -13124 0
+#PSALDO -1 202402 1630 {} 5246 0
+#PSALDO -1 202403 1630 {} -57103 0
+#PSALDO -1 202404 1630 {} 71868 0
+#PSALDO -1 202405 1630 {} -8116 0
+#PSALDO -1 202406 1630 {} -7203 0
+#PSALDO -1 202407 1630 {} -7293 0
+#PSALDO -1 202408 1630 {} -172650 0
+#PSALDO -1 202409 1630 {} 21373 0
+#PSALDO -1 202410 1630 {} 160010 0
+#PSALDO -1 202411 1630 {} -7258 0
+#PSALDO -1 202412 1630 {} -7355 0
+#PSALDO -1 202402 1660 {} 10000 0
+#PSALDO -1 202404 1660 {} 1000 0
+#PSALDO -1 202410 1660 {} -85000 0
+#PSALDO -1 202412 1660 {} 140396.01 0
+#PSALDO -1 202406 1790 {} 2000 0
+#PSALDO -1 202411 1790 {} 2000 0
+#PSALDO -1 202412 1790 {} -167779.38 0
+#PSALDO -1 202401 1930 {} 235819 0
+#PSALDO -1 202402 1930 {} 53155 0
+#PSALDO -1 202403 1930 {} -59153.2 0
+#PSALDO -1 202404 1930 {} -442307.9 0
+#PSALDO -1 202405 1930 {} 39570.25 0
+#PSALDO -1 202406 1930 {} -13012.75 0
+#PSALDO -1 202407 1930 {} 182145 0
+#PSALDO -1 202408 1930 {} -364740 0
+#PSALDO -1 202409 1930 {} -40353 0
+#PSALDO -1 202410 1930 {} 12855.96 0
+#PSALDO -1 202411 1930 {} 640378.19 0
+#PSALDO -1 202412 1930 {} -182237.33 0
+#PSALDO -1 202412 2091 {} -2221.78 0
+#PSALDO -1 202412 2099 {} 150626.88 0
+#PSALDO -1 202412 2123 {} -110000 0
+#PSALDO -1 202412 2393 {} 69606.37 0
+#PSALDO -1 202401 2440 {} -19207 0
+#PSALDO -1 202402 2440 {} -40055 0
+#PSALDO -1 202403 2440 {} -19566 0
+#PSALDO -1 202404 2440 {} 65925 0
+#PSALDO -1 202405 2440 {} -203 0
+#PSALDO -1 202406 2440 {} -4326 0
+#PSALDO -1 202407 2440 {} 2861.84 0
+#PSALDO -1 202408 2440 {} 16788 0
+#PSALDO -1 202409 2440 {} -11195 0
+#PSALDO -1 202410 2440 {} -7266 0
+#PSALDO -1 202411 2440 {} 4471.5 0
+#PSALDO -1 202412 2440 {} -4235 0
+#PSALDO -1 202401 2510 {} 6008 0
+#PSALDO -1 202402 2510 {} 7208 0
+#PSALDO -1 202403 2510 {} 79293 0
+#PSALDO -1 202404 2510 {} 7208 0
+#PSALDO -1 202405 2510 {} 7208 0
+#PSALDO -1 202406 2510 {} 7208 0
+#PSALDO -1 202407 2510 {} 7208 0
+#PSALDO -1 202408 2510 {} 7208 0
+#PSALDO -1 202409 2510 {} 7208 0
+#PSALDO -1 202410 2510 {} 7208 0
+#PSALDO -1 202411 2510 {} 7208 0
+#PSALDO -1 202412 2510 {} -88963 0
+#PSALDO -1 202406 2611 {} -13475 0
+#PSALDO -1 202410 2611 {} -136712.5 0
+#PSALDO -1 202411 2611 {} -148125 0
+#PSALDO -1 202412 2611 {} 549670.5 0
+#PSALDO -1 202401 2641 {} 3645.86 0
+#PSALDO -1 202402 2641 {} 8885.4 0
+#PSALDO -1 202403 2641 {} 2235.18 0
+#PSALDO -1 202404 2641 {} 1053.95 0
+#PSALDO -1 202405 2641 {} 2734.25 0
+#PSALDO -1 202406 2641 {} 2109.92 0
+#PSALDO -1 202407 2641 {} 1352.91 0
+#PSALDO -1 202408 2641 {} 1618.09 0
+#PSALDO -1 202409 2641 {} 1562.68 0
+#PSALDO -1 202410 2641 {} 2439.12 0
+#PSALDO -1 202411 2641 {} 4542.12 0
+#PSALDO -1 202412 2641 {} -78550.85 0
+#PSALDO -1 202408 2650 {} 204987 0
+#PSALDO -1 202412 2650 {} -452124.2 0
+#PSALDO -1 202401 2710 {} -251 0
+#PSALDO -1 202402 2710 {} 5553 0
+#PSALDO -1 202407 2710 {} -13335 0
+#PSALDO -1 202408 2710 {} 13335 0
+#PSALDO -1 202409 2710 {} -1345 0
+#PSALDO -1 202412 2710 {} 1345 0
+#PSALDO -1 202401 2730 {} -85 0
+#PSALDO -1 202402 2730 {} 1889 0
+#PSALDO -1 202407 2730 {} -11173 0
+#PSALDO -1 202408 2730 {} 11173 0
+#PSALDO -1 202409 2730 {} -3255 0
+#PSALDO -1 202412 2730 {} 3255.59 0
+#PSALDO -1 202412 2731 {} -44319 0
+#PSALDO -1 202401 2840 {} -155250 0
+#PSALDO -1 202408 2850 {} 44698 0
+#PSALDO -1 202409 2891 {} 36 0
+#PSALDO -1 202410 2891 {} -36 0
+#PSALDO -1 202401 2893 {} 100851 0
+#PSALDO -1 202402 2893 {} 8 0
+#PSALDO -1 202403 2893 {} 66075 0
+#PSALDO -1 202404 2893 {} 230026 0
+#PSALDO -1 202407 2893 {} -17383.75 0
+#PSALDO -1 202408 2893 {} 166340.25 0
+#PSALDO -1 202409 2893 {} 21731.25 0
+#PSALDO -1 202410 2893 {} -15159.75 0
+#PSALDO -1 202411 2893 {} 9736.25 0
+#PSALDO -1 202412 2893 {} -525668.13 0
+#PSALDO -1 202412 2990 {} 7000 0
+#PSALDO -1 202402 2999 {} 6875 0
+#PSALDO -1 202403 2999 {} -36532.55 0
+#PSALDO -1 202404 2999 {} 52253.15 0
+#PSALDO -1 202406 2999 {} 2095 0
+#PSALDO -1 202408 2999 {} 3916 0
+#PSALDO -1 202411 2999 {} 924.81 0
+#PSALDO -1 202412 2999 {} -58218.21 0
+#PSALDO -1 202406 3041 {} -53900 0
+#PSALDO -1 202410 3041 {} -473200 0
+#PSALDO -1 202411 3041 {} -568300 0
+#PSALDO -1 202412 3041 {} 327599 0
+#PSALDO -1 202410 3051 {} -73650 0
+#PSALDO -1 202411 3051 {} -24200 0
+#PSALDO -1 202401 3740 {} 1.09 0
+#PSALDO -1 202402 3740 {} -0.24 0
+#PSALDO -1 202403 3740 {} 0.75 0
+#PSALDO -1 202404 3740 {} 0.5 0
+#PSALDO -1 202405 3740 {} 0 0
+#PSALDO -1 202406 3740 {} 0.5 0
+#PSALDO -1 202407 3740 {} 0.7 0
+#PSALDO -1 202408 3740 {} 0.36 0
+#PSALDO -1 202409 3740 {} 1.3 0
+#PSALDO -1 202410 3740 {} 0.79 0
+#PSALDO -1 202411 3740 {} 1.06 0
+#PSALDO -1 202412 3740 {} 1.17 0
+#PSALDO -1 202412 5013 {} 2362.1 0
+#PSALDO -1 202407 5070 {} -4215.87 0
+#PSALDO -1 202401 5420 {} 845.25 0
+#PSALDO -1 202402 5420 {} 315.25 0
+#PSALDO -1 202403 5420 {} 315.25 0
+#PSALDO -1 202404 5420 {} 332.25 0
+#PSALDO -1 202405 5420 {} 315.25 0
+#PSALDO -1 202406 5420 {} 468.25 0
+#PSALDO -1 202407 5420 {} 366.25 0
+#PSALDO -1 202408 5420 {} 315.25 0
+#PSALDO -1 202409 5420 {} 351.25 0
+#PSALDO -1 202410 5420 {} 333.25 0
+#PSALDO -1 202411 5420 {} 126 0
+#PSALDO -1 202410 5610 {} 3555.85 0
+#PSALDO -1 202403 5612 {} 3938 0
+#PSALDO -1 202407 5612 {} 1638 0
+#PSALDO -1 202408 5612 {} 422 0
+#PSALDO -1 202410 5612 {} 3249.86 0
+#PSALDO -1 202412 5612 {} 1638 0
+#PSALDO -1 202401 5615 {} 12984.9 0
+#PSALDO -1 202402 5615 {} 6474.59 0
+#PSALDO -1 202403 5615 {} 6474.6 0
+#PSALDO -1 202404 5615 {} 6474.6 0
+#PSALDO -1 202405 5615 {} 6410.15 0
+#PSALDO -1 202406 5615 {} 6372.03 0
+#PSALDO -1 202407 5615 {} 6412.01 0
+#PSALDO -1 202408 5615 {} 6354.24 0
+#PSALDO -1 202409 5615 {} 6301.31 0
+#PSALDO -1 202410 5615 {} 6241.76 0
+#PSALDO -1 202411 5615 {} 6203.76 0
+#PSALDO -1 202412 5615 {} -106044.45 0
+#PSALDO -1 202411 5910 {} 9990 0
+#PSALDO -1 202412 5910 {} 60000 0
+#PSALDO -1 202401 6110 {} 3191 0
+#PSALDO -1 202401 6230 {} 2456.9 0
+#PSALDO -1 202402 6230 {} 4092.75 0
+#PSALDO -1 202403 6230 {} 907.22 0
+#PSALDO -1 202404 6230 {} 784.7 0
+#PSALDO -1 202405 6230 {} 568.35 0
+#PSALDO -1 202406 6230 {} 535.3 0
+#PSALDO -1 202407 6230 {} 554.76 0
+#PSALDO -1 202408 6230 {} 728.06 0
+#PSALDO -1 202409 6230 {} 494.46 0
+#PSALDO -1 202410 6230 {} 603.91 0
+#PSALDO -1 202411 6230 {} 690.56 0
+#PSALDO -1 202412 6230 {} 906.56 0
+#PSALDO -1 202401 6310 {} 2267 0
+#PSALDO -1 202402 6310 {} 1378 0
+#PSALDO -1 202403 6310 {} 10139 0
+#PSALDO -1 202404 6310 {} 889 0
+#PSALDO -1 202405 6310 {} 1886 0
+#PSALDO -1 202406 6310 {} 889 0
+#PSALDO -1 202407 6310 {} 1480 0
+#PSALDO -1 202408 6310 {} 889 0
+#PSALDO -1 202409 6310 {} 1380 0
+#PSALDO -1 202410 6310 {} 1397 0
+#PSALDO -1 202411 6310 {} 1380 0
+#PSALDO -1 202412 6310 {} 1397 0
+#PSALDO -1 202401 6430 {} 500 0
+#PSALDO -1 202402 6430 {} 27951.25 0
+#PSALDO -1 202403 6430 {} 840 0
+#PSALDO -1 202405 6430 {} 6900 0
+#PSALDO -1 202406 6430 {} 2300 0
+#PSALDO -1 202407 6430 {} 2300 0
+#PSALDO -1 202408 6430 {} 2300 0
+#PSALDO -1 202409 6430 {} 2300 0
+#PSALDO -1 202410 6430 {} 2300 0
+#PSALDO -1 202411 6430 {} 2300 0
+#PSALDO -1 202412 6430 {} 8750 0
+#PSALDO -1 202401 6540 {} 240 0
+#PSALDO -1 202402 6540 {} 240 0
+#PSALDO -1 202403 6540 {} 263.75 0
+#PSALDO -1 202404 6540 {} 263.75 0
+#PSALDO -1 202405 6540 {} 263.75 0
+#PSALDO -1 202406 6540 {} 263.75 0
+#PSALDO -1 202407 6540 {} 3578.15 0
+#PSALDO -1 202408 6540 {} 263.75 0
+#PSALDO -1 202409 6540 {} 263.75 0
+#PSALDO -1 202410 6540 {} 263.75 0
+#PSALDO -1 202411 6540 {} 263.75 0
+#PSALDO -1 202412 6540 {} 263.75 0
+#PSALDO -1 202401 6550 {} 2188 0
+#PSALDO -1 202403 6550 {} 3758 0
+#PSALDO -1 202410 6550 {} 3438 0
+#PSALDO -1 202412 6550 {} 938 0
+#PSALDO -1 202401 6570 {} 1671 0
+#PSALDO -1 202412 6570 {} 92.33 0
+#PSALDO -1 202401 6991 {} 610 0
+#PSALDO -1 202402 6991 {} 305 0
+#PSALDO -1 202403 6991 {} 305 0
+#PSALDO -1 202404 6991 {} 305 0
+#PSALDO -1 202405 6991 {} 305 0
+#PSALDO -1 202406 6991 {} 305 0
+#PSALDO -1 202407 6991 {} 305 0
+#PSALDO -1 202408 6991 {} 305 0
+#PSALDO -1 202409 6991 {} 305 0
+#PSALDO -1 202410 6991 {} 746 0
+#PSALDO -1 202411 6991 {} 305 0
+#PSALDO -1 202412 6991 {} 305.17 0
+#PSALDO -1 202401 7210 {} 15000 0
+#PSALDO -1 202407 7210 {} 52440 0
+#PSALDO -1 202409 7210 {} 10360 0
+#PSALDO -1 202401 7390 {} 3509 0
+#PSALDO -1 202401 7399 {} -3509 0
+#PSALDO -1 202401 7510 {} 1889 0
+#PSALDO -1 202407 7510 {} 11173 0
+#PSALDO -1 202409 7510 {} 3255 0
+#PSALDO -1 202412 7832 {} 19200 0
+#PSALDO -1 202401 8423 {} 10 0
+#PSALDO -1 202402 8423 {} 104 0
+#PSALDO -1 202403 8423 {} -2190 0
+#PSALDO -1 202404 8423 {} 3924 0
+#PSALDO -1 202405 8423 {} 908 0
+#PSALDO -1 202406 8423 {} -5 0
+#PSALDO -1 202407 8423 {} 85 0
+#PSALDO -1 202408 8423 {} 1249 0
+#PSALDO -1 202409 8423 {} 6100 0
+#PSALDO -1 202410 8423 {} 2818 0
+#PSALDO -1 202411 8423 {} 50 0
+#PSALDO -1 202412 8423 {} 147 0
+#PSALDO -1 202412 8811 {} 110000 0
+#PSALDO -1 202401 8910 {} 489 0
+#PSALDO -1 202412 8910 {} 96171 0
+#PSALDO -1 202412 8999 {} 351594.9 0
+#RES 0 3041 -842640 0
+#RES 0 3051 -292255.3 0
+#RES 0 3740 -0.97 0
+#RES 0 5013 2477.15 0
+#RES 0 5420 4717.25 0
+#RES 0 5612 4983 0
+#RES 0 5615 100047.4 0
+#RES 0 6064 309 0
+#RES 0 6230 13006.04 0
+#RES 0 6310 16218 0
+#RES 0 6430 67893 0
+#RES 0 6550 37595.25 0
+#RES 0 6570 3618 0
+#RES 0 6991 2005.8 0
+#RES 0 6992 1250 0
+#RES 0 7610 26600 0
+#RES 0 7621 15530.19 0
+#RES 0 8300 -39714 0
+#RES 0 8422 34.41 0
+#RES 0 8423 8371 0
+
+#IB -1 1210 0 0
+#UB -1 1210 54500 0
+#IB -1 1221 83860.39 0
+#UB -1 1221 83860.39 0
+#IB -1 1229 -41860.39 0
+#UB -1 1229 -61060.39 0
+#IB -1 1350 187196 0
+#UB -1 1350 188596 0
+#IB -1 1386 120092.96 0
+#UB -1 1386 120092.96 0
+#IB -1 1510 1001895 0
+#UB -1 1510 1043895 0
+#IB -1 1630 1819 0
+#UB -1 1630 -19786 0
+#IB -1 1660 198739.99 0
+#UB -1 1660 265136 0
+#IB -1 1790 1958010.58 0
+#UB -1 1790 1794231.2 0
+#IB -1 1930 506521.09 0
+#UB -1 1930 568640.31 0
+#IB -1 2081 -100000 0
+#UB -1 2081 -100000 0
+#IB -1 2091 -935331.07 0
+#UB -1 2091 -937552.85 0
+#IB -1 2099 -502221.78 0
+#UB -1 2099 -351594.9 0
+#IB -1 2118 -500000 0
+#UB -1 2118 -500000 0
+#IB -1 2119 -200000 0
+#UB -1 2119 -200000 0
+#IB -1 2120 -250000 0
+#UB -1 2120 -250000 0
+#IB -1 2123 0 0
+#UB -1 2123 -110000 0
+#IB -1 2124 -130000 0
+#UB -1 2124 -130000 0
+#IB -1 2393 -69606.37 0
+#UB -1 2393 0 0
+#IB -1 2440 -138867.77 0
+#UB -1 2440 -154874.43 0
+#IB -1 2510 -142356 0
+#UB -1 2510 -81146 0
+#IB -1 2611 -210808.75 0
+#UB -1 2611 40549.25 0
+#IB -1 2641 46371.37 0
+#UB -1 2641 -0 0
+#IB -1 2650 -0.2 0
+#UB -1 2650 -247137.4 0
+#IB -1 2710 -5302 0
+#UB -1 2710 0 0
+#IB -1 2730 -1804.59 0
+#UB -1 2730 0 0
+#IB -1 2731 44319 0
+#UB -1 2731 0 0
+#IB -1 2840 -717250 0
+#UB -1 2840 -872500 0
+#IB -1 2850 -254634.67 0
+#UB -1 2850 -209936.67 0
+#IB -1 2893 0 0
+#UB -1 2893 36556.12 0
+#IB -1 2990 -7000 0
+#UB -1 2990 0 0
+#IB -1 2999 58218.21 0
+#UB -1 2999 29531.41 0
+#RES -1 3041 -767801 0
+#RES -1 3051 -97850 0
+#RES -1 3740 7.98 0
+#RES -1 5013 2362.1 0
+#RES -1 5070 -4215.87 0
+#RES -1 5420 4083.5 0
+#RES -1 5610 3555.85 0
+#RES -1 5612 10885.86 0
+#RES -1 5615 -29340.5 0
+#RES -1 5910 69990 0
+#RES -1 6110 3191 0
+#RES -1 6230 13323.53 0
+#RES -1 6310 25371 0
+#RES -1 6430 58741.25 0
+#RES -1 6540 6431.9 0
+#RES -1 6550 10322 0
+#RES -1 6570 1763.33 0
+#RES -1 6991 4406.17 0
+#RES -1 7210 77800 0
+#RES -1 7390 3509 0
+#RES -1 7399 -3509 0
+#RES -1 7510 16317 0
+#RES -1 7832 19200 0
+#RES -1 8423 13200 0
+#RES -1 8811 110000 0
+#RES -1 8910 96660 0
+#RES -1 8999 351594.9 0
+
+
+
+
+
+#VER A 1 20250710 "îverfîring" 20260127
+{
+#TRANS 1930 {} -20000 "" "" 0
+#TRANS 2893 {} 20000 "" "" 0
+}
+#VER A 2 20250710 "OBS - Inbetalning kronofogden" 20260127
+{
+#TRANS 1930 {} -1408 "" "" 0
+#TRANS 2999 {} 1408 "" "" 0
+}
+#VER A 3 20250728 "OBS - SVEA INKASSO AB" 20260127
+{
+#TRANS 1930 {} -718 "" "" 0
+#TRANS 2999 {} 718 "" "" 0
+}
+#VER A 4 20250728 "OBS - visma" 20260127
+{
+#TRANS 1930 {} -334.01 "" "" 0
+#TRANS 2999 {} 334.01 "" "" 0
+}
+#VER A 5 20250728 "OBS VISMA COLLECTORS" 20260127
+{
+#TRANS 1930 {} -309.21 "" "" 0
+#TRANS 2999 {} 309.21 "" "" 0
+}
+#VER A 6 20250728 "OBS - VISMA COLLECTORS" 20260127
+{
+#TRANS 1930 {} -286.21 "" "" 0
+#TRANS 2999 {} 286.21 "" "" 0
+}
+#VER A 7 20250801 "Uttag" 20260127
+{
+#TRANS 1930 {} -50000 "" "" 0
+#TRANS 2893 {} 50000 "" "" 0
+}
+#VER A 8 20250820 "FîrsÑljning TOYOTA" 20260127
+{
+#TRANS 1930 {} 29266 "" "" 0
+#BTRANS 1386 {} -29266 "" "Ers frÜn Riddermark" 0 "Ingrid Lindegren"
+#RTRANS 1386 {} -66787 "" "Erlagt till Toyota 2023, ver L 81" 0 "Ingrid Lindegren"
+#TRANS 1386 {} -66787 "" "Erlagt till Toyota 2023, ver L 81" 0
+#RTRANS 5615 {} 37521 "" "Fîrutbetald leasing" 0 "Ingrid Lindegren"
+#TRANS 5615 {} 37521 "" "Fîrutbetald leasing" 0
+}
+#VER A 9 20250821 "OBS - Inbetalning kronofogden" 20260127
+{
+#TRANS 1930 {} -1412 "" "" 0
+#TRANS 2999 {} 1412 "" "" 0
+}
+#VER A 10 20250901 "Uttag" 20260127
+{
+#TRANS 1930 {} -150000 "" "" 0
+#TRANS 2893 {} 150000 "" "" 0
+}
+#VER A 11 20250901 "Uttag Transportstyrels" 20260127
+{
+#TRANS 1930 {} -298 "" "" 0
+#TRANS 2893 {} 298 "" "" 0
+}
+#VER A 12 20250901 "Uttag - Transportstyrels" 20260127
+{
+#TRANS 1930 {} -224 "" "" 0
+#TRANS 2893 {} 224 "" "" 0
+}
+#VER A 13 20250901 "OBS - Fordonsskatt" 20260127
+{
+#TRANS 1930 {} -429 "" "" 0
+#TRANS 2999 {} 429 "" "" 0
+}
+#VER A 14 20250904 "OBS - Kronofogdemyndig" 20260127
+{
+#TRANS 1930 {} -1420 "" "" 0
+#TRANS 2999 {} 1420 "" "" 0
+}
+#VER A 15 20250910 "Uttag" 20260127
+{
+#TRANS 1930 {} -20000 "" "" 0
+#TRANS 2893 {} 20000 "" "" 0
+}
+#VER A 16 20250924 "OBS - VISMA COLLECTORS" 20260127
+{
+#TRANS 1930 {} -354.86 "" "" 0
+#TRANS 2999 {} 354.86 "" "" 0
+}
+#VER A 17 20250930 "Uttag - Transportstyrels" 20260127
+{
+#TRANS 1930 {} -37 "" "" 0
+#TRANS 2893 {} 37 "" "" 0
+}
+#VER A 18 20251001 "Uttag" 20260127
+{
+#TRANS 1930 {} -50000 "" "" 0
+#TRANS 2893 {} 50000 "" "" 0
+}
+#VER A 19 20251020 "Uttag" 20260127
+{
+#TRANS 1930 {} -50000 "" "" 0
+#TRANS 2893 {} 50000 "" "" 0
+}
+#VER A 20 20251030 "Uttag" 20260127
+{
+#TRANS 1930 {} -25761 "" "" 0
+#TRANS 2893 {} 25761 "" "" 0
+}
+#VER A 21 20251031 "Uttag - Transportstyrels" 20260127
+{
+#TRANS 1930 {} -113 "" "" 0
+#TRANS 2893 {} 113 "" "" 0
+}
+#VER A 22 20251031 "Uttag - Transportstyrels" 20260127
+{
+#TRANS 1930 {} -11 "" "" 0
+#TRANS 2893 {} 11 "" "" 0
+}
+#VER A 23 20251103 "Uttag - Infrastrukturavg" 20260127
+{
+#TRANS 1930 {} -808 "" "" 0
+#TRANS 2893 {} 808 "" "" 0
+}
+#VER A 24 20251103 "OBS - Kronofogdemyndig" 20260127
+{
+#TRANS 1930 {} -2050 "" "" 0
+#TRANS 2999 {} 2050 "" "" 0
+}
+#VER A 25 20251103 "OBS - SVEA INKASSO AB" 20260127
+{
+#TRANS 1930 {} -249 "" "" 0
+#TRANS 2999 {} 249 "" "" 0
+}
+#VER A 26 20251127 "Uttag" 20260127
+{
+#TRANS 1930 {} -100000 "" "" 0
+#TRANS 2893 {} 100000 "" "" 0
+}
+#VER A 27 20251204 "OBS - ALEKTUM GROUP AB" 20260127
+{
+#TRANS 1930 {} -986.93 "" "" 0
+#TRANS 2999 {} 986.93 "" "" 0
+}
+#VER A 28 20251223 "Uttag" 20260127
+{
+#TRANS 1930 {} -25000 "" "" 0
+#TRANS 2893 {} 25000 "" "" 0
+}
+#VER A 29 20251230 "Uttag" 20260127
+{
+#TRANS 1930 {} -100000 "" "" 0
+#TRANS 2893 {} 100000 "" "" 0
+}
+#VER A 30 20251230 "Uttag" 20260127
+{
+#TRANS 1930 {} -25000 "" "" 0
+#TRANS 2893 {} 25000 "" "" 0
+}
+#VER A 31 20250721 "Uttag" 20260127
+{
+#TRANS 1930 {} -30000 "" "" 0
+#TRANS 2893 {} 30000 "" "" 0
+}
+#VER B 1 20250102 "uttag" 20250803
+{
+#TRANS 2893 {} 282 "" "" 0
+#TRANS 1930 {} -282 "" "" 0
+}
+#VER B 2 20250102 "LF MOTOR" 20250803
+{
+#TRANS 1930 {} -508 "" "" 0
+#TRANS 6310 {} 508 "" "" 0
+}
+#VER B 3 20250115 "uttag" 20250803
+{
+#TRANS 1930 {} -10000 "" "" 0
+#TRANS 2893 {} 10000 "" "" 0
+}
+#VER B 4 20250120 "bankavg" 20250803
+{
+#TRANS 1930 {} -3618 "" "" 0
+#TRANS 6570 {} 3618 "" "" 0
+}
+#VER B 5 20250123 "Bilia" 20250804
+{
+#TRANS 1930 {} -20534 "" "" 0
+#TRANS 2999 {} 20534 "" "" 0
+}
+#VER B 6 20250123 "BOLAGSVERKET" 20250804
+{
+#TRANS 1930 {} -75 "" "" 0
+#TRANS 6991 {} 75 "" "" 0
+}
+#VER B 7 20250131 "trÑngselskatt" 20250804
+{
+#TRANS 1930 {} -56 "" "" 0
+#BTRANS 6991 {} 56 "" "" 0 "Ingrid Lindegren"
+#RTRANS 2893 {} 56 "" "" 0 "Ingrid Lindegren"
+#TRANS 2893 {} 56 "" "" 0
+}
+#VER B 8 20250131 "trÑngselskatt" 20250804
+{
+#TRANS 1930 {} -350 "" "" 0
+#TRANS 2893 {} 350 "" "" 0
+}
+#VER B 9 20250203 "uttag" 20250804
+{
+#TRANS 1930 {} -20000 "" "" 0
+#TRANS 2893 {} 20000 "" "" 0
+}
+#VER B 10 20250203 "LF MOTOR" 20250804
+{
+#TRANS 1930 {} -459 "" "" 0
+#TRANS 6310 {} 459 "" "" 0
+}
+#VER B 11 20250206 "uttag" 20250804
+{
+#TRANS 1930 {} -15000 "" "" 0
+#TRANS 2893 {} 15000 "" "" 0
+}
+#VER B 12 20250219 "uttag" 20250804
+{
+#TRANS 1930 {} -10000 "" "" 0
+#TRANS 2893 {} 10000 "" "" 0
+}
+#VER B 13 20250303 "utlÑgg Football" 20250804
+{
+#TRANS 1930 {} -364.53 "" "" 0
+#TRANS 1684 {} 364.53 "" "" 0
+#RTRANS 1930 {} 364.53 "" "" 0 "Ingrid Lindegren"
+#TRANS 1930 {} 364.53 "" "" 0
+#RTRANS 1684 {} -364.53 "" "" 0 "Ingrid Lindegren"
+#TRANS 1684 {} -364.53 "" "" 0
+}
+#VER B 14 20250303 "LF MOTOR" 20250804
+{
+#TRANS 1930 {} -508 "" "" 0
+#TRANS 6310 {} 508 "" "" 0
+}
+#VER B 15 20250310 "uttag" 20250804
+{
+#TRANS 1930 {} -10000 "" "" 0
+#TRANS 2893 {} 10000 "" "" 0
+}
+#VER B 16 20250319 "uttag" 20250804
+{
+#TRANS 1930 {} -15000 "" "" 0
+#TRANS 2893 {} 15000 "" "" 0
+}
+#VER B 17 20250228 "uttag" 20251118
+{
+#TRANS 1930 {} -81 "" "" 0
+#TRANS 2893 {} 81 "" "" 0
+}
+#VER B 18 20250320 "uttag" 20251118
+{
+#TRANS 1930 {} -1408 "" "" 0
+#TRANS 2893 {} 1408 "" "" 0
+}
+#VER B 19 20250331 "uttag" 20251118
+{
+#TRANS 1930 {} -58 "" "" 0
+#TRANS 2893 {} 58 "" "" 0
+}
+#VER B 20 20250401 "LF MOTOR" 20251118
+{
+#TRANS 1930 {} -491 "" "" 0
+#TRANS 6310 {} 491 "" "" 0
+}
+#VER B 21 20250403 "uttag" 20251118
+{
+#TRANS 1930 {} -1408 "" "" 0
+#TRANS 2893 {} 1408 "" "" 0
+}
+#VER B 22 20250424 "uttag" 20251118
+{
+#TRANS 1930 {} -10000 "" "" 0
+#TRANS 2893 {} 10000 "" "" 0
+}
+#VER B 23 20250428 "uttag" 20251118
+{
+#TRANS 1930 {} -15000 "" "" 0
+#TRANS 2893 {} 15000 "" "" 0
+}
+#VER B 24 20250502 "LF MOTOR" 20251118
+{
+#TRANS 1930 {} -595 "" "" 0
+#TRANS 6310 {} 595 "" "" 0
+}
+#VER B 25 20250530 "uttag" 20251118
+{
+#TRANS 1930 {} -100000 "" "" 0
+#TRANS 2893 {} 100000 "" "" 0
+}
+#VER B 26 20250530 "LF MOTOR" 20251118
+{
+#TRANS 1930 {} -567 "" "" 0
+#TRANS 6310 {} 567 "" "" 0
+}
+#VER B 27 20250701 "LF MOTOR" 20260126
+{
+#TRANS 1930 {} -584 "" "" 0
+#TRANS 6310 {} 584 "" "" 0
+}
+#VER B 28 20250801 "LF MOTOR" 20260126
+{
+#TRANS 1930 {} -584 "" "" 0
+#TRANS 6310 {} 584 "" "" 0
+}
+#VER B 29 20250901 "LF MOTOR" 20260126
+{
+#TRANS 1930 {} -567 "" "" 0
+#TRANS 6310 {} 567 "" "" 0
+}
+#VER B 30 20251001 "LF MOTOR" 20260126
+{
+#TRANS 1930 {} -584 "" "" 0
+#TRANS 6310 {} 584 "" "" 0
+}
+#VER B 31 20251101 "LF MOTOR" 20260126
+{
+#TRANS 1930 {} -567 "" "" 0
+#TRANS 6310 {} 567 "" "" 0
+}
+#VER B 32 20251124 "leverantîrsbetalning" 20260126
+{
+#TRANS 1930 {} -2041 "" "" 0
+#TRANS 2999 {} 2041 "" "" 0
+}
+#VER B 33 20251201 "LF MOTOR" 20260126
+{
+#TRANS 1930 {} -584 "" "" 0
+#TRANS 6310 {} 584 "" "" 0
+}
+#VER C 1 20250107 "Kundbet Orara AB (16265)" 20250726
+{
+#TRANS 1930 {} 30000 "" "" 0
+#TRANS 1510 {} -30000 "" "" 0
+}
+#VER C 2 20250114 "Kundbet Nexar Group AB (16248)" 20250726
+{
+#TRANS 1930 {} 25000 "" "" 0
+#TRANS 1510 {} -25000 "" "" 0
+}
+#VER C 3 20250120 "Kundbet ByggnadsstÑllningsentreprenad i Stockholm AB (16287)" 20250726
+{
+#TRANS 1930 {} 75000 "" "" 0
+#TRANS 1510 {} -75000 "" "" 0
+}
+#VER C 4 20250205 "Kundbet Nexar Group AB (16248)" 20250726
+{
+#TRANS 1930 {} 46875 "" "" 0
+#TRANS 1510 {} -46875 "" "" 0
+}
+#VER C 5 20250212 "Kundbet Nexar Football AB (16247)" 20250726
+{
+#TRANS 1930 {} 49375 "" "" 0
+#TRANS 1510 {} -49375 "" "" 0
+}
+#VER C 6 20250214 "Kundbet Nexar Group AB (16281)" 20250726
+{
+#TRANS 1930 {} 50000 "" "" 0
+#TRANS 1510 {} -50000 "" "" 0
+}
+#VER C 7 20250305 "Kundbet ByggnadsstÑllningsentreprenad i Stockholm AB (16287)" 20250726
+{
+#TRANS 1930 {} 50000 "" "" 0
+#TRANS 1510 {} -50000 "" "" 0
+}
+#VER C 8 20250411 "Kundbet Nexar Football AB (16282)" 20250726
+{
+#TRANS 1930 {} 46250 "" "" 0
+#TRANS 1510 {} -46250 "" "" 0
+}
+#VER C 9 20250416 "Kundbet Nexar Football AB (16289)" 20250726
+{
+#TRANS 1930 {} 16875 "" "" 0
+#TRANS 1510 {} -16875 "" "" 0
+}
+#VER C 10 20250422 "Kundbet Nexar Group AB (16290)" 20250726
+{
+#TRANS 1930 {} 93750 "" "" 0
+#TRANS 1510 {} -93750 "" "" 0
+}
+#VER C 11 20250422 "Kundbet Nexar Group AB (16291)" 20250726
+{
+#TRANS 1930 {} 68750 "" "" 0
+#TRANS 1510 {} -68750 "" "" 0
+}
+#VER C 12 20250422 "Kundbet Nexar Group AB (16281)" 20250726
+{
+#TRANS 1930 {} 75000 "" "" 0
+#TRANS 1510 {} -75000 "" "" 0
+}
+#VER C 13 20250422 "Kundbet Nexar Football AB (16292)" 20250726
+{
+#TRANS 1930 {} 15626 "" "" 0
+#TRANS 1510 {} -15626 "" "" 0
+}
+#VER C 14 20250714 "Kundbet A Guide Line i Stockholm AB (16191)" 20250726
+{
+#TRANS 1930 {} 35375 "" "" 0
+#TRANS 1510 {} -35375 "" "" 0
+}
+#VER C 15 20250714 "Kundbet A Guide Line i Stockholm AB (16219)" 20250726
+{
+#TRANS 1930 {} 18750 "" "" 0
+#TRANS 1510 {} -18750 "" "" 0
+}
+#VER C 16 20250714 "Kundbet A Guide Line i Stockholm AB (16286)" 20250726
+{
+#TRANS 1930 {} 11500 "" "" 0
+#TRANS 1510 {} -11500 "" "" 0
+}
+#VER C 17 20250723 "Kundbet ByggnadsstÑllningsentreprenad i Stockholm AB (16295)" 20250726
+{
+#TRANS 1930 {} 56250 "" "" 0
+#TRANS 1510 {} -56250 "" "" 0
+}
+#VER C 18 20250725 "Kundbet Admera AB (16313)" 20250726
+{
+#TRANS 1930 {} 129519 "" "" 0
+#TRANS 1510 {} -129519 "" "" 0
+}
+#VER C 19 20250725 "Kundbet Admera AB (16314)" 20250726
+{
+#TRANS 1930 {} 50000 "" "" 0
+#TRANS 1510 {} -50000 "" "" 0
+}
+#VER C 20 20250729 "Kundbet Nexar Group AB (16301)" 20250801
+{
+#TRANS 1930 {} 31250 "" "" 0
+#TRANS 1510 {} -31250 "" "" 0
+}
+#VER C 21 20250729 "Kundbet Nexar Football AB (16302)" 20250801
+{
+#TRANS 1930 {} 5625 "" "" 0
+#TRANS 1510 {} -5625 "" "" 0
+}
+#VER C 22 20250730 "Kundbet Wibom Apartments AB (16312)" 20250801
+{
+#TRANS 1930 {} 18750 "" "" 0
+#TRANS 1510 {} -18750 "" "" 0
+}
+#VER C 23 20250806 "Kundbet Nexar Group AB (16299)" 20250806
+{
+#TRANS 1930 {} 3444 "" "" 0
+#TRANS 1510 {} -3444 "" "" 0
+}
+#VER C 24 20250806 "Kundbet Nexar Football AB (16298)" 20250806
+{
+#TRANS 1930 {} 11110 "" "" 0
+#TRANS 1510 {} -11110 "" "" 0
+}
+#VER C 25 20250806 "Kundbet Nexar Group AB (16300)" 20250806
+{
+#TRANS 1930 {} 36000 "" "" 0
+#TRANS 1510 {} -36000 "" "" 0
+}
+#VER C 26 20250806 "Kundbet ByggnadsstÑllningsentreprenad i Stockholm AB (16293)" 20250806
+{
+#TRANS 1930 {} 68750 "" "" 0
+#TRANS 1510 {} -68750 "" "" 0
+}
+#VER C 27 20250428 "Kundbet ByggnadsstÑllningsentreprenad i Stockholm AB (16287)" 20250806
+{
+#TRANS 1930 {} 50000 "" "" 0
+#TRANS 1510 {} -50000 "" "" 0
+}
+#VER C 28 20250804 "Kundbet Arkitektgruppen Vind AB (16270)" 20250806
+{
+#TRANS 1930 {} 12500 "" "" 0
+#TRANS 1510 {} -12500 "" "" 0
+}
+#VER C 29 20250804 "Kundbet Arkitektgruppen Vind AB (16310)" 20250806
+{
+#TRANS 1930 {} 9375 "" "" 0
+#TRANS 1510 {} -9375 "" "" 0
+}
+#VER C 30 20250807 "Kundbet Ad Astra Mark AB (16274)" 20250807
+{
+#TRANS 1930 {} 9375 "" "" 0
+#TRANS 1510 {} -9375 "" "" 0
+}
+#VER C 31 20250813 "Kundbet Stockholm Vind AB (16306)" 20250813
+{
+#TRANS 1930 {} 15000 "" "" 0
+#TRANS 1510 {} -15000 "" "" 0
+}
+#VER C 32 20250813 "Kundbet Stockholm Vind AB (16309)" 20250813
+{
+#TRANS 1930 {} 12500 "" "" 0
+#TRANS 1510 {} -12500 "" "" 0
+}
+#VER C 33 20250813 "Kundbet ByggnadsstÑllningsentreprenad i Stockholm AB (16293)" 20250813
+{
+#TRANS 1930 {} 50000 "" "" 0
+#TRANS 1510 {} -50000 "" "" 0
+}
+#VER C 34 20250813 "Kundbet Stockholm Vind AB (16308)" 20250813
+{
+#TRANS 2440 {} 21875 "" "" 0
+#TRANS 1510 {} -21875 "" "" 0
+}
+#VER C 35 20250813 "Kundbet Stockholm Vind AB (16305)" 20250813
+{
+#TRANS 2440 {} -21875 "" "" 0
+#TRANS 1510 {} 21875 "" "" 0
+}
+#VER C 36 20250819 "Kundbet Projektîrsbolaget i Vasastan AB (16311)" 20250819
+{
+#TRANS 1930 {} 12500 "" "" 0
+#TRANS 1510 {} -12500 "" "" 0
+}
+#VER C 37 20250819 "Kundbet Projektîrsbolaget i Vasastan AB (16311)" 20250819
+{
+#TRANS 1930 {} 15000 "" "" 0
+#TRANS 1510 {} -15000 "" "" 0
+}
+#VER C 38 20251027 "Kundbet ByggnadsstÑllningsentreprenad i Stockholm AB (16293)" 20250825
+{
+#TRANS 1930 {} 50000 "" "" 0
+#TRANS 1510 {} -50000 "" "" 0
+}
+#VER C 39 20250825 "Kundbet Projektîrsbolaget i Vasastan AB (16311)" 20250825
+{
+#TRANS 1930 {} 3750 "" "" 0
+#TRANS 1510 {} -3750 "" "" 0
+}
+#VER C 40 20250826 "Kundbet Admera AB (16314)" 20250828
+{
+#TRANS 1930 {} 73781 "" "" 0
+#TRANS 1510 {} -73781 "" "" 0
+}
+#VER C 41 20250916 "Kundbet Nexar Group AB (16297)" 20250916
+{
+#TRANS 1930 {} 28604 "" "" 0
+#TRANS 1510 {} -28604 "" "" 0
+}
+#VER C 42 20251010 "Kundbet ByggnadsstÑllningsentreprenad i Stockholm AB (16293)" 20251018
+{
+#TRANS 1930 {} 75000 "" "" 0
+#TRANS 1510 {} -75000 "" "" 0
+}
+#VER C 43 20251030 "Kundbet Nexar Group AB (16315)" 20251030
+{
+#TRANS 1930 {} 31250 "" "" 0
+#TRANS 1510 {} -31250 "" "" 0
+}
+#VER C 44 20251030 "Kundbet Wibom Apartments AB (16320)" 20251030
+{
+#TRANS 1930 {} 31250 "" "" 0
+#TRANS 1510 {} -31250 "" "" 0
+}
+#VER C 45 20251028 "Kundbet Wibom Apartments AB (16318)" 20251030
+{
+#TRANS 1930 {} 12500 "" "" 0
+#TRANS 1510 {} -12500 "" "" 0
+}
+#VER C 46 20251027 "Kundbet Nexar Football AB (16316)" 20251030
+{
+#TRANS 1930 {} 5625 "" "" 0
+#TRANS 1510 {} -5625 "" "" 0
+}
+#VER C 47 20251103 "Kundbet Nexar Group AB (16317)" 20251104
+{
+#TRANS 1930 {} 39000 "" "" 0
+#TRANS 1510 {} -39000 "" "" 0
+}
+#VER C 48 20251107 "Kundbet Admera AB (16321)" 20251117
+{
+#TRANS 1930 {} 45000 "" "" 0
+#TRANS 1510 {} -45000 "" "" 0
+}
+#VER C 49 20251027 "Kundbet ByggnadsstÑllningsentreprenad i Stockholm AB (16293)" 20251117
+{
+#TRANS 1930 {} 50000 "" "" 0
+#TRANS 1510 {} -50000 "" "" 0
+}
+#VER C 50 20251119 "Kundbet BOSTADSRéTTSFôRENINGEN ANKARET II I GUSTAVSBERG (16325)" 20251121
+{
+#TRANS 1930 {} 18750 "" "" 0
+#TRANS 1510 {} -18750 "" "" 0
+}
+#VER C 51 20251121 "Kundbet BRF KARLHOV (16324)" 20251122
+{
+#TRANS 1930 {} 62500 "" "" 0
+#TRANS 1510 {} -62500 "" "" 0
+}
+#VER C 52 20251124 "Kundbet Mîrby Revision AB (16336)" 20251201
+{
+#TRANS 1930 {} 6250 "" "" 0
+#TRANS 1510 {} -6250 "" "" 0
+}
+#VER C 53 20251125 "Kundbet Brf Kejsaren 2 (16323)" 20251201
+{
+#TRANS 1930 {} 30000 "" "" 0
+#TRANS 1510 {} -30000 "" "" 0
+}
+#VER C 54 20251208 "Kundbet Wibom Apartments AB (16327)" 20251211
+{
+#TRANS 1930 {} 15000 "" "" 0
+#TRANS 1510 {} -15000 "" "" 0
+}
+#VER C 55 20251211 "Kundbet Admera AB (16321)" 20251218
+{
+#TRANS 1930 {} 45000 "" "" 0
+#TRANS 1510 {} -45000 "" "" 0
+}
+#VER C 56 20251217 "Kundbet ByggnadsstÑllningsentreprenad i Stockholm AB (16293)" 20251218
+{
+#TRANS 1930 {} 100000 "" "" 0
+#TRANS 1510 {} -100000 "" "" 0
+}
+#VER C 57 20251230 "Kundbet Wibom Apartments AB (16327)" 20260124
+{
+#TRANS 1930 {} 15000 "" "" 0
+#TRANS 1510 {} -15000 "" "" 0
+}
+#VER C 58 20251219 "Kundbet Admera AB (16321)" 20260124
+{
+#TRANS 1930 {} 1625 "" "" 0
+#TRANS 1510 {} -1625 "" "" 0
+}
+#VER C 59 20251222 "Kundbet GO Revision & Consulting AB (16337)" 20260124
+{
+#TRANS 1930 {} 40000 "" "" 0
+#TRANS 1510 {} -40000 "" "" 0
+}
+#VER C 60 20251229 "Kundbet LR Revision Recenseo AB (16341)" 20260124
+{
+#TRANS 1930 {} 100000 "" "" 0
+#TRANS 1510 {} -100000 "" "" 0
+}
+#VER C 61 20251231 "Kundbet Bengt Hellstrîm  (16195)" 20260124
+{
+#TRANS 1930 {} 5625 "" "" 0
+#TRANS 1510 {} -5625 "" "" 0
+}
+#VER C 62 20251231 "Kundbet Bengt Hellstrîm  (16254)" 20260124
+{
+#TRANS 1930 {} -5625 "" "" 0
+#TRANS 1510 {} 5625 "" "" 0
+}
+#VER C 63 20251231 "Kundbet Admera AB (16307)" 20260124
+{
+#TRANS 1510 {} 104125 "" "" 0
+#TRANS 1510 {} -104125 "" "" 0
+}
+#VER C 64 20251231 "Kundbet Admera AB (16322)" 20260124
+{
+#TRANS 1510 {} -104125 "" "" 0
+#TRANS 1510 {} 104125 "" "" 0
+}
+#VER C 65 20251231 "Kundbet GO Revision & Consulting AB (16269)" 20260124
+{
+#TRANS 1510 {} 40000 "" "" 0
+#TRANS 1510 {} -40000 "" "" 0
+}
+#VER C 66 20251231 "Kundbet GO Revision & Consulting AB (16338)" 20260124
+{
+#TRANS 1510 {} -40000 "" "" 0
+#TRANS 1510 {} 40000 "" "" 0
+}
+#VER C 67 20251231 "Kundbet Truls Enterprise AB (16326)" 20260124
+{
+#TRANS 1510 {} 27375 "" "" 0
+#TRANS 1510 {} -27375 "" "" 0
+}
+#VER C 68 20251231 "Kundbet Truls Enterprise AB (16339)" 20260124
+{
+#TRANS 1510 {} -27375 "" "" 0
+#TRANS 1510 {} 27375 "" "" 0
+}
+#VER C 69 20251231 "Kundbet Truls Enterprise AB (16273)" 20260124
+{
+#TRANS 1510 {} 26125 "" "" 0
+#TRANS 1510 {} -26125 "" "" 0
+}
+#VER C 70 20251231 "Kundbet Truls Enterprise AB (16346)" 20260124
+{
+#TRANS 1510 {} -26125 "" "" 0
+#TRANS 1510 {} 26125 "" "" 0
+}
+#VER C 71 20251231 "Kundbet Truls Enterprise AB (16252)" 20260124
+{
+#TRANS 1510 {} 18750 "" "" 0
+#TRANS 1510 {} -18750 "" "" 0
+}
+#VER C 72 20251231 "Kundbet Truls Enterprise AB (16345)" 20260124
+{
+#TRANS 1510 {} -18750 "" "" 0
+#TRANS 1510 {} 18750 "" "" 0
+}
+#VER C 73 20251231 "Kundbet BRF KARLHOV (16350)" 20260126
+{
+#TRANS 1510 {} -59125 "" "" 0
+#TRANS 1510 {} 59125 "" "" 0
+}
+#VER C 74 20251231 "Kundbet BRF KARLHOV (16161)" 20260126
+{
+#TRANS 1510 {} 59125 "" "" 0
+#TRANS 1510 {} -59125 "" "" 0
+}
+#VER D 1 20250506 "Levbet LR Revision & Redovisning Sverige AB (709)" 20250506
+{
+#TRANS 1930 {} -375 "" "" 0
+#TRANS 2440 {} 375 "" "" 0
+}
+#VER D 2 20250506 "Levbet LR Revision & Redovisning Sverige AB (702)" 20250506
+{
+#TRANS 1930 {} -43591 "" "" 0
+#TRANS 2440 {} 43591 "" "" 0
+}
+#VER D 3 20250506 "Levbet LR Revision & Redovisning Sverige AB (704)" 20250506
+{
+#TRANS 1930 {} -1666 "" "" 0
+#TRANS 2440 {} 1666 "" "" 0
+}
+#VER D 4 20250506 "Levbet LR Revision & Redovisning Sverige AB (700)" 20250506
+{
+#TRANS 1930 {} -375 "" "" 0
+#TRANS 2440 {} 375 "" "" 0
+}
+#VER D 5 20250506 "Levbet LR Revision & Redovisning Sverige AB (708)" 20250506
+{
+#TRANS 1930 {} -375 "" "" 0
+#TRANS 2440 {} 375 "" "" 0
+}
+#VER D 6 20250506 "Levbet LR Revision & Redovisning Sverige AB (707)" 20250506
+{
+#TRANS 1930 {} -375 "" "" 0
+#TRANS 2440 {} 375 "" "" 0
+}
+#VER D 7 20250506 "Levbet LR Revision & Redovisning Sverige AB (703)" 20250506
+{
+#TRANS 1930 {} -1666 "" "" 0
+#TRANS 2440 {} 1666 "" "" 0
+}
+#VER D 8 20250506 "Levbet LR Revision & Redovisning Sverige AB (705)" 20250506
+{
+#TRANS 1930 {} -1666 "" "" 0
+#TRANS 2440 {} 1666 "" "" 0
+}
+#VER D 9 20250506 "Levbet LR Revision & Redovisning Sverige AB (701)" 20250506
+{
+#TRANS 1930 {} -1666 "" "" 0
+#TRANS 2440 {} 1666 "" "" 0
+}
+#VER D 10 20250506 "Levbet LR Revision & Redovisning Sverige AB (706)" 20250506
+{
+#TRANS 1930 {} -7350 "" "" 0
+#TRANS 2440 {} 7350 "" "" 0
+}
+#VER D 11 20250109 "Levbet Convensia Revision AB (694)" 20250801
+{
+#TRANS 1930 {} -1172 "" "" 0
+#TRANS 2440 {} 1172 "" "" 0
+}
+#VER D 12 20250109 "Levbet Convensia Revision AB (664)" 20250801
+{
+#TRANS 1930 {} -4298 "" "" 0
+#TRANS 2440 {} 4298 "" "" 0
+}
+#VER D 13 20250109 "Levbet Convensia Revision AB (716)" 20250801
+{
+#TRANS 1930 {} -5328 "" "" 0
+#TRANS 2440 {} 5328 "" "" 0
+}
+#VER D 14 20250109 "Levbet Convensia Revision AB (717)" 20250801
+{
+#TRANS 1930 {} -2344 "" "" 0
+#TRANS 2440 {} 2344 "" "" 0
+}
+#VER D 15 20250102 "Levbet Toyota Kreditbank Gmbh Tyskland, Sverige Filial (714)" 20250803
+{
+#TRANS 1930 {} -8074 "" "" 0
+#TRANS 2440 {} 8074 "" "" 0
+}
+#VER D 16 20250115 "Levbet Accountec Sweden AB (744)" 20250803
+{
+#TRANS 1930 {} -394 "" "" 0
+#TRANS 2440 {} 394 "" "" 0
+}
+#VER D 17 20250123 "Levbet UC AffÑrsinformation AB (690)" 20250803
+{
+#TRANS 1930 {} -12488 "" "" 0
+#TRANS 2440 {} 12488 "" "" 0
+}
+#VER D 18 20250124 "Levbet Telenor Sverige Aktiebolag (715)" 20250803
+{
+#TRANS 1930 {} -628 "" "" 0
+#TRANS 2440 {} 628 "" "" 0
+}
+#VER D 19 20250131 "Levbet Toyota Kreditbank Gmbh Tyskland, Sverige Filial (719)" 20250803
+{
+#TRANS 1930 {} -8069 "" "" 0
+#TRANS 2440 {} 8069 "" "" 0
+}
+#VER D 20 20250217 "Levbet Accountec Sweden AB (740)" 20250803
+{
+#TRANS 1930 {} -439 "" "" 0
+#TRANS 2440 {} 439 "" "" 0
+}
+#VER D 21 20250228 "Levbet Toyota Kreditbank Gmbh Tyskland, Sverige Filial (720)" 20250803
+{
+#TRANS 1930 {} -8114 "" "" 0
+#TRANS 2440 {} 8114 "" "" 0
+}
+#VER D 22 20250306 "Levbet S & P INSURANCE CONSULTING AB (749)" 20250803
+{
+#TRANS 1930 {} -9620 "" "" 0
+#TRANS 2440 {} 9620 "" "" 0
+}
+#VER D 23 20250313 "Levbet Telenor Sverige Aktiebolag (755)" 20250803
+{
+#TRANS 1930 {} -616 "" "" 0
+#TRANS 2440 {} 616 "" "" 0
+}
+#VER D 24 20250317 "Levbet Accountec Sweden AB (741)" 20250803
+{
+#TRANS 1930 {} -439 "" "" 0
+#TRANS 2440 {} 439 "" "" 0
+}
+#VER D 25 20250327 "Levbet Telenor Sverige Aktiebolag (756)" 20250803
+{
+#TRANS 1930 {} -632 "" "" 0
+#TRANS 2440 {} 632 "" "" 0
+}
+#VER D 26 20250331 "Levbet Transportstyrelsen ôrebro (752)" 20250803
+{
+#TRANS 1930 {} -1707 "" "" 0
+#TRANS 2440 {} 1707 "" "" 0
+}
+#VER D 27 20250401 "Levbet Toyota Kreditbank Gmbh Tyskland, Sverige Filial (722)" 20250803
+{
+#TRANS 1930 {} -8015 "" "" 0
+#TRANS 2440 {} 8015 "" "" 0
+}
+#VER D 28 20250415 "Levbet Accountec Sweden AB (743)" 20250803
+{
+#TRANS 1930 {} -439 "" "" 0
+#TRANS 2440 {} 439 "" "" 0
+}
+#VER D 29 20250415 "Levbet Telenor Sverige Aktiebolag (753)" 20250803
+{
+#TRANS 1930 {} -844 "" "" 0
+#TRANS 2440 {} 844 "" "" 0
+}
+#VER D 30 20250502 "Levbet Toyota Kreditbank Gmbh Tyskland, Sverige Filial (725)" 20250803
+{
+#TRANS 1930 {} -8071 "" "" 0
+#TRANS 2440 {} 8071 "" "" 0
+}
+#VER D 31 20250516 "Levbet Accountec Sweden AB (745)" 20250803
+{
+#TRANS 1930 {} -439 "" "" 0
+#TRANS 2440 {} 439 "" "" 0
+}
+#VER D 32 20250523 "Levbet Telenor Sverige Aktiebolag (750)" 20250803
+{
+#TRANS 1930 {} -779 "" "" 0
+#TRANS 2440 {} 779 "" "" 0
+}
+#VER D 33 20250530 "Levbet Toyota Kreditbank Gmbh Tyskland, Sverige Filial (726)" 20250803
+{
+#TRANS 1930 {} -8071 "" "" 0
+#TRANS 2440 {} 8071 "" "" 0
+}
+#VER D 34 20250616 "Levbet Accountec Sweden AB (746)" 20250803
+{
+#TRANS 1930 {} -439 "" "" 0
+#TRANS 2440 {} 439 "" "" 0
+}
+#VER D 35 20250701 "Levbet Toyota Kreditbank Gmbh Tyskland, Sverige Filial (727)" 20250803
+{
+#TRANS 1930 {} -8071 "" "" 0
+#TRANS 2440 {} 8071 "" "" 0
+}
+#VER D 36 20250707 "Levbet Telenor Sverige Aktiebolag (754)" 20250803
+{
+#TRANS 1930 {} -779 "" "" 0
+#TRANS 2440 {} 779 "" "" 0
+}
+#VER D 37 20250715 "Levbet Accountec Sweden AB (747)" 20250803
+{
+#TRANS 1930 {} -439 "" "" 0
+#TRANS 2440 {} 439 "" "" 0
+}
+#VER D 38 20250723 "Levbet Stefan Lîîv Consulting AB (742)" 20250803
+{
+#TRANS 1930 {} -3135 "" "" 0
+#TRANS 2440 {} 3135 "" "" 0
+}
+#VER D 39 20250725 "Levbet Telenor Sverige Aktiebolag (751)" 20250803
+{
+#TRANS 1930 {} -485 "" "" 0
+#TRANS 2440 {} 485 "" "" 0
+}
+#VER D 40 20250731 "Levbet Transportstyrelsen ôrebro (758)" 20250803
+{
+#TRANS 1930 {} -1638 "" "" 0
+#TRANS 2440 {} 1638 "" "" 0
+}
+#VER D 41 20250801 "Levbet Toyota Kreditbank Gmbh Tyskland, Sverige Filial (736)" 20250803
+{
+#TRANS 1930 {} -8071 "" "" 0
+#TRANS 2440 {} 8071 "" "" 0
+}
+#VER D 42 20250121 "Levbet Fortnox AB (689)" 20250803
+{
+#BTRANS 1930 {} -505 "" "" 0 "Ingrid Lindegren"
+#TRANS 2440 {} 505 "" "" 0
+#BTRANS 1930 {} -565.62 "" "" 0 "Ingrid Lindegren"
+#RTRANS 6991 {} 60 "" "" 0 "Ingrid Lindegren"
+#TRANS 6991 {} 60 "" "" 0
+#RTRANS 8422 {} 0.62 "" "" 0 "Ingrid Lindegren"
+#TRANS 8422 {} 0.62 "" "" 0
+#RTRANS 2893 {} -565.62 "" "" 0 "Ingrid Lindegren"
+#TRANS 2893 {} -565.62 "" "" 0
+}
+#VER D 43 20250224 "Levbet Fortnox AB (696)" 20250804
+{
+#BTRANS 1930 {} -144 "" "" 0 "Ingrid Lindegren"
+#TRANS 2440 {} 144 "" "" 0
+#BTRANS 1930 {} -384.79 "" "" 0 "Ingrid Lindegren"
+#RTRANS 6991 {} 60 "" "" 0 "Ingrid Lindegren"
+#TRANS 6991 {} 60 "" "" 0
+#RTRANS 6991 {} 180 "" "" 0 "Ingrid Lindegren"
+#TRANS 6991 {} 180 "" "" 0
+#RTRANS 8422 {} 0.79 "" "" 0 "Ingrid Lindegren"
+#TRANS 8422 {} 0.79 "" "" 0
+#RTRANS 2893 {} -384.79 "" "" 0 "Ingrid Lindegren"
+#TRANS 2893 {} -384.79 "" "" 0
+}
+#VER D 44 20250924 "Levbet Convensia Revision AB (769)" 20250924
+{
+#TRANS 1930 {} 1900 "" "" 0
+#TRANS 2440 {} -1900 "" "" 0
+}
+#VER D 45 20250924 "Levbet Convensia Revision AB (767)" 20250924
+{
+#TRANS 1930 {} -1900 "" "" 0
+#TRANS 2440 {} 1900 "" "" 0
+}
+#VER D 46 20250120 "Levbet LR Revision & Redovisning Sverige AB (686)" 20251118
+{
+#TRANS 1930 {} -2500 "" "" 0
+#TRANS 2440 {} 2500 "" "" 0
+}
+#VER D 47 20250120 "Levbet LR Revision & Redovisning Sverige AB (688)" 20251118
+{
+#TRANS 1930 {} -375 "" "" 0
+#TRANS 2440 {} 375 "" "" 0
+}
+#VER D 48 20250120 "Levbet LR Revision & Redovisning Sverige AB (693)" 20251118
+{
+#TRANS 1930 {} -8063 "" "" 0
+#TRANS 2440 {} 8063 "" "" 0
+}
+#VER D 49 20250319 "Levbet Depona AB (680)" 20251118
+{
+#BTRANS 1930 {} -2953 "" "" 0 "Ingrid Lindegren"
+#TRANS 2440 {} 2953 "" "" 0
+#RTRANS 2893 {} -3166 "" "" 0 "Ingrid Lindegren"
+#TRANS 2893 {} -3166 "" "" 0
+#RTRANS 6991 {} 180 "" "" 0 "Ingrid Lindegren"
+#TRANS 6991 {} 180 "" "" 0
+#RTRANS 8422 {} 33 "" "" 0 "Ingrid Lindegren"
+#TRANS 8422 {} 33 "" "" 0
+}
+#VER D 50 20250815 "Levbet Accountec Sweden AB (748)" 20251120
+{
+#TRANS 1930 {} -439 "" "" 0
+#TRANS 2440 {} 439 "" "" 0
+}
+#VER D 51 20250815 "Levbet W&F Advisory AB (776)" 20251120
+{
+#TRANS 1930 {} -6094 "" "" 0
+#TRANS 2440 {} 6094 "" "" 0
+}
+#VER D 52 20250822 "Levbet Telenor Sverige Aktiebolag (790)" 20251120
+{
+#TRANS 1930 {} -623 "" "" 0
+#TRANS 2440 {} 623 "" "" 0
+}
+#VER D 53 20250901 "Levbet Toyota Kreditbank Gmbh Tyskland, Sverige Filial (763)" 20251120
+{
+#TRANS 1930 {} -7985 "" "" 0
+#TRANS 2440 {} 7985 "" "" 0
+}
+#VER D 54 20250915 "Levbet Accountec Sweden AB (777)" 20251120
+{
+#TRANS 1930 {} -529 "" "" 0
+#TRANS 2440 {} 529 "" "" 0
+}
+#VER D 55 20250924 "Levbet Telenor Sverige Aktiebolag (792)" 20251120
+{
+#TRANS 1930 {} -560 "" "" 0
+#TRANS 2440 {} 560 "" "" 0
+}
+#VER D 56 20251001 "Levbet Toyota Kreditbank Gmbh Tyskland, Sverige Filial (765)" 20251120
+{
+#TRANS 1930 {} -2726 "" "" 0
+#TRANS 2440 {} 2726 "" "" 0
+}
+#VER D 57 20251015 "Levbet Accountec Sweden AB (780)" 20251120
+{
+#TRANS 1930 {} -439 "" "" 0
+#TRANS 2440 {} 439 "" "" 0
+}
+#VER D 58 20251027 "Levbet Convensia Revision AB (768)" 20251120
+{
+#TRANS 1930 {} -2375 "" "" 0
+#TRANS 2440 {} 2375 "" "" 0
+}
+#VER D 59 20251027 "Levbet Convensia Revision AB (770)" 20251120
+{
+#TRANS 1930 {} -2531 "" "" 0
+#TRANS 2440 {} 2531 "" "" 0
+}
+#VER D 60 20251027 "Levbet Telenor Sverige Aktiebolag (793)" 20251120
+{
+#TRANS 1930 {} -560 "" "" 0
+#TRANS 2440 {} 560 "" "" 0
+}
+#VER D 61 20251031 "Levbet Toyota Kreditbank Gmbh Tyskland, Sverige Filial (782)" 20251120
+{
+#TRANS 1930 {} -2726 "" "" 0
+#TRANS 2440 {} 2726 "" "" 0
+}
+#VER D 62 20251117 "Levbet Accountec Sweden AB (785)" 20251120
+{
+#TRANS 1930 {} -439 "" "" 0
+#TRANS 2440 {} 439 "" "" 0
+}
+#VER D 63 20250924 "Levbet LR Revision & Redovisning Sverige AB (728)" 20251120
+{
+#TRANS 1930 {} -1666 "" "" 0
+#TRANS 2440 {} 1666 "" "" 0
+}
+#VER D 64 20250924 "Levbet LR Revision & Redovisning Sverige AB (729)" 20251120
+{
+#TRANS 1930 {} -375 "" "" 0
+#TRANS 2440 {} 375 "" "" 0
+}
+#VER D 65 20250924 "Levbet LR Revision & Redovisning Sverige AB (731)" 20251120
+{
+#TRANS 1930 {} -1666 "" "" 0
+#TRANS 2440 {} 1666 "" "" 0
+}
+#VER D 66 20250924 "Levbet LR Revision & Redovisning Sverige AB (734)" 20251120
+{
+#TRANS 1930 {} -375 "" "" 0
+#TRANS 2440 {} 375 "" "" 0
+}
+#VER D 67 20250924 "Levbet LR Revision & Redovisning Sverige AB (737)" 20251120
+{
+#TRANS 1930 {} -1666 "" "" 0
+#TRANS 2440 {} 1666 "" "" 0
+}
+#VER D 68 20250924 "Levbet LR Revision & Redovisning Sverige AB (739)" 20251120
+{
+#TRANS 1930 {} -375 "" "" 0
+#TRANS 2440 {} 375 "" "" 0
+}
+#VER D 69 20250924 "Levbet LR Revision & Redovisning Sverige AB (761)" 20251120
+{
+#TRANS 1930 {} -375 "" "" 0
+#TRANS 2440 {} 375 "" "" 0
+}
+#VER D 70 20250924 "Levbet LR Revision & Redovisning Sverige AB (762)" 20251120
+{
+#TRANS 1930 {} -1666 "" "" 0
+#TRANS 2440 {} 1666 "" "" 0
+}
+#VER D 71 20250924 "Levbet LR Revision & Redovisning Sverige AB (764)" 20251120
+{
+#TRANS 1930 {} -495 "" "" 0
+#TRANS 2440 {} 495 "" "" 0
+}
+#VER D 72 20250129 "Levbet Fortnox AB (598)" 20251123
+{
+#BTRANS 1930 {} -496 "" "" 0 "Ingrid Lindegren"
+#TRANS 2440 {} 496 "" "" 0
+#RTRANS 2893 {} -496 "" "" 0 "Ingrid Lindegren"
+#TRANS 2893 {} -496 "" "" 0
+}
+#VER D 73 20250424 "Levbet Fortnox AB (721)" 20251123
+{
+#BTRANS 1930 {} -417 "" "" 0 "Ingrid Lindegren"
+#TRANS 2440 {} 417 "" "" 0
+#RTRANS 2393 {} -658.78 "" "" 0 "Ingrid Lindegren"
+#TRANS 2393 {} -658.78 "" "" 0
+#RTRANS 6991 {} 241.78 "" "" 0 "Ingrid Lindegren"
+#TRANS 6991 {} 241.78 "" "" 0
+}
+#VER D 74 20250605 "Levbet Fortnox AB (732)" 20251123
+{
+#BTRANS 1930 {} -172 "" "" 0 "Ingrid Lindegren"
+#TRANS 2440 {} 172 "" "" 0
+#RTRANS 2393 {} -172 "" "" 0 "Ingrid Lindegren"
+#TRANS 2393 {} -172 "" "" 0
+}
+#VER D 75 20250722 "Levbet Fortnox AB (733)" 20251123
+{
+#BTRANS 1930 {} -154 "" "" 0 "Ingrid Lindegren"
+#TRANS 2440 {} 154 "" "" 0
+#RTRANS 2393 {} -394.64 "" "" 0 "Ingrid Lindegren"
+#TRANS 2393 {} -394.64 "" "" 0
+#RTRANS 6991 {} 240.64 "" "" 0 "Ingrid Lindegren"
+#TRANS 6991 {} 240.64 "" "" 0
+}
+#VER D 76 20250728 "Levbet Fortnox AB (794)" 20251123
+{
+#BTRANS 1930 {} -1455 "" "" 0 "Ingrid Lindegren"
+#TRANS 2440 {} 1455 "" "" 0
+#RTRANS 2893 {} -1700.66 "" "" 0 "Ingrid Lindegren"
+#TRANS 2893 {} -1700.66 "" "" 0
+#RTRANS 6991 {} 245.66 "" "" 0 "Ingrid Lindegren"
+#TRANS 6991 {} 245.66 "" "" 0
+}
+#VER D 77 20250728 "Levbet Fortnox AB (738)" 20251123
+{
+#TRANS 2393 {} -180 "" "" 0
+#TRANS 2440 {} 180 "" "" 0
+}
+#VER D 78 20250922 "Levbet Fortnox AB (760)" 20251123
+{
+#BTRANS 2393 {} -214 "" "" 0 "Ingrid Lindegren"
+#TRANS 2440 {} 214 "" "" 0
+#RTRANS 2393 {} -454.83 "" "" 0 "Ingrid Lindegren"
+#TRANS 2393 {} -454.83 "" "" 0
+#RTRANS 6991 {} 240.83 "" "" 0 "Ingrid Lindegren"
+#TRANS 6991 {} 240.83 "" "" 0
+}
+#VER D 79 20251020 "Levbet Fortnox AB (766)" 20251123
+{
+#BTRANS 2393 {} -321 "" "" 0 "Ingrid Lindegren"
+#TRANS 2440 {} 321 "" "" 0
+#RTRANS 2393 {} -562.25 "" "" 0 "Ingrid Lindegren"
+#TRANS 2393 {} -562.25 "" "" 0
+#RTRANS 6991 {} 241.25 "" "" 0 "Ingrid Lindegren"
+#TRANS 6991 {} 241.25 "" "" 0
+}
+#VER D 80 20251103 "Levbet Fortnox AB (781)" 20251123
+{
+#TRANS 2393 {} -184 "" "" 0
+#TRANS 2440 {} 184 "" "" 0
+}
+#VER D 81 20250523 "Levbet Fortnox AB (724)" 20251123
+{
+#BTRANS 2393 {} -161 "" "" 0 "Ingrid Lindegren"
+#TRANS 2440 {} 161 "" "" 0
+#RTRANS 2393 {} -401.64 "" "" 0 "Ingrid Lindegren"
+#TRANS 2393 {} -401.64 "" "" 0
+#RTRANS 6991 {} 240.64 "" "" 0 "Ingrid Lindegren"
+#TRANS 6991 {} 240.64 "" "" 0
+}
+#VER D 82 20251124 "Levbet GO Revision & Consulting AB (631)" 20251123
+{
+#TRANS 1930 {} -16783.28 "" "" 0
+#TRANS 2440 {} 16783.28 "" "" 0
+}
+#VER D 83 20251125 "Levbet LR Revision & Redovisning Sverige AB (773)" 20251201
+{
+#TRANS 1930 {} -1666 "" "" 0
+#TRANS 2440 {} 1666 "" "" 0
+}
+#VER D 84 20251125 "Levbet LR Revision & Redovisning Sverige AB (775)" 20251201
+{
+#TRANS 1930 {} -375 "" "" 0
+#TRANS 2440 {} 375 "" "" 0
+}
+#VER D 85 20251125 "Levbet W&F Advisory AB (779)" 20251201
+{
+#TRANS 1930 {} -4875 "" "" 0
+#TRANS 2440 {} 4875 "" "" 0
+}
+#VER D 86 20251125 "Levbet JB Travel AB (783)" 20251201
+{
+#TRANS 1930 {} -437.5 "" "" 0
+#TRANS 2440 {} 437.5 "" "" 0
+}
+#VER D 87 20251125 "Levbet STOCKHOLMS ALLMéNA GYMANSTIKAVDELNI (789)" 20251201
+{
+#TRANS 1930 {} -1450 "" "" 0
+#TRANS 2440 {} 1450 "" "" 0
+}
+#VER D 88 20251124 "Levbet LR Revision & Redovisning Sverige AB (771)" 20251201
+{
+#TRANS 1930 {} -1666 "" "" 0
+#TRANS 2440 {} 1666 "" "" 0
+}
+#VER D 89 20251124 "Levbet LR Revision & Redovisning Sverige AB (772)" 20251201
+{
+#TRANS 1930 {} -375 "" "" 0
+#TRANS 2440 {} 375 "" "" 0
+}
+#VER D 90 20251124 "Levbet LR Revision & Redovisning Sverige AB (774)" 20251201
+{
+#TRANS 1930 {} -248 "" "" 0
+#TRANS 2440 {} 248 "" "" 0
+}
+#VER D 91 20251201 "Levbet Visma Spcs AB (784)" 20260126
+{
+#TRANS 1930 {} -404 "" "" 0
+#TRANS 2440 {} 404 "" "" 0
+}
+#VER D 92 20251201 "Levbet LR Revision & Redovisning Sverige AB (787)" 20260126
+{
+#TRANS 1930 {} -1666 "" "" 0
+#TRANS 2440 {} 1666 "" "" 0
+}
+#VER D 93 20251201 "Levbet LR Revision & Redovisning Sverige AB (788)" 20260126
+{
+#TRANS 1930 {} -375 "" "" 0
+#TRANS 2440 {} 375 "" "" 0
+}
+#VER D 94 20251124 "Levbet Telenor Sverige Aktiebolag (791)" 20260126
+{
+#TRANS 1930 {} -566 "" "" 0
+#TRANS 2440 {} 566 "" "" 0
+}
+#VER D 95 20251201 "Levbet Toyota Kreditbank Gmbh Tyskland, Sverige Filial (786)" 20260126
+{
+#TRANS 1930 {} -2717 "" "" 0
+#TRANS 2440 {} 2717 "" "" 0
+}
+#VER D 96 20251215 "Levbet Accountec Sweden AB (805)" 20260126
+{
+#TRANS 1930 {} -49 "" "" 0
+#TRANS 2440 {} 49 "" "" 0
+}
+#VER D 97 20251223 "Levbet Telenor Sverige Aktiebolag (804)" 20260126
+{
+#TRANS 1930 {} -572 "" "" 0
+#TRANS 2440 {} 572 "" "" 0
+}
+#VER D 98 20251223 "Levbet W&F Advisory AB (809)" 20260126
+{
+#TRANS 1930 {} -18750 "" "" 0
+#TRANS 2440 {} 18750 "" "" 0
+}
+#VER K 1 20250416 "Kundfaktura Nexar Group AB (16291)" 20250726
+{
+#TRANS 3041 {} -25000 "" "" 0
+#TRANS 3051 {} -30000 "" "" 0
+#TRANS 2611 {} -13750 "" "" 0
+#TRANS 1510 {} 68750 "" "" 0
+}
+#VER K 2 20250416 "Kundfaktura Nexar Football AB (16292)" 20250726
+{
+#TRANS 3041 {} -12500 "" "" 0
+#TRANS 2611 {} -3125 "" "" 0
+#TRANS 1510 {} 15625 "" "" 0
+}
+#VER K 3 20250630 "Kundfaktura ByggnadsstÑllningsentreprenad i Stockholm AB (16293)" 20250726
+{
+#TRANS 3041 {} -215000 "" "" 0
+#TRANS 2611 {} -53750 "" "" 0
+#TRANS 1510 {} 268750 "" "" 0
+}
+#VER K 4 20250630 "Kundfaktura ByggnadsstÑllningsentreprenad i Stockholm AB (16294)" 20250726
+{
+#TRANS 3041 {} -90000 "" "" 0
+#TRANS 2611 {} -22500 "" "" 0
+#TRANS 1510 {} 112500 "" "" 0
+}
+#VER K 5 20250630 "Kundfaktura ByggnadsstÑllningsentreprenad i Stockholm AB (16295)" 20250726
+{
+#TRANS 3041 {} -45000 "" "" 0
+#TRANS 2611 {} -11250 "" "" 0
+#TRANS 1510 {} 56250 "" "" 0
+}
+#VER K 6 20250630 "Kundfaktura Admera AB (16313)" 20250726
+{
+#TRANS 3041 {} -103615 "" "" 0
+#TRANS 3051 {} 0 "" "" 0
+#TRANS 2611 {} -25903.75 "" "" 0
+#TRANS 3740 {} -0.25 "" "" 0
+#TRANS 1510 {} 129519 "" "" 0
+}
+#VER K 7 20250630 "Kundfaktura Admera AB (16314)" 20250726
+{
+#TRANS 3041 {} -99025 "" "" 0
+#TRANS 2611 {} -24756.25 "" "" 0
+#TRANS 3740 {} 0.25 "" "" 0
+#TRANS 1510 {} 123781 "" "" 0
+}
+#VER K 8 20250701 "Kundfaktura Nexar Group AB (16297)" 20250726
+{
+#TRANS 8300 {} -28604 "" "" 0
+#TRANS 1510 {} 28604 "" "" 0
+}
+#VER K 9 20250701 "Kundfaktura Nexar Football AB (16298)" 20250726
+{
+#TRANS 8300 {} -11110 "" "" 0
+#TRANS 1510 {} 11110 "" "" 0
+}
+#VER K 10 20250701 "Kundfaktura Nexar Group AB (16299)" 20250726
+{
+#TRANS 3051 {} -2755.3 "" "" 0
+#TRANS 2611 {} -688.83 "" "" 0
+#TRANS 3740 {} 0.13 "" "" 0
+#TRANS 1510 {} 3444 "" "" 0
+}
+#VER K 11 20250701 "Kundfaktura Nexar Group AB (16300)" 20250726
+{
+#TRANS 3051 {} -28800 "" "" 0
+#TRANS 2611 {} -7200 "" "" 0
+#TRANS 1510 {} 36000 "" "" 0
+}
+#VER K 12 20250701 "Kundfaktura Nexar Group AB (16301)" 20250726
+{
+#TRANS 3041 {} -25000 "" "" 0
+#TRANS 2611 {} -6250 "" "" 0
+#TRANS 1510 {} 31250 "" "" 0
+}
+#VER K 13 20250701 "Kundfaktura Nexar Football AB (16302)" 20250726
+{
+#TRANS 3041 {} -12500 "" "" 0
+#TRANS 3051 {} 8000 "" "" 0
+#TRANS 2611 {} -1125 "" "" 0
+#TRANS 1510 {} 5625 "" "" 0
+}
+#VER K 14 20250701 "Kreditfaktura Stockholm Vind AB (16305)" 20250726
+{
+#TRANS 3041 {} 17500 "" "" 0
+#TRANS 2611 {} 4375 "" "" 0
+#TRANS 1510 {} -21875 "" "" 0
+}
+#VER K 15 20250701 "Kundfaktura Stockholm Vind AB (16306)" 20250726
+{
+#TRANS 3041 {} -12000 "" "" 0
+#TRANS 2611 {} -3000 "" "" 0
+#TRANS 1510 {} 15000 "" "" 0
+}
+#VER K 16 20250701 "Kundfaktura Admera AB (16307)" 20250726
+{
+#TRANS 3041 {} -83300 "" "" 0
+#TRANS 2611 {} -20825 "" "" 0
+#TRANS 1510 {} 104125 "" "" 0
+}
+#VER K 17 20250701 "Kundfaktura Stockholm Vind AB (16308)" 20250726
+{
+#TRANS 3041 {} -17500 "" "" 0
+#TRANS 2611 {} -4375 "" "" 0
+#TRANS 1510 {} 21875 "" "" 0
+}
+#VER K 18 20250701 "Kundfaktura Stockholm Vind AB (16309)" 20250726
+{
+#TRANS 3041 {} -10000 "" "" 0
+#TRANS 2611 {} -2500 "" "" 0
+#TRANS 1510 {} 12500 "" "" 0
+}
+#VER K 19 20250701 "Kundfaktura Arkitektgruppen Vind AB (16310)" 20250726
+{
+#TRANS 3041 {} -7500 "" "" 0
+#TRANS 2611 {} -1875 "" "" 0
+#TRANS 1510 {} 9375 "" "" 0
+}
+#VER K 20 20250701 "Kundfaktura Projektîrsbolaget i Vasastan AB (16311)" 20250726
+{
+#TRANS 3041 {} -25000 "" "" 0
+#TRANS 2611 {} -6250 "" "" 0
+#TRANS 1510 {} 31250 "" "" 0
+}
+#VER K 21 20250701 "Kundfaktura Wibom Apartments AB (16312)" 20250726
+{
+#TRANS 3051 {} -15000 "" "" 0
+#TRANS 2611 {} -3750 "" "" 0
+#TRANS 1510 {} 18750 "" "" 0
+}
+#VER K 22 20250805 "Kundfaktura Nexar Group AB (16315)" 20250805
+{
+#TRANS 3041 {} -25000 "" "" 0
+#TRANS 2611 {} -6250 "" "" 0
+#TRANS 1510 {} 31250 "" "" 0
+}
+#VER K 23 20250805 "Kundfaktura Nexar Football AB (16316)" 20250805
+{
+#TRANS 3041 {} -12500 "" "" 0
+#TRANS 3051 {} 8000 "" "" 0
+#TRANS 2611 {} -1125 "" "" 0
+#TRANS 1510 {} 5625 "" "" 0
+}
+#VER K 24 20250826 "Kundfaktura Nexar Group AB (16317)" 20250826
+{
+#TRANS 3041 {} -6000 "" "" 0
+#TRANS 3051 {} -25200 "" "" 0
+#TRANS 2611 {} -7800 "" "" 0
+#TRANS 1510 {} 39000 "" "" 0
+}
+#VER K 25 20250831 "Kundfaktura Wibom Apartments AB (16318)" 20250826
+{
+#TRANS 3051 {} -10000 "" "" 0
+#TRANS 2611 {} -2500 "" "" 0
+#TRANS 1510 {} 12500 "" "" 0
+}
+#VER K 26 20250930 "Kundfaktura Wibom Apartments AB (16320)" 20251004
+{
+#TRANS 3051 {} -25000 "" "" 0
+#TRANS 2611 {} -6250 "" "" 0
+#TRANS 1510 {} 31250 "" "" 0
+}
+#VER K 27 20250930 "Kundfaktura Admera AB (16321)" 20251004
+{
+#TRANS 3041 {} -83300 "" "" 0
+#TRANS 2611 {} -20825 "" "" 0
+#TRANS 1510 {} 104125 "" "" 0
+}
+#VER K 28 20251018 "Kreditfaktura Admera AB (16322)" 20251021
+{
+#TRANS 3041 {} 83300 "" "" 0
+#TRANS 2611 {} 20825 "" "" 0
+#TRANS 1510 {} -104125 "" "" 0
+}
+#VER K 29 20251112 "Kundfaktura BRF KARLHOV (16324)" 20251112
+{
+#TRANS 3041 {} -50000 "" "" 0
+#TRANS 2611 {} -12500 "" "" 0
+#TRANS 1510 {} 62500 "" "" 0
+}
+#VER K 30 20251112 "Kundfaktura Brf Kejsaren 2 (16323)" 20251112
+{
+#TRANS 3051 {} -24000 "" "" 0
+#TRANS 2611 {} -6000 "" "" 0
+#TRANS 1510 {} 30000 "" "" 0
+}
+#VER K 31 20251112 "Kundfaktura BOSTADSRéTTSFôRENINGEN ANKARET II I GUSTAVSBERG (16325)" 20251112
+{
+#TRANS 3041 {} -15000 "" "" 0
+#TRANS 2611 {} -3750 "" "" 0
+#TRANS 1510 {} 18750 "" "" 0
+}
+#VER K 32 20251112 "Kundfaktura Wibom Apartments AB (16327)" 20251112
+{
+#TRANS 3051 {} -29000 "" "" 0
+#TRANS 2611 {} -1250 "" "" 0
+#TRANS 1510 {} 30250 "" "" 0
+}
+#VER K 33 20251112 "Kundfaktura Truls Enterprise AB (16326)" 20251116
+{
+#TRANS 3051 {} -21900 "" "" 0
+#TRANS 2611 {} -5475 "" "" 0
+#TRANS 1510 {} 27375 "" "" 0
+}
+#VER K 34 20251112 "Kundfaktura Visby Presen 6 Bengt Hellstrîm  (16328)" 20251117
+{
+#TRANS 3041 {} -18000 "" "" 0
+#TRANS 2611 {} -4500 "" "" 0
+#TRANS 1510 {} 22500 "" "" 0
+}
+#VER K 35 20251112 "Kundfaktura Bengt Hellstrîm  (16329)" 20251117
+{
+#TRANS 3041 {} -6000 "" "" 0
+#TRANS 2611 {} -1500 "" "" 0
+#TRANS 1510 {} 7500 "" "" 0
+}
+#VER K 36 20251112 "Kundfaktura Visby Presen 6 Bengt Hellstrîm  (16330)" 20251117
+{
+#TRANS 3041 {} -7200 "" "" 0
+#TRANS 2611 {} -1800 "" "" 0
+#TRANS 1510 {} 9000 "" "" 0
+}
+#VER K 37 20251112 "Kundfaktura Lennart Nordfors AB  (16331)" 20251117
+{
+#TRANS 3041 {} -15600 "" "" 0
+#TRANS 2611 {} -3900 "" "" 0
+#TRANS 1510 {} 19500 "" "" 0
+}
+#VER K 38 20251112 "Kundfaktura A Guide Line i Stockholm AB (16332)" 20251117
+{
+#TRANS 3041 {} -10900 "" "" 0
+#TRANS 2611 {} -2725 "" "" 0
+#TRANS 1510 {} 13625 "" "" 0
+}
+#VER K 39 20251117 "Kundfaktura KrGa redovisning AB (16333)" 20251117
+{
+#TRANS 3041 {} -7500 "" "" 0
+#TRANS 2611 {} -1875 "" "" 0
+#TRANS 1510 {} 9375 "" "" 0
+}
+#VER K 40 20251117 "Kundfaktura KrGa redovisning AB (16334)" 20251117
+{
+#TRANS 3041 {} -7500 "" "" 0
+#TRANS 2611 {} -1875 "" "" 0
+#TRANS 1510 {} 9375 "" "" 0
+}
+#VER K 41 20251117 "Kundfaktura KrGa redovisning AB (16335)" 20251117
+{
+#TRANS 3041 {} -6500 "" "" 0
+#TRANS 2611 {} -1625 "" "" 0
+#TRANS 1510 {} 8125 "" "" 0
+}
+#VER K 42 20251119 "Kundfaktura Mîrby Revision AB (16336)" 20251119
+{
+#TRANS 3051 {} -5000 "" "" 0
+#TRANS 2611 {} -1250 "" "" 0
+#TRANS 1510 {} 6250 "" "" 0
+}
+#VER K 43 20251123 "Kundfaktura GO Revision & Consulting AB (16337)" 20251123
+{
+#TRANS 3041 {} -32000 "" "" 0
+#TRANS 2611 {} -8000 "" "" 0
+#TRANS 1510 {} 40000 "" "" 0
+}
+#VER K 44 20251123 "Kreditfaktura GO Revision & Consulting AB (16338)" 20251123
+{
+#TRANS 3041 {} 32000 "" "" 0
+#TRANS 2611 {} 8000 "" "" 0
+#TRANS 1510 {} -40000 "" "" 0
+}
+#VER K 45 20251217 "Kundfaktura LR Revision Recenseo AB (16341)" 20251217
+{
+#TRANS 3041 {} -80000 "" "" 0
+#TRANS 2611 {} -20000 "" "" 0
+#TRANS 1510 {} 100000 "" "" 0
+}
+#VER K 46 20251216 "Kreditfaktura Truls Enterprise AB (16339)" 20251218
+{
+#TRANS 3051 {} 21900 "" "" 0
+#TRANS 2611 {} 5475 "" "" 0
+#TRANS 1510 {} -27375 "" "" 0
+}
+#VER K 47 20251216 "Kundfaktura Xpand It Media AB (16340)" 20251218
+{
+#TRANS 3051 {} -21900 "" "" 0
+#TRANS 2611 {} -5475 "" "" 0
+#TRANS 1510 {} 27375 "" "" 0
+}
+#VER K 48 20251229 "Kundfaktura STOCKHOLM 2 Holding AB (16342)" 20260103
+{
+#TRANS 3051 {} -31500 "" "" 0
+#TRANS 2611 {} -7875 "" "" 0
+#TRANS 1510 {} 39375 "" "" 0
+}
+#VER K 49 20251229 "Kundfaktura AB Ostsvenska Fastighetskompaniet (16343)" 20260103
+{
+#TRANS 3051 {} -45000 "" "" 0
+#TRANS 2611 {} -11250 "" "" 0
+#TRANS 1510 {} 56250 "" "" 0
+}
+#VER K 50 20251229 "Kundfaktura Hallingen Invest 3 AB (16344)" 20260103
+{
+#TRANS 3051 {} -36000 "" "" 0
+#TRANS 2611 {} -9000 "" "" 0
+#TRANS 1510 {} 45000 "" "" 0
+}
+#VER K 51 20251231 "Kreditfaktura Truls Enterprise AB (16345)" 20260124
+{
+#TRANS 3041 {} 15000 "" "" 0
+#TRANS 2611 {} 3750 "" "" 0
+#TRANS 1510 {} -18750 "" "" 0
+}
+#VER K 52 20251231 "Kreditfaktura Truls Enterprise AB (16346)" 20260124
+{
+#TRANS 3051 {} 20900 "" "" 0
+#TRANS 2611 {} 5225 "" "" 0
+#TRANS 1510 {} -26125 "" "" 0
+}
+#VER K 53 20251231 "Kreditfaktura School of Mindfulness Stockholm Handelsbolag (16347)" 20260124
+{
+#TRANS 3041 {} 10000 "" "" 0
+#TRANS 2611 {} 2500 "" "" 0
+#TRANS 1510 {} -12500 "" "" 0
+}
+#VER K 54 20251231 "Kreditfaktura BRF KARLHOV (16350)" 20260126
+{
+#TRANS 3041 {} 47300 "" "" 0
+#TRANS 2611 {} 11825 "" "" 0
+#TRANS 1510 {} -59125 "" "" 0
+}
+#VER K 55 20251231 "Kreditfaktura STOCKHOLM 2 Holding AB (16348)" 20260221
+{
+#TRANS 3041 {} 75000 "" "" 0
+#TRANS 2611 {} 18750 "" "" 0
+#TRANS 1510 {} -93750 "" "" 0
+}
+#VER K 56 20251231 "Kreditfaktura STOCKHOLM 2 Holding AB (16349)" 20260221
+{
+#TRANS 3041 {} 43200 "" "" 0
+#TRANS 2611 {} 10800 "" "" 0
+#TRANS 1510 {} -54000 "" "" 0
+}
+#VER L 1 20250104 "Levfakt Fortnox AB (696)" 20250305
+{
+#TRANS 2440 {} -144 "" "" 0
+#TRANS 2641 {} 28.8 "" "" 0
+#TRANS 6230 {} 115.2 "" "" 0
+}
+#VER L 2 20250131 "Levfakt Visma Spcs AB (697)" 20250305
+{
+#TRANS 2440 {} -90 "" "" 0
+#TRANS 2641 {} 18 "" "" 0
+#TRANS 5420 {} 72 "" "" 0
+}
+#VER L 3 20250317 "Levfakt LR Revision & Redovisning Sverige AB (701)" 20250506
+{
+#TRANS 2440 {} -1666 "" "" 0
+#TRANS 2641 {} 333.25 "" "" 0
+#TRANS 3740 {} -0.25 "" "" 0
+#TRANS 6430 {} 1333 "" "" 0
+}
+#VER L 4 20250317 "Levfakt LR Revision & Redovisning Sverige AB (702)" 20250506
+{
+#TRANS 2440 {} -43591 "" "" 0
+#TRANS 2641 {} 8718.25 "" "" 0
+#TRANS 3740 {} -0.25 "" "" 0
+#TRANS 6430 {} 34873 "" "" 0
+}
+#VER L 5 20250317 "Levfakt LR Revision & Redovisning Sverige AB (703)" 20250506
+{
+#TRANS 2440 {} -1666 "" "" 0
+#TRANS 2641 {} 333.25 "" "" 0
+#TRANS 3740 {} -0.25 "" "" 0
+#TRANS 6430 {} 1333 "" "" 0
+}
+#VER L 6 20250317 "Levfakt LR Revision & Redovisning Sverige AB (704)" 20250506
+{
+#TRANS 2440 {} -1666 "" "" 0
+#TRANS 2641 {} 333.25 "" "" 0
+#TRANS 3740 {} -0.25 "" "" 0
+#TRANS 6430 {} 1333 "" "" 0
+}
+#VER L 7 20250317 "Levfakt LR Revision & Redovisning Sverige AB (707)" 20250506
+{
+#TRANS 2440 {} -375 "" "" 0
+#TRANS 2641 {} 75 "" "" 0
+#TRANS 6430 {} 300 "" "" 0
+}
+#VER L 8 20250317 "Levfakt LR Revision & Redovisning Sverige AB (708)" 20250506
+{
+#TRANS 2440 {} -375 "" "" 0
+#TRANS 2641 {} 75 "" "" 0
+#TRANS 6430 {} 300 "" "" 0
+}
+#VER L 9 20250317 "Levfakt LR Revision & Redovisning Sverige AB (709)" 20250506
+{
+#TRANS 2440 {} -375 "" "" 0
+#TRANS 2641 {} 75 "" "" 0
+#TRANS 6430 {} 300 "" "" 0
+}
+#VER L 10 20250407 "Levfakt LR Revision & Redovisning Sverige AB (700)" 20250506
+{
+#TRANS 2440 {} -375 "" "" 0
+#TRANS 2641 {} 75 "" "" 0
+#TRANS 6430 {} 300 "" "" 0
+}
+#VER L 11 20250407 "Levfakt LR Revision & Redovisning Sverige AB (705)" 20250506
+{
+#TRANS 2440 {} -1666 "" "" 0
+#TRANS 2641 {} 333.25 "" "" 0
+#TRANS 3740 {} -0.25 "" "" 0
+#TRANS 6430 {} 1333 "" "" 0
+}
+#VER L 12 20250416 "Levfakt LR Revision & Redovisning Sverige AB (706)" 20250506
+{
+#TRANS 2440 {} -7350 "" "" 0
+#TRANS 2641 {} 1470 "" "" 0
+#TRANS 6430 {} 5880 "" "" 0
+}
+#VER L 13 20250101 "Levfakt Convensia Revision AB (716)" 20250801
+{
+#TRANS 2440 {} -5328 "" "" 0
+#TRANS 2641 {} 1066 "" "" 0
+#TRANS 6550 {} 4262 "" "" 0
+}
+#VER L 14 20250101 "Levfakt Convensia Revision AB (717)" 20250801
+{
+#TRANS 2440 {} -2344 "" "" 0
+#TRANS 2641 {} 469 "" "" 0
+#TRANS 6550 {} 1875 "" "" 0
+}
+#VER L 15 20250109 "Levfakt Toyota Kreditbank Gmbh Tyskland, Sverige Filial (719)" 20250801
+{
+#TRANS 2440 {} -8069 "" "" 0
+#TRANS 2641 {} 1435.97 "" "" 0
+#TRANS 5615 {} 6633.03 "" "" 0
+}
+#VER L 16 20250207 "Levfakt Toyota Kreditbank Gmbh Tyskland, Sverige Filial (720)" 20250801
+{
+#TRANS 2440 {} -8114 "" "" 0
+#TRANS 2641 {} 1445.01 "" "" 0
+#TRANS 5615 {} 6668.99 "" "" 0
+}
+#VER L 17 20250630 "Levfakt Visma Spcs AB (735)" 20250801
+{
+#TRANS 2440 {} -113 "" "" 0
+#TRANS 2641 {} 22.5 "" "" 0
+#TRANS 3740 {} 0.5 "" "" 0
+#TRANS 5420 {} 90 "" "" 0
+}
+#VER L 18 20250304 "Levfakt Fortnox AB (721)" 20250801
+{
+#TRANS 2440 {} -417 "" "" 0
+#TRANS 2641 {} 83.33 "" "" 0
+#TRANS 3740 {} 0.37 "" "" 0
+#TRANS 6230 {} 333.3 "" "" 0
+}
+#VER L 19 20250307 "Levfakt Toyota Kreditbank Gmbh Tyskland, Sverige Filial (722)" 20250801
+{
+#TRANS 2440 {} -8015 "" "" 0
+#TRANS 2641 {} 1425.01 "" "" 0
+#TRANS 5615 {} 6589.99 "" "" 0
+}
+#VER L 20 20250331 "Levfakt Visma Spcs AB (723)" 20250801
+{
+#TRANS 2440 {} -45 "" "" 0
+#TRANS 2641 {} 9 "" "" 0
+#TRANS 5420 {} 36 "" "" 0
+}
+#VER L 21 20250402 "Levfakt Fortnox AB (724)" 20250801
+{
+#TRANS 2440 {} -161 "" "" 0
+#TRANS 2641 {} 32.1 "" "" 0
+#TRANS 3740 {} 0.5 "" "" 0
+#TRANS 6230 {} 128.4 "" "" 0
+}
+#VER L 22 20250408 "Levfakt Toyota Kreditbank Gmbh Tyskland, Sverige Filial (725)" 20250801
+{
+#TRANS 2440 {} -8071 "" "" 0
+#TRANS 2641 {} 1436.23 "" "" 0
+#TRANS 5615 {} 6634.77 "" "" 0
+}
+#VER L 23 20250430 "Levfakt Visma Spcs AB (730)" 20250801
+{
+#TRANS 2440 {} -68 "" "" 0
+#TRANS 2641 {} 13.5 "" "" 0
+#TRANS 3740 {} 0.5 "" "" 0
+#TRANS 5420 {} 54 "" "" 0
+}
+#VER L 24 20250505 "Levfakt Fortnox AB (732)" 20250801
+{
+#TRANS 2440 {} -172 "" "" 0
+#TRANS 2641 {} 34.43 "" "" 0
+#TRANS 3740 {} -0.13 "" "" 0
+#TRANS 6230 {} 137.7 "" "" 0
+}
+#VER L 25 20250507 "Levfakt Toyota Kreditbank Gmbh Tyskland, Sverige Filial (726)" 20250801
+{
+#TRANS 2440 {} -8071 "" "" 0
+#TRANS 2641 {} 1436.23 "" "" 0
+#TRANS 5615 {} 6634.77 "" "" 0
+}
+#VER L 26 20250519 "Levfakt LR Revision & Redovisning Sverige AB (731)" 20250801
+{
+#TRANS 2440 {} -1666 "" "" 0
+#TRANS 2641 {} 333.25 "" "" 0
+#TRANS 3740 {} -0.25 "" "" 0
+#TRANS 6430 {} 1333 "" "" 0
+}
+#VER L 27 20250519 "Levfakt LR Revision & Redovisning Sverige AB (734)" 20250801
+{
+#TRANS 2440 {} -375 "" "" 0
+#TRANS 2641 {} 75 "" "" 0
+#TRANS 6430 {} 300 "" "" 0
+}
+#VER L 28 20250603 "Levfakt Fortnox AB (733)" 20250801
+{
+#TRANS 2440 {} -154 "" "" 0
+#TRANS 2641 {} 30.88 "" "" 0
+#TRANS 3740 {} -0.38 "" "" 0
+#TRANS 6230 {} 123.5 "" "" 0
+}
+#VER L 29 20250606 "Levfakt Toyota Kreditbank Gmbh Tyskland, Sverige Filial (727)" 20250801
+{
+#TRANS 2440 {} -8071 "" "" 0
+#TRANS 2641 {} 1436.23 "" "" 0
+#TRANS 5615 {} 6634.77 "" "" 0
+}
+#VER L 30 20250617 "Levfakt LR Revision & Redovisning Sverige AB (728)" 20250801
+{
+#TRANS 2440 {} -1666 "" "" 0
+#TRANS 2641 {} 333.25 "" "" 0
+#TRANS 3740 {} -0.25 "" "" 0
+#TRANS 6430 {} 1333 "" "" 0
+}
+#VER L 31 20250617 "Levfakt LR Revision & Redovisning Sverige AB (729)" 20250801
+{
+#TRANS 2440 {} -375 "" "" 0
+#TRANS 2641 {} 75 "" "" 0
+#TRANS 6430 {} 300 "" "" 0
+}
+#VER L 32 20250702 "Levfakt Fortnox AB (738)" 20250801
+{
+#TRANS 2440 {} -180 "" "" 0
+#TRANS 2641 {} 36.03 "" "" 0
+#TRANS 3740 {} -0.13 "" "" 0
+#TRANS 6230 {} 144.1 "" "" 0
+}
+#VER L 33 20250707 "Levfakt LR Revision & Redovisning Sverige AB (737)" 20250801
+{
+#TRANS 2440 {} -1666 "" "" 0
+#TRANS 2641 {} 333.25 "" "" 0
+#TRANS 3740 {} -0.25 "" "" 0
+#TRANS 6430 {} 1333 "" "" 0
+}
+#VER L 34 20250707 "Levfakt LR Revision & Redovisning Sverige AB (739)" 20250801
+{
+#TRANS 2440 {} -375 "" "" 0
+#TRANS 2641 {} 75 "" "" 0
+#TRANS 6430 {} 300 "" "" 0
+}
+#VER L 35 20250708 "Levfakt Toyota Kreditbank Gmbh Tyskland, Sverige Filial (736)" 20250801
+{
+#TRANS 2440 {} -8071 "" "" 0
+#TRANS 2641 {} 1436.23 "" "" 0
+#TRANS 5615 {} 6634.77 "" "" 0
+}
+#VER L 36 20250308 "Levfakt Transportstyrelsen ôrebro (752)" 20250803
+{
+#TRANS 2440 {} -1707 "" "" 0
+#TRANS 5612 {} 1707 "" "" 0
+}
+#VER L 37 20250704 "Levfakt Transportstyrelsen ôrebro (757)" 20250803
+{
+#TRANS 2440 {} -1638 "" "" 0
+#TRANS 5612 {} 1638 "" "" 0
+}
+#VER L 38 20250101 "Levfakt Transportstyrelsen ôrebro (758)" 20250803
+{
+#TRANS 2440 {} -1638 "" "" 0
+#TRANS 5612 {} 1638 "" "" 0
+}
+#VER L 39 20250125 "Levfakt Telenor Sverige Aktiebolag (755)" 20250803
+{
+#TRANS 2440 {} -616 "" "" 0
+#TRANS 2641 {} 123.24 "" "" 0
+#TRANS 6230 {} 492.76 "" "" 0
+}
+#VER L 40 20250225 "Levfakt Telenor Sverige Aktiebolag (756)" 20250803
+{
+#TRANS 2440 {} -632 "" "" 0
+#TRANS 2641 {} 126.32 "" "" 0
+#TRANS 6230 {} 505.68 "" "" 0
+}
+#VER L 41 20250325 "Levfakt Telenor Sverige Aktiebolag (753)" 20250803
+{
+#TRANS 2440 {} -844 "" "" 0
+#TRANS 2641 {} 156.23 "" "" 0
+#TRANS 6230 {} 687.77 "" "" 0
+}
+#VER L 42 20250425 "Levfakt Telenor Sverige Aktiebolag (750)" 20250803
+{
+#TRANS 2440 {} -779 "" "" 0
+#TRANS 2641 {} 155.74 "" "" 0
+#TRANS 6230 {} 623.26 "" "" 0
+}
+#VER L 43 20250525 "Levfakt Telenor Sverige Aktiebolag (754)" 20250803
+{
+#TRANS 2440 {} -779 "" "" 0
+#TRANS 2641 {} 155.74 "" "" 0
+#TRANS 6230 {} 623.26 "" "" 0
+}
+#VER L 44 20250625 "Levfakt Telenor Sverige Aktiebolag (751)" 20250803
+{
+#TRANS 2440 {} -485 "" "" 0
+#TRANS 2641 {} 96.98 "" "" 0
+#TRANS 6230 {} 388.02 "" "" 0
+}
+#VER L 45 20250131 "Levfakt Accountec Sweden AB (740)" 20250803
+{
+#TRANS 2440 {} -439 "" "" 0
+#TRANS 2641 {} 87.75 "" "" 0
+#TRANS 5420 {} 351.25 "" "" 0
+}
+#VER L 46 20250228 "Levfakt Accountec Sweden AB (741)" 20250803
+{
+#TRANS 2440 {} -439 "" "" 0
+#TRANS 2641 {} 87.75 "" "" 0
+#TRANS 5420 {} 351.25 "" "" 0
+}
+#VER L 47 20250331 "Levfakt Accountec Sweden AB (743)" 20250803
+{
+#TRANS 2440 {} -439 "" "" 0
+#TRANS 2641 {} 87.75 "" "" 0
+#TRANS 5420 {} 351.25 "" "" 0
+}
+#VER L 48 20250430 "Levfakt Accountec Sweden AB (745)" 20250803
+{
+#TRANS 2440 {} -439 "" "" 0
+#TRANS 2641 {} 87.75 "" "" 0
+#TRANS 5420 {} 351.25 "" "" 0
+}
+#VER L 49 20250531 "Levfakt Accountec Sweden AB (746)" 20250803
+{
+#TRANS 2440 {} -439 "" "" 0
+#TRANS 2641 {} 87.75 "" "" 0
+#TRANS 5420 {} 351.25 "" "" 0
+}
+#VER L 50 20250630 "Levfakt Accountec Sweden AB (747)" 20250803
+{
+#TRANS 2440 {} -439 "" "" 0
+#TRANS 2641 {} 87.75 "" "" 0
+#TRANS 5420 {} 351.25 "" "" 0
+}
+#VER L 51 20250731 "Levfakt Accountec Sweden AB (748)" 20250803
+{
+#TRANS 2440 {} -439 "" "" 0
+#TRANS 2641 {} 87.75 "" "" 0
+#TRANS 5420 {} 351.25 "" "" 0
+}
+#VER L 52 20250101 "Levfakt Accountec Sweden AB (744)" 20250803
+{
+#TRANS 2440 {} -394 "" "" 0
+#TRANS 2641 {} 78.75 "" "" 0
+#TRANS 5420 {} 315.25 "" "" 0
+}
+#VER L 53 20250206 "Levfakt S & P INSURANCE CONSULTING AB (749)" 20250803
+{
+#TRANS 2440 {} -9620 "" "" 0
+#TRANS 6310 {} 9620 "" "" 0
+}
+#VER L 54 20250312 "Levfakt Stefan Lîîv Consulting AB (742)" 20250803
+{
+#TRANS 2440 {} -3135 "" "" 0
+#TRANS 2641 {} 627 "" "" 0
+#TRANS 6550 {} 2508 "" "" 0
+}
+#VER L 55 20250626 "Levfakt VISMA FINANCIAL SOLUTIONS AB (759)" 20250901
+{
+#TRANS 2440 {} -309 "" "" 0
+#TRANS 6064 {} 309 "" "" 0
+}
+#VER L 56 20250804 "Levfakt Fortnox AB (760)" 20250901
+{
+#TRANS 2440 {} -214 "" "" 0
+#TRANS 2641 {} 42.78 "" "" 0
+#TRANS 3740 {} 0.12 "" "" 0
+#TRANS 6230 {} 171.1 "" "" 0
+}
+#VER L 57 20250807 "Levfakt LR Revision & Redovisning Sverige AB (761)" 20250901
+{
+#TRANS 2440 {} -375 "" "" 0
+#TRANS 2641 {} 75 "" "" 0
+#TRANS 6430 {} 300 "" "" 0
+}
+#VER L 58 20250807 "Levfakt LR Revision & Redovisning Sverige AB (762)" 20250901
+{
+#TRANS 2440 {} -1666 "" "" 0
+#TRANS 2641 {} 333.25 "" "" 0
+#TRANS 3740 {} -0.25 "" "" 0
+#TRANS 6430 {} 1333 "" "" 0
+}
+#VER L 59 20250807 "Levfakt Toyota Kreditbank Gmbh Tyskland, Sverige Filial (763)" 20250901
+{
+#TRANS 2440 {} -7985 "" "" 0
+#TRANS 2641 {} 1419.11 "" "" 0
+#TRANS 5615 {} 6565.89 "" "" 0
+}
+#VER L 60 20250818 "Levfakt LR Revision & Redovisning Sverige AB (764)" 20250901
+{
+#TRANS 2440 {} -495 "" "" 0
+#TRANS 2641 {} 99 "" "" 0
+#TRANS 6430 {} 396 "" "" 0
+}
+#VER L 61 20250801 "Levfakt Convensia Revision AB (767)" 20250924
+{
+#TRANS 2440 {} -1900 "" "" 0
+#TRANS 6550 {} 1900 "" "" 0
+}
+#VER L 62 20250902 "Levfakt Fortnox AB (766)" 20250924
+{
+#TRANS 2440 {} -321 "" "" 0
+#TRANS 2641 {} 64.2 "" "" 0
+#TRANS 6230 {} 256.8 "" "" 0
+}
+#VER L 63 20250906 "Levfakt Toyota Kreditbank Gmbh Tyskland, Sverige Filial (765)" 20250924
+{
+#TRANS 2440 {} -2726 "" "" 0
+#TRANS 2641 {} 545.12 "" "" 0
+#TRANS 5615 {} 2180.88 "" "" 0
+}
+#VER L 64 20250912 "Levfakt Convensia Revision AB (768)" 20250924
+{
+#TRANS 2440 {} -2375 "" "" 0
+#TRANS 2641 {} 475 "" "" 0
+#TRANS 6550 {} 1900 "" "" 0
+}
+#VER L 65 20250801 "Levkreditfakt Convensia Revision AB (769)" 20250924
+{
+#TRANS 2440 {} 1900 "" "" 0
+#TRANS 6550 {} -1900 "" "" 0
+}
+#VER L 66 20250401 "Levfakt Convensia Revision AB (770)" 20250924
+{
+#TRANS 2440 {} -2531 "" "" 0
+#TRANS 2641 {} 506 "" "" 0
+#TRANS 6550 {} 2025 "" "" 0
+}
+#VER L 67 20250925 "Levfakt LR Revision & Redovisning Sverige AB (773)" 20251025
+{
+#TRANS 2440 {} -1666 "" "" 0
+#TRANS 2641 {} 333.25 "" "" 0
+#TRANS 3740 {} -0.25 "" "" 0
+#TRANS 6430 {} 1333 "" "" 0
+}
+#VER L 68 20250925 "Levfakt LR Revision & Redovisning Sverige AB (775)" 20251025
+{
+#TRANS 2440 {} -375 "" "" 0
+#TRANS 2641 {} 75 "" "" 0
+#TRANS 6430 {} 300 "" "" 0
+}
+#VER L 69 20251007 "Levfakt LR Revision & Redovisning Sverige AB (774)" 20251025
+{
+#TRANS 2440 {} -248 "" "" 0
+#TRANS 2641 {} 49.5 "" "" 0
+#TRANS 3740 {} 0.5 "" "" 0
+#TRANS 6430 {} 198 "" "" 0
+}
+#VER L 70 20251022 "Levfakt LR Revision & Redovisning Sverige AB (771)" 20251025
+{
+#TRANS 2440 {} -1666 "" "" 0
+#TRANS 2641 {} 333.25 "" "" 0
+#TRANS 3740 {} -0.25 "" "" 0
+#TRANS 6430 {} 1333 "" "" 0
+}
+#VER L 71 20251022 "Levfakt LR Revision & Redovisning Sverige AB (772)" 20251025
+{
+#TRANS 2440 {} -375 "" "" 0
+#TRANS 2641 {} 75 "" "" 0
+#TRANS 6430 {} 300 "" "" 0
+}
+#VER L 72 20250603 "Levfakt W&F Advisory AB (776)" 20251119
+{
+#TRANS 2440 {} -6094 "" "" 0
+#TRANS 2641 {} 1218.75 "" "" 0
+#TRANS 6550 {} 4875.25 "" "" 0
+}
+#VER L 73 20250923 "Levfakt W&F Advisory AB (779)" 20251119
+{
+#TRANS 2440 {} -4875 "" "" 0
+#TRANS 2641 {} 975 "" "" 0
+#TRANS 6550 {} 3900 "" "" 0
+}
+#VER L 74 20251104 "Levfakt STOCKHOLMS ALLMéNA GYMANSTIKAVDELNI (789)" 20251119
+{
+#TRANS 2440 {} -1450 "" "" 0
+#TRANS 2641 {} 70.75 "" "" 0
+#TRANS 7621 {} 1379.25 "" "" 0
+}
+#VER L 75 20250831 "Levfakt Accountec Sweden AB (777)" 20251119
+{
+#TRANS 2440 {} -529 "" "" 0
+#TRANS 2641 {} 105.75 "" "" 0
+#TRANS 5420 {} 423.25 "" "" 0
+}
+#VER L 76 20250916 "Levfakt JB Travel AB (778)" 20251119
+{
+#TRANS 2440 {} -32812.5 "" "" 0
+#TRANS 2641 {} 6562.5 "" "" 0
+#BTRANS 5800 {} 26250 "" "" 0 "Ingrid Lindegren"
+#RTRANS 7610 {} 26250 "" "" 0 "Ingrid Lindegren"
+#TRANS 7610 {} 26250 "" "" 0
+}
+#VER L 77 20250930 "Levfakt Accountec Sweden AB (780)" 20251119
+{
+#TRANS 2440 {} -439 "" "" 0
+#TRANS 2641 {} 87.75 "" "" 0
+#TRANS 5420 {} 351.25 "" "" 0
+}
+#VER L 78 20251002 "Levfakt Fortnox AB (781)" 20251119
+{
+#TRANS 2440 {} -184 "" "" 0
+#TRANS 2641 {} 36.88 "" "" 0
+#TRANS 3740 {} -0.38 "" "" 0
+#TRANS 6230 {} 147.5 "" "" 0
+}
+#VER L 79 20251007 "Levfakt Toyota Kreditbank Gmbh Tyskland, Sverige Filial (782)" 20251119
+{
+#TRANS 2440 {} -2726 "" "" 0
+#TRANS 2641 {} 272.56 "" "" 0
+#TRANS 5615 {} 2453.44 "" "" 0
+}
+#VER L 80 20251014 "Levfakt JB Travel AB (783)" 20251119
+{
+#TRANS 2440 {} -437.5 "" "" 0
+#TRANS 2641 {} 87.5 "" "" 0
+#BTRANS 5800 {} 350 "" "" 0 "Ingrid Lindegren"
+#RTRANS 7610 {} 350 "" "" 0 "Ingrid Lindegren"
+#TRANS 7610 {} 350 "" "" 0
+}
+#VER L 81 20251031 "Levfakt Visma Spcs AB (784)" 20251119
+{
+#TRANS 2440 {} -404 "" "" 0
+#TRANS 2641 {} 80.75 "" "" 0
+#TRANS 3740 {} 0.25 "" "" 0
+#TRANS 5420 {} 323 "" "" 0
+}
+#VER L 82 20251031 "Levfakt Accountec Sweden AB (785)" 20251119
+{
+#TRANS 2440 {} -439 "" "" 0
+#TRANS 2641 {} 87.75 "" "" 0
+#TRANS 5420 {} 351.25 "" "" 0
+}
+#VER L 83 20251106 "Levfakt Toyota Kreditbank Gmbh Tyskland, Sverige Filial (786)" 20251119
+{
+#TRANS 2440 {} -2717 "" "" 0
+#TRANS 2641 {} 271.7 "" "" 0
+#TRANS 5615 {} 2445.3 "" "" 0
+}
+#VER L 84 20251110 "Levfakt LR Revision & Redovisning Sverige AB (787)" 20251119
+{
+#TRANS 2440 {} -1666 "" "" 0
+#TRANS 2641 {} 333.25 "" "" 0
+#TRANS 3740 {} -0.25 "" "" 0
+#TRANS 6430 {} 1333 "" "" 0
+}
+#VER L 85 20251110 "Levfakt LR Revision & Redovisning Sverige AB (788)" 20251119
+{
+#TRANS 2440 {} -375 "" "" 0
+#TRANS 2641 {} 75 "" "" 0
+#TRANS 6430 {} 300 "" "" 0
+}
+#VER L 86 20250725 "Levfakt Telenor Sverige Aktiebolag (790)" 20251120
+{
+#TRANS 2440 {} -623 "" "" 0
+#TRANS 2641 {} 112 "" "" 0
+#TRANS 6230 {} 511 "" "" 0
+}
+#VER L 87 20250825 "Levfakt Telenor Sverige Aktiebolag (792)" 20251120
+{
+#TRANS 2440 {} -560 "" "" 0
+#TRANS 2641 {} 112 "" "" 0
+#TRANS 6230 {} 448 "" "" 0
+}
+#VER L 88 20250925 "Levfakt Telenor Sverige Aktiebolag (793)" 20251120
+{
+#TRANS 2440 {} -560 "" "" 0
+#TRANS 2641 {} 112 "" "" 0
+#TRANS 6230 {} 448 "" "" 0
+}
+#VER L 89 20251025 "Levfakt Telenor Sverige Aktiebolag (791)" 20251120
+{
+#TRANS 2440 {} -566 "" "" 0
+#TRANS 2641 {} 113.13 "" "" 0
+#TRANS 6230 {} 452.87 "" "" 0
+}
+#VER L 90 20250609 "Levfakt Fortnox AB (794)" 20251123
+{
+#TRANS 2440 {} -1455 "" "" 0
+#TRANS 2641 {} 290.92 "" "" 0
+#TRANS 6230 {} 1164.08 "" "" 0
+}
+#VER L 91 20251205 "Levfakt LR Revision & Redovisning Sverige AB (795)" 20260114
+{
+#TRANS 2440 {} -1666 "" "" 0
+#TRANS 2641 {} 333.25 "" "" 0
+#TRANS 3740 {} -0.25 "" "" 0
+#TRANS 6430 {} 1333 "" "" 0
+}
+#VER L 92 20251205 "Levfakt LR Revision & Redovisning Sverige AB (797)" 20260114
+{
+#TRANS 2440 {} -375 "" "" 0
+#TRANS 2641 {} 75 "" "" 0
+#TRANS 6430 {} 300 "" "" 0
+}
+#VER L 93 20251217 "Levfakt LR Revision & Redovisning Sverige AB (796)" 20260114
+{
+#TRANS 2440 {} -8688 "" "" 0
+#TRANS 2641 {} 1737.5 "" "" 0
+#TRANS 3740 {} 0.5 "" "" 0
+#TRANS 6430 {} 6950 "" "" 0
+}
+#VER L 94 20251206 "Levfakt Toyota Kreditbank Gmbh Tyskland, Sverige Filial (798)" 20260125
+{
+#TRANS 2440 {} -2722 "" "" 0
+#TRANS 2641 {} 272.2 "" "" 0
+#TRANS 5615 {} 2449.8 "" "" 0
+}
+#VER L 95 20251130 "Levfakt Visma Spcs AB (799)" 20260125
+{
+#TRANS 2440 {} -25 "" "" 0
+#TRANS 2641 {} 5 "" "" 0
+#TRANS 5420 {} 20 "" "" 0
+}
+#VER L 96 20251201 "Levfakt Convensia Revision AB (800)" 20260125
+{
+#TRANS 2440 {} -1562 "" "" 0
+#TRANS 2641 {} 312 "" "" 0
+#TRANS 6550 {} 1250 "" "" 0
+}
+#VER L 97 20251203 "Levfakt Fortnox AB (801)" 20260125
+{
+#TRANS 2440 {} -227 "" "" 0
+#TRANS 2641 {} 45.33 "" "" 0
+#TRANS 3740 {} 0.37 "" "" 0
+#TRANS 6230 {} 181.3 "" "" 0
+}
+#VER L 98 20251208 "Levfakt Fortnox AB (802)" 20260125
+{
+#TRANS 2440 {} -2835 "" "" 0
+#TRANS 2641 {} 567 "" "" 0
+#TRANS 6230 {} 2268 "" "" 0
+}
+#VER L 99 20251125 "Levfakt Telenor Sverige Aktiebolag (804)" 20260126
+{
+#TRANS 2440 {} -572 "" "" 0
+#TRANS 2641 {} 114.41 "" "" 0
+#TRANS 6230 {} 457.59 "" "" 0
+}
+#VER L 100 20251130 "Levfakt Accountec Sweden AB (805)" 20260126
+{
+#TRANS 2440 {} -49 "" "" 0
+#TRANS 2641 {} 9.75 "" "" 0
+#TRANS 5420 {} 39.25 "" "" 0
+}
+#VER L 101 20251225 "Levfakt Telenor Sverige Aktiebolag (806)" 20260126
+{
+#TRANS 2440 {} -2746 "" "" 0
+#TRANS 2641 {} 549.15 "" "" 0
+#TRANS 6230 {} 2196.85 "" "" 0
+}
+#VER L 102 20251231 "Levfakt Accountec Sweden AB (807)" 20260126
+{
+#TRANS 2440 {} -229 "" "" 0
+#TRANS 2641 {} 45.75 "" "" 0
+#TRANS 5420 {} 183.25 "" "" 0
+}
+#VER L 103 20251215 "Levfakt W&F Advisory AB (809)" 20260126
+{
+#TRANS 2440 {} -18750 "" "" 0
+#TRANS 2641 {} 3750 "" "" 0
+#TRANS 6550 {} 15000 "" "" 0
+}
+#VER L 104 20251201 "Levfakt Depona AB (810)" 20260127
+{
+#TRANS 2440 {} -3096 "" "" 0
+#TRANS 2641 {} 619.29 "" "" 0
+#TRANS 3740 {} -0.44 "" "" 0
+#TRANS 5013 {} 2477.15 "" "" 0
+}
+#VER L 105 20251104 "Levfakt STOCKHOLMS ALLMéNA GYMANSTIKAVDELNI (811)" 20260129
+{
+#TRANS 2440 {} -15000 "" "" 0
+#TRANS 2641 {} 849.06 "" "" 0
+#TRANS 7621 {} 14150.94 "" "" 0
+}
+#VER S 1 20250131 "Skattekonto 2501" 20250426
+{
+#TRANS 1630 {} 30000 "" "" 0
+#BTRANS 1930 {} -30000 "" "" 0 "Ingrid Lindegren"
+#TRANS 1630 {} -265 "" "" 0
+#TRANS 8423 {} 265 "" "" 0
+#TRANS 1630 {} 1 "" "" 0
+#TRANS 8423 {} -1 "" "" 0
+#TRANS 1630 {} -7208 "" "" 0
+#TRANS 2510 {} 7208 "" "" 0
+#BTRANS 2999 {} -30000 "" "" 0 "Ingrid Lindegren"
+#BTRANS 1930 {} -30000 "" "" 0 "Ingrid Lindegren"
+#BTRANS 2893 {} -30000 "" "" 0 "Ingrid Lindegren"
+#RTRANS 1930 {} -30000 "" "" 0 "Ingrid Lindegren"
+#TRANS 1930 {} -30000 "" "" 0
+}
+#VER S 2 20250228 "Skattekonto 2502" 20250426
+{
+#TRANS 1630 {} 5 "" "" 0
+#TRANS 8423 {} -5 "" "" 0
+}
+#VER S 3 20250331 "Skattekonto 2503" 20250426
+{
+#TRANS 1630 {} 2 "" "" 0
+#TRANS 8423 {} -2 "" "" 0
+#TRANS 1630 {} -136359 "" "" 0
+#TRANS 2510 {} 136359 "" "" 0
+#TRANS 1630 {} 72096 "" "" 0
+#TRANS 2510 {} -72096 "" "" 0
+}
+#VER S 4 20250430 "Skattekonto 2504" 20250426
+{
+#TRANS 1630 {} -2201 "" "" 0
+#TRANS 8423 {} 2201 "" "" 0
+#TRANS 1630 {} -782 "" "" 0
+#TRANS 8423 {} 782 "" "" 0
+#TRANS 1630 {} -9 "" "" 0
+#TRANS 8423 {} 9 "" "" 0
+#TRANS 1630 {} -625 "" "" 0
+#TRANS 6992 {} 625 "" "" 0
+}
+#VER S 5 20250531 "Skattekonto 2505" 20250803
+{
+#TRANS 1630 {} 66000 "" "" 0
+#TRANS 1930 {} -66000 "" "" 0
+#TRANS 1630 {} -840 "" "" 0
+#TRANS 8423 {} 840 "" "" 0
+}
+#VER S 6 20250831 "Skattekonto 2508" 20250923
+{
+#TRANS 1630 {} -247137 "" "" 0
+#TRANS 2650 {} 247137 "" "" 0
+}
+#VER S 7 20250930 "Skattekonto 2509" 20250923
+{
+#TRANS 1630 {} -2251 "" "" 0
+#TRANS 8423 {} 2251 "" "" 0
+#TRANS 1630 {} 252000 "" "" 0
+#TRANS 1930 {} -252000 "" "" 0
+}
+#VER S 8 20251031 "Skattekonto 2510" 20260221
+{
+#TRANS 1630 {} -2033 "" "" 0
+#TRANS 8423 {} 2033 "" "" 0
+#TRANS 1630 {} 1 "" "" 0
+#TRANS 8423 {} -1 "" "" 0
+}
+#VER S 9 20251130 "Skattekonto 2511" 20260221
+{
+#TRANS 1630 {} 1 "" "" 0
+#TRANS 8423 {} -1 "" "" 0
+#RTRANS 1630 {} -625 "" "" 0 "Ingrid Lindegren"
+#TRANS 1630 {} -625 "" "" 0
+#RTRANS 6992 {} 625 "" "" 0 "Ingrid Lindegren"
+#TRANS 6992 {} 625 "" "" 0
+}
