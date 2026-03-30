@@ -1,0 +1,76 @@
+<h2>KEYHOLDER — System Architecture</h2>
+<p class="subtitle">How the pieces fit together</p>
+
+<div class="section">
+  <div class="mockup">
+    <div class="mockup-header">Architecture Overview</div>
+    <div class="mockup-body" style="padding: 2rem; font-family: monospace; font-size: 0.85rem; line-height: 1.8;">
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <div style="display: inline-block; background: #1a1a2e; color: #e94560; padding: 0.8rem 2rem; border-radius: 8px; font-weight: bold; font-size: 1.1rem;">
+          KEYHOLDER CONTROL PLANE
+        </div>
+        <div style="color: #666; margin-top: 0.5rem;">Your central platform (Next.js + your own Supabase)</div>
+        <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1rem; flex-wrap: wrap;">
+          <span style="background: #16213e; color: #0f3460; padding: 0.4rem 0.8rem; border-radius: 4px; border: 1px solid #0f3460; color: #e94560;">Auth & Users</span>
+          <span style="background: #16213e; color: #0f3460; padding: 0.4rem 0.8rem; border-radius: 4px; border: 1px solid #0f3460; color: #e94560;">Billing (Stripe)</span>
+          <span style="background: #16213e; color: #0f3460; padding: 0.4rem 0.8rem; border-radius: 4px; border: 1px solid #0f3460; color: #e94560;">Fortnox OAuth</span>
+          <span style="background: #16213e; color: #0f3460; padding: 0.4rem 0.8rem; border-radius: 4px; border: 1px solid #0f3460; color: #e94560;">Provisioning Engine</span>
+          <span style="background: #16213e; color: #0f3460; padding: 0.4rem 0.8rem; border-radius: 4px; border: 1px solid #0f3460; color: #e94560;">Agent Library</span>
+        </div>
+      </div>
+
+      <div style="text-align: center; color: #666; font-size: 1.5rem;">↓ provisions & manages ↓</div>
+
+      <div style="display: flex; gap: 1.5rem; margin-top: 1.5rem; flex-wrap: wrap; justify-content: center;">
+        <div style="flex: 1; min-width: 250px; max-width: 350px; border: 2px solid #533483; border-radius: 12px; padding: 1.2rem; background: #1a1a2e;">
+          <div style="color: #e94560; font-weight: bold; text-align: center; margin-bottom: 0.8rem;">CUSTOMER A — Supabase</div>
+          <div style="color: #aaa; font-size: 0.8rem;">
+            ├── customers<br>
+            ├── invoices<br>
+            ├── suppliers<br>
+            ├── vouchers<br>
+            ├── accounts<br>
+            ├── ... (all 45+ tables)<br>
+            ├── edge_functions/<br>
+            ├── sync_status<br>
+            └── auth (pre-configured)
+          </div>
+          <div style="margin-top: 0.8rem; text-align: center;">
+            <span style="background: #533483; padding: 0.3rem 0.6rem; border-radius: 4px; font-size: 0.75rem; color: #fff;">MCP → Claude / AI</span>
+          </div>
+        </div>
+
+        <div style="flex: 1; min-width: 250px; max-width: 350px; border: 2px solid #533483; border-radius: 12px; padding: 1.2rem; background: #1a1a2e;">
+          <div style="color: #e94560; font-weight: bold; text-align: center; margin-bottom: 0.8rem;">CUSTOMER B — Supabase</div>
+          <div style="color: #aaa; font-size: 0.8rem;">
+            ├── customers<br>
+            ├── invoices<br>
+            ├── suppliers<br>
+            ├── vouchers<br>
+            ├── accounts<br>
+            ├── ... (all 45+ tables)<br>
+            ├── edge_functions/<br>
+            ├── sync_status<br>
+            └── auth (pre-configured)
+          </div>
+          <div style="margin-top: 0.8rem; text-align: center;">
+            <span style="background: #533483; padding: 0.3rem 0.6rem; border-radius: 4px; font-size: 0.75rem; color: #fff;">MCP → Claude / AI</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; color: #666; font-size: 1.5rem; margin-top: 1.5rem;">↑ syncs from ↑</div>
+
+      <div style="text-align: center; margin-top: 1rem;">
+        <div style="display: inline-block; background: #0a5c36; color: #2ecc71; padding: 0.8rem 2rem; border-radius: 8px; font-weight: bold; font-size: 1.1rem;">
+          FORTNOX API
+        </div>
+        <div style="color: #666; margin-top: 0.5rem;">Polling every 5 min → incremental sync per customer</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3 style="margin-top: 2rem;">Key Principle</h3>
+<p>You own the <strong>control plane</strong> (users, billing, provisioning, sync engine, agent library).<br>
+Customers own their <strong>data plane</strong> (their Supabase = their data, their edge functions, their AI connections).</p>

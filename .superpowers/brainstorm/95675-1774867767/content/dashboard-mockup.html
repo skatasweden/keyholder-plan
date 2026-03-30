@@ -1,0 +1,132 @@
+<h2>KEYHOLDER — Customer Dashboard (MVP)</h2>
+<p class="subtitle">What the customer sees after onboarding</p>
+
+<div class="section">
+  <div class="mockup">
+    <div class="mockup-header">Dashboard — Företag AB</div>
+    <div class="mockup-body" style="padding: 0;">
+
+      <!-- Top nav -->
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.2);">
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <span style="font-weight: bold; color: #e94560; font-size: 1.1rem;">🔑 KEYHOLDER</span>
+          <span style="color: #888; font-size: 0.85rem;">Företag AB</span>
+        </div>
+        <div style="display: flex; gap: 1.5rem; font-size: 0.85rem;">
+          <span style="color: #ccc; cursor: pointer;">Data</span>
+          <span style="color: #888; cursor: pointer;">Sync</span>
+          <span style="color: #888; cursor: pointer;">AI Connect</span>
+          <span style="color: #888; cursor: pointer;">Settings</span>
+        </div>
+      </div>
+
+      <!-- Sync status bar -->
+      <div style="display: flex; gap: 1rem; padding: 1rem 1.5rem; background: rgba(46, 204, 113, 0.08); border-bottom: 1px solid rgba(46, 204, 113, 0.2); flex-wrap: wrap;">
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <div style="width: 8px; height: 8px; border-radius: 50%; background: #2ecc71;"></div>
+          <span style="color: #2ecc71; font-size: 0.85rem; font-weight: 500;">All synced</span>
+        </div>
+        <span style="color: #666; font-size: 0.8rem;">Last sync: 2 min ago</span>
+        <span style="color: #666; font-size: 0.8rem;">|</span>
+        <span style="color: #666; font-size: 0.8rem;">Fortnox connected ✓</span>
+        <span style="color: #666; font-size: 0.8rem;">|</span>
+        <span style="color: #666; font-size: 0.8rem;">12,847 records</span>
+      </div>
+
+      <!-- Main content -->
+      <div style="padding: 1.5rem;">
+
+        <!-- Data overview cards -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+          <div style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 1rem; text-align: center;">
+            <div style="color: #888; font-size: 0.75rem; text-transform: uppercase;">Verifikationer</div>
+            <div style="color: #fff; font-size: 1.5rem; font-weight: bold; margin-top: 0.3rem;">4,231</div>
+          </div>
+          <div style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 1rem; text-align: center;">
+            <div style="color: #888; font-size: 0.75rem; text-transform: uppercase;">Fakturor</div>
+            <div style="color: #fff; font-size: 1.5rem; font-weight: bold; margin-top: 0.3rem;">892</div>
+          </div>
+          <div style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 1rem; text-align: center;">
+            <div style="color: #888; font-size: 0.75rem; text-transform: uppercase;">Kunder</div>
+            <div style="color: #fff; font-size: 1.5rem; font-weight: bold; margin-top: 0.3rem;">156</div>
+          </div>
+          <div style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 1rem; text-align: center;">
+            <div style="color: #888; font-size: 0.75rem; text-transform: uppercase;">Leverantörer</div>
+            <div style="color: #fff; font-size: 1.5rem; font-weight: bold; margin-top: 0.3rem;">89</div>
+          </div>
+          <div style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 1rem; text-align: center;">
+            <div style="color: #888; font-size: 0.75rem; text-transform: uppercase;">Konton</div>
+            <div style="color: #fff; font-size: 1.5rem; font-weight: bold; margin-top: 0.3rem;">284</div>
+          </div>
+        </div>
+
+        <!-- Data table preview -->
+        <div style="margin-bottom: 2rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem;">
+            <h3 style="margin: 0; color: #fff; font-size: 1rem;">Verifikationer</h3>
+            <div style="display: flex; gap: 0.5rem;">
+              <span style="background: rgba(255,255,255,0.1); padding: 0.3rem 0.8rem; border-radius: 4px; font-size: 0.75rem; color: #ccc; cursor: pointer;">Fakturor</span>
+              <span style="background: rgba(255,255,255,0.1); padding: 0.3rem 0.8rem; border-radius: 4px; font-size: 0.75rem; color: #ccc; cursor: pointer;">Kunder</span>
+              <span style="background: rgba(255,255,255,0.1); padding: 0.3rem 0.8rem; border-radius: 4px; font-size: 0.75rem; color: #ccc; cursor: pointer;">Konton</span>
+            </div>
+          </div>
+          <table style="width: 100%; border-collapse: collapse; font-size: 0.8rem;">
+            <thead>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                <th style="text-align: left; padding: 0.5rem; color: #888; font-weight: 500;">Nr</th>
+                <th style="text-align: left; padding: 0.5rem; color: #888; font-weight: 500;">Datum</th>
+                <th style="text-align: left; padding: 0.5rem; color: #888; font-weight: 500;">Text</th>
+                <th style="text-align: right; padding: 0.5rem; color: #888; font-weight: 500;">Belopp</th>
+                <th style="text-align: center; padding: 0.5rem; color: #888; font-weight: 500;">Bilaga</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                <td style="padding: 0.5rem; color: #ccc;">A 412</td>
+                <td style="padding: 0.5rem; color: #ccc;">2026-03-28</td>
+                <td style="padding: 0.5rem; color: #ccc;">Faktura #1092 Kund AB</td>
+                <td style="padding: 0.5rem; color: #2ecc71; text-align: right;">45,000 kr</td>
+                <td style="padding: 0.5rem; text-align: center;">📎</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                <td style="padding: 0.5rem; color: #ccc;">A 411</td>
+                <td style="padding: 0.5rem; color: #ccc;">2026-03-27</td>
+                <td style="padding: 0.5rem; color: #ccc;">Leverantörsfaktura Telia</td>
+                <td style="padding: 0.5rem; color: #e94560; text-align: right;">-2,400 kr</td>
+                <td style="padding: 0.5rem; text-align: center;">📎</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                <td style="padding: 0.5rem; color: #ccc;">A 410</td>
+                <td style="padding: 0.5rem; color: #ccc;">2026-03-26</td>
+                <td style="padding: 0.5rem; color: #ccc;">Löner mars 2026</td>
+                <td style="padding: 0.5rem; color: #e94560; text-align: right;">-128,500 kr</td>
+                <td style="padding: 0.5rem; text-align: center;">📎</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- AI Connect section -->
+        <div style="background: linear-gradient(135deg, rgba(83, 52, 131, 0.2), rgba(233, 69, 96, 0.1)); border: 1px solid rgba(83, 52, 131, 0.3); border-radius: 12px; padding: 1.5rem;">
+          <h3 style="margin: 0 0 0.5rem 0; color: #fff; font-size: 1rem;">Connect Your AI</h3>
+          <p style="color: #aaa; font-size: 0.85rem; margin: 0 0 1rem 0;">Connect Claude, GPT, or any MCP-compatible AI to your accounting data.</p>
+          <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+            <div style="background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 0.8rem 1.2rem; cursor: pointer;">
+              <div style="color: #fff; font-size: 0.85rem; font-weight: 500;">Claude Desktop</div>
+              <div style="color: #888; font-size: 0.75rem;">Setup guide →</div>
+            </div>
+            <div style="background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 0.8rem 1.2rem; cursor: pointer;">
+              <div style="color: #fff; font-size: 0.85rem; font-weight: 500;">Claude Code (CLI)</div>
+              <div style="color: #888; font-size: 0.75rem;">Setup guide →</div>
+            </div>
+            <div style="background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 0.8rem 1.2rem; cursor: pointer;">
+              <div style="color: #fff; font-size: 0.85rem; font-weight: 500;">Supabase MCP</div>
+              <div style="color: #888; font-size: 0.75rem;">Connection string →</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
