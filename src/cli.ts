@@ -4,8 +4,8 @@ import { parseSIE4 } from './sie4-parser.js'
 import { importToSupabase } from './sie4-importer.js'
 import { validateImport } from './sie4-validator.js'
 
-const SUPABASE_URL = 'http://127.0.0.1:54421'
-const SUPABASE_SERVICE_KEY = '$SUPABASE_SERVICE_KEY'
+const SUPABASE_URL = process.env.SUPABASE_URL || 'http://127.0.0.1:54421'
+const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_KEY || '$SUPABASE_SERVICE_KEY'
 
 async function main() {
   const filePath = process.argv[2]
