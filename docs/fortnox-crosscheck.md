@@ -1,53 +1,51 @@
-# Fortnox Crosscheck — Manual Verification
+# Fortnox Crosscheck — Verification Status
 
-> One-time manual verification that the SIE4 parser correctly interprets
-> Fortnox SIE4 exports. Proves the DB is a true mirror of the source system.
+> Proves parser-to-source accuracy: DB data == Fortnox data.
 
-## Purpose
+## Status: AUTOMATED AND VERIFIED (2026-03-30)
 
-Automated tests prove parser-to-DB consistency (parsed data == DB data).
-This crosscheck proves parser-to-source accuracy (DB data == Fortnox data).
+This crosscheck is now fully automated in `src/__tests__/fortnox-crosscheck.test.ts` (16 tests).
 
-## Procedure
+Hardcoded values from real Fortnox Balansrapport and Resultatrapport PDFs are compared against DB values for all 3 companies. Source PDFs in `SIE/FORTNOX-CORRECT-DATA/`.
 
-Use RevIL AB (smallest file) for verification.
+### What's verified
 
-### 1. Balance Sheet (Balansräkning)
+| Company | Closing Balances (UB) | Opening Balances (IB) | Period Results (RES) | Totals |
+|---------|----------------------|----------------------|---------------------|--------|
+| RevIL AB | 27 accounts | 4 accounts | 9 accounts | SUMMA TILLGÅNGAR + BERÄKNAT RESULTAT |
+| Skata Sweden AB | 7 accounts | — | 5 accounts | SUMMA TILLGÅNGAR + BERÄKNAT RESULTAT |
+| Byggnadsställningsentreprenad | 8 accounts | — | 7 accounts | SUMMA TILLGÅNGAR + BERÄKNAT RESULTAT |
 
-Open Fortnox → Rapporter → Balansräkning for 2025.
+All values match to < 0.01 SEK (öre precision).
 
-Pick 3 accounts and note the closing balance (UB):
+### Sign convention
 
-| Account | Fortnox value | DB query | DB value | Match? |
-|---------|--------------|----------|----------|--------|
-| 1510 | _fill in_ | `SELECT amount FROM closing_balances cb JOIN financial_years fy ON cb.financial_year_id = fy.id WHERE fy.year_index = 0 AND cb.account_number = 1510;` | _fill in_ | |
-| 1930 | _fill in_ | same query, account 1930 | _fill in_ | |
-| 2640 | _fill in_ | same query, account 2640 | _fill in_ | |
+- **Balansrapport (IB/UB):** DB values match Fortnox directly
+- **Resultatrapport (RES):** Fortnox negates amounts for display (income=positive, costs=negative). DB stores raw SIE values (debit=positive, credit=negative). Formula: `DB value = -1 × Fortnox value`
 
-### 2. Income Statement (Resultaträkning)
+### Running the crosscheck
 
-Open Fortnox → Rapporter → Resultaträkning for 2025.
+```bash
+npm test  # includes all 52 tests (parser + integration + fortnox crosscheck)
+```
 
-Pick 3 accounts:
+Requires local Supabase running with migrations applied.
 
-| Account | Fortnox value | DB query | DB value | Match? |
-|---------|--------------|----------|----------|--------|
-| 3001 | _fill in_ | `SELECT amount FROM period_results pr JOIN financial_years fy ON pr.financial_year_id = fy.id WHERE fy.year_index = 0 AND pr.account_number = 3001;` | _fill in_ | |
-| 5420 | _fill in_ | same, account 5420 | _fill in_ | |
+## Manual Procedure (if needed)
 
-### 3. Specific Vouchers
+If adding a new company or verifying a specific account not covered by automated tests:
 
-Open Fortnox → Verifikationer. Pick voucher A-1 and one other:
+1. Import the company's `.se` file: `npx tsx src/cli.ts SIE/<file>.se`
+2. Query the DB for specific account balances:
+   ```sql
+   -- Closing balance (Utg balans)
+   SELECT amount FROM closing_balances cb
+   JOIN financial_years fy ON cb.financial_year_id = fy.id
+   WHERE fy.year_index = 0 AND cb.account_number = <ACCOUNT>;
 
-| Voucher | Row | Fortnox account | Fortnox amount | DB amount | Match? |
-|---------|-----|----------------|----------------|-----------|--------|
-| A-1 | 1 | _fill in_ | _fill in_ | `SELECT account_number, amount FROM voucher_rows WHERE voucher_id = (SELECT id FROM vouchers WHERE series = 'A' AND voucher_number = 1) AND transaction_type = 'normal';` | |
-| A-1 | 2 | _fill in_ | _fill in_ | | |
-
-## Result
-
-**Date verified:** _fill in_
-**Verified by:** _fill in_
-**All values match:** Yes / No
-
-If any values don't match, investigate the specific parsing of that record type.
+   -- Period result (Resultatrapport) — negate to match Fortnox display
+   SELECT -amount AS fortnox_display FROM period_results pr
+   JOIN financial_years fy ON pr.financial_year_id = fy.id
+   WHERE fy.year_index = 0 AND pr.account_number = <ACCOUNT>;
+   ```
+3. Compare against the Fortnox PDF in `SIE/FORTNOX-CORRECT-DATA/`

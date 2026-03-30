@@ -624,7 +624,7 @@ keyholder/
 ## CURRENT STATUS
 
 - Design spec completed (2026-03-30)
-- No code written yet
-- No Supabase projects created yet
+- **SIE4 import pipeline: COMPLETE** (2026-03-30) — parser, importer, validator, CLI, 52 automated tests (all passing). DB values verified against Fortnox PDF reports to öre precision. See `SIE/SIE4-PIPELINE-CONTEXT.md` for full technical details.
+- No Supabase production projects created yet (local dev only)
 - No Fortnox OAuth app registered yet
-- Ready for implementation planning
+- Next: build reporting queries, Edge Function for file upload, Fortnox API integration
