@@ -97,8 +97,16 @@ export async function importToSupabase(
     ]
     const extraAccounts = [...new Set(allRefAccounts.filter(a => !knownAccounts.has(a)))]
     const accRows = [
-      ...parsed.accounts.map(a => ({ account_number: a.account_number, name: a.name })),
-      ...extraAccounts.map(a => ({ account_number: a, name: `Account ${a}` })),
+      ...parsed.accounts.map(a => ({
+        account_number: a.account_number,
+        name: a.name,
+        account_type: a.account_type,
+      })),
+      ...extraAccounts.map(a => ({
+        account_number: a,
+        name: `Account ${a}`,
+        account_type: null,
+      })),
     ]
     await upsertBatched(client, 'accounts', accRows, 'account_number')
     stats.accounts = accRows.length
@@ -187,7 +195,7 @@ export async function importToSupabase(
         financial_year_id: fyId,
       }
     })
-    await upsertBatched(client, 'vouchers', voucherRows, 'series,voucher_number')
+    await upsertBatched(client, 'vouchers', voucherRows, 'series,voucher_number,financial_year_id')
     stats.vouchers = voucherRows.length
     log('vouchers', voucherRows.length)
 
@@ -198,12 +206,12 @@ export async function importToSupabase(
     while (true) {
       const { data: voucherData, error: voucherLookupErr } = await client
         .from('vouchers')
-        .select('id, series, voucher_number')
+        .select('id, series, voucher_number, financial_year_id')
         .range(vOffset, vOffset + PAGE - 1)
       if (voucherLookupErr) throw new Error(`voucher lookup: ${voucherLookupErr.message}`)
       if (!voucherData || voucherData.length === 0) break
       for (const v of voucherData) {
-        voucherMap.set(`${v.series}:${v.voucher_number}`, v.id)
+        voucherMap.set(`${v.series}:${v.voucher_number}:${v.financial_year_id}`, v.id)
       }
       if (voucherData.length < PAGE) break
       vOffset += PAGE
@@ -225,7 +233,8 @@ export async function importToSupabase(
     // Insert fresh voucher rows
     const allVoucherRows: Record<string, unknown>[] = []
     for (const v of parsed.vouchers) {
-      const voucherId = voucherMap.get(`${v.series}:${v.voucher_number}`)
+      const fyId = findFinancialYear(v.date, fyRanges)
+      const voucherId = voucherMap.get(`${v.series}:${v.voucher_number}:${fyId}`)
       if (!voucherId) continue
       for (const row of v.rows) {
         allVoucherRows.push({
