@@ -1,0 +1,72 @@
+<h2>Which views are essential for the accounting program?</h2>
+<p class="subtitle">Select all that should be in the initial version. We can add more later.</p>
+
+<div class="options" data-multiselect>
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>SIE4 Import + Overview</h3>
+      <p>Upload SIE4 file, see import progress, company info summary, financial years, parse errors. The landing page after import.</p>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Chart of Accounts (Kontoplan)</h3>
+      <p>Browse all accounts with BAS grouping (1xxx Assets, 2xxx Liabilities, 3xxx Revenue, etc.), account types, SRU codes. Searchable and filterable.</p>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>General Ledger (Huvudbok)</h3>
+      <p>Per-account transaction list with running balance. Filter by date range, account, dimension. The core accounting view.</p>
+    </div>
+  </div>
+
+  <div class="option" data-choice="d" onclick="toggleSelect(this)">
+    <div class="letter">D</div>
+    <div class="content">
+      <h3>Voucher Browser (Verifikationer)</h3>
+      <p>List all vouchers by series (A, B, C...), click to see debit/credit rows, dimensions, attachments. Search by description, amount, date.</p>
+    </div>
+  </div>
+</div>
+
+<div style="margin-top: 2rem;"></div>
+
+<div class="options" data-multiselect>
+  <div class="option" data-choice="e" onclick="toggleSelect(this)">
+    <div class="letter">E</div>
+    <div class="content">
+      <h3>Balance Sheet (Balansrapport)</h3>
+      <p>Standard Swedish balance sheet grouped by BAS account classes. Shows IB, UB, and change. Matches Fortnox layout.</p>
+    </div>
+  </div>
+
+  <div class="option" data-choice="f" onclick="toggleSelect(this)">
+    <div class="letter">F</div>
+    <div class="content">
+      <h3>Income Statement (Resultatrapport)</h3>
+      <p>Revenue - Costs = Result, grouped by BAS classes. Period comparison (month, quarter, YTD). Matches Fortnox layout.</p>
+    </div>
+  </div>
+
+  <div class="option" data-choice="g" onclick="toggleSelect(this)">
+    <div class="letter">G</div>
+    <div class="content">
+      <h3>Validation Dashboard</h3>
+      <p>Run the 10 validator checks visually. Side-by-side comparison with Fortnox source data. Red/green status for each check. The "trust but verify" view.</p>
+    </div>
+  </div>
+
+  <div class="option" data-choice="h" onclick="toggleSelect(this)">
+    <div class="letter">H</div>
+    <div class="content">
+      <h3>Dimensions & Cost Centers</h3>
+      <p>Browse dimensions (cost centers, projects, employees), objects per dimension, and per-object balances (OIB/OUB). Filter vouchers by dimension.</p>
+    </div>
+  </div>
+</div>

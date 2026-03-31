@@ -1,0 +1,1 @@
+select c.company_name, c.org_number, (select count(*) from accounts a where a.company_id = c.id) as konton, (select count(*) from vouchers v where v.company_id = c.id) as verifikationer, (select count(*) from financial_years fy where fy.company_id = c.id) as rakenskapsar from company_info c order by c.company_name

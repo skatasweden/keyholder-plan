@@ -1,0 +1,134 @@
+<h2>App Layout & Navigation</h2>
+<p class="subtitle">Fixed sidebar + scrollable content area</p>
+
+<div class="mockup" style="margin-bottom: 2rem;">
+  <div class="mockup-header">Desktop Layout (1440px)</div>
+  <div class="mockup-body" style="padding: 0; min-height: 480px; display: flex; background: #f0e9df;">
+
+    <!-- Sidebar -->
+    <div style="width: 260px; background: white; border-right: 1.5px solid #d9cec4; display: flex; flex-direction: column; padding: 0; flex-shrink: 0;">
+
+      <!-- Company Switcher -->
+      <div style="padding: 20px 20px 16px; border-bottom: 1.5px solid #d9cec4;">
+        <div style="font-family: 'Fraunces', Georgia, serif; font-size: 18px; font-weight: 800; color: #1a0f09; letter-spacing: -0.02em;">KEYHOLDER</div>
+        <div style="margin-top: 12px; padding: 10px 14px; background: #f0e9df; border-radius: 10px; display: flex; align-items: center; justify-content: space-between; cursor: pointer;">
+          <div>
+            <div style="font-size: 13px; font-weight: 600; color: #1a0f09;">RevIL AB</div>
+            <div style="font-size: 11px; color: #7a6358;">556677-8899</div>
+          </div>
+          <div style="font-size: 11px; color: #7a6358;">▼</div>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div style="padding: 12px 12px; flex: 1; display: flex; flex-direction: column; gap: 2px;">
+        <div style="padding: 10px 14px; background: #fce0dd; border-radius: 10px; display: flex; align-items: center; gap: 10px;">
+          <span style="font-size: 15px;">📊</span>
+          <span style="font-size: 14px; font-weight: 600; color: #c93526;">Översikt</span>
+        </div>
+        <div style="padding: 10px 14px; border-radius: 10px; display: flex; align-items: center; gap: 10px;">
+          <span style="font-size: 15px;">📂</span>
+          <span style="font-size: 14px; font-weight: 500; color: #362318;">Importera SIE4</span>
+        </div>
+        <div style="padding: 10px 14px; border-radius: 10px; display: flex; align-items: center; gap: 10px;">
+          <span style="font-size: 15px;">📋</span>
+          <span style="font-size: 14px; font-weight: 500; color: #362318;">Kontoplan</span>
+        </div>
+        <div style="padding: 10px 14px; border-radius: 10px; display: flex; align-items: center; gap: 10px;">
+          <span style="font-size: 15px;">📖</span>
+          <span style="font-size: 14px; font-weight: 500; color: #362318;">Huvudbok</span>
+        </div>
+        <div style="padding: 10px 14px; border-radius: 10px; display: flex; align-items: center; gap: 10px;">
+          <span style="font-size: 15px;">📝</span>
+          <span style="font-size: 14px; font-weight: 500; color: #362318;">Verifikationer</span>
+        </div>
+
+        <div style="height: 1px; background: #d9cec4; margin: 8px 4px;"></div>
+        <div style="font-size: 11px; font-weight: 700; color: #7a6358; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 14px;">Rapporter</div>
+
+        <div style="padding: 10px 14px; border-radius: 10px; display: flex; align-items: center; gap: 10px;">
+          <span style="font-size: 15px;">⚖️</span>
+          <span style="font-size: 14px; font-weight: 500; color: #362318;">Balansrapport</span>
+        </div>
+        <div style="padding: 10px 14px; border-radius: 10px; display: flex; align-items: center; gap: 10px;">
+          <span style="font-size: 15px;">📈</span>
+          <span style="font-size: 14px; font-weight: 500; color: #362318;">Resultatrapport</span>
+        </div>
+
+        <div style="height: 1px; background: #d9cec4; margin: 8px 4px;"></div>
+        <div style="font-size: 11px; font-weight: 700; color: #7a6358; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 14px;">Verktyg</div>
+
+        <div style="padding: 10px 14px; border-radius: 10px; display: flex; align-items: center; gap: 10px;">
+          <span style="font-size: 15px;">✅</span>
+          <span style="font-size: 14px; font-weight: 500; color: #362318;">Validering</span>
+        </div>
+        <div style="padding: 10px 14px; border-radius: 10px; display: flex; align-items: center; gap: 10px;">
+          <span style="font-size: 15px;">🏷️</span>
+          <span style="font-size: 14px; font-weight: 500; color: #362318;">Dimensioner</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div style="flex: 1; padding: 32px 40px; overflow-y: auto;">
+      <!-- Page Header -->
+      <div style="margin-bottom: 28px;">
+        <div style="font-family: 'Fraunces', Georgia, serif; font-size: 28px; font-weight: 800; color: #1a0f09; letter-spacing: -0.03em;">Översikt</div>
+        <div style="font-size: 14px; color: #7a6358; margin-top: 4px;">RevIL AB — Räkenskapsår 2025-01-01 till 2025-12-31</div>
+      </div>
+
+      <!-- Stat Cards -->
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 28px;">
+        <div style="background: white; border: 1.5px solid #d9cec4; border-radius: 20px; padding: 20px; text-align: center;">
+          <div style="font-family: 'Fraunces', Georgia, serif; font-size: 32px; font-weight: 900; color: #1a0f09; line-height: 1;">87</div>
+          <div style="font-size: 13px; font-weight: 600; color: #7a6358; margin-top: 6px;">Konton</div>
+        </div>
+        <div style="background: white; border: 1.5px solid #d9cec4; border-radius: 20px; padding: 20px; text-align: center;">
+          <div style="font-family: 'Fraunces', Georgia, serif; font-size: 32px; font-weight: 900; color: #1a0f09; line-height: 1;">406</div>
+          <div style="font-size: 13px; font-weight: 600; color: #7a6358; margin-top: 6px;">Verifikationer</div>
+        </div>
+        <div style="background: white; border: 1.5px solid #d9cec4; border-radius: 20px; padding: 20px; text-align: center;">
+          <div style="font-family: 'Fraunces', Georgia, serif; font-size: 32px; font-weight: 900; color: #f04e3e; line-height: 1;">10<span style="font-size: 18px; color: #7a6358;">/10</span></div>
+          <div style="font-size: 13px; font-weight: 600; color: #7a6358; margin-top: 6px;">Valideringscheckar</div>
+        </div>
+        <div style="background: white; border: 1.5px solid #d9cec4; border-radius: 20px; padding: 20px; text-align: center;">
+          <div style="font-family: 'Fraunces', Georgia, serif; font-size: 32px; font-weight: 900; color: #1a0f09; line-height: 1;">2</div>
+          <div style="font-size: 13px; font-weight: 600; color: #7a6358; margin-top: 6px;">Räkenskapsår</div>
+        </div>
+      </div>
+
+      <!-- Quick Info Cards -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+        <div style="background: white; border: 1.5px solid #d9cec4; border-radius: 18px; padding: 24px;">
+          <div style="font-family: 'Fraunces', Georgia, serif; font-size: 16px; font-weight: 700; color: #1a0f09; margin-bottom: 12px;">Företagsinfo</div>
+          <div style="font-size: 14px; color: #62493e; line-height: 1.8;">
+            <div><span style="color: #7a6358;">Org.nr:</span> 556677-8899</div>
+            <div><span style="color: #7a6358;">Kontoplan:</span> BAS2024</div>
+            <div><span style="color: #7a6358;">Valuta:</span> SEK</div>
+            <div><span style="color: #7a6358;">Program:</span> Fortnox</div>
+          </div>
+        </div>
+        <div style="background: white; border: 1.5px solid #d9cec4; border-radius: 18px; padding: 24px;">
+          <div style="font-family: 'Fraunces', Georgia, serif; font-size: 16px; font-weight: 700; color: #1a0f09; margin-bottom: 12px;">Senaste import</div>
+          <div style="font-size: 14px; color: #62493e; line-height: 1.8;">
+            <div><span style="color: #7a6358;">Fil:</span> RevILAB20260330.se</div>
+            <div><span style="color: #7a6358;">Datum:</span> 2026-03-30</div>
+            <div><span style="color: #7a6358;">Resultat:</span> <span style="color: #2d7a4f; font-weight: 600;">✓ 0 fel</span></div>
+            <div><span style="color: #7a6358;">CRC:</span> <span style="color: #2d7a4f; font-weight: 600;">✓ Verifierad</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Key design decisions</h3>
+  <ul style="line-height: 2;">
+    <li><strong>Sidebar navigation</strong> — always visible, grouped: Data (Import, Kontoplan, Huvudbok, Verifikationer) + Rapporter (Balans, Resultat) + Verktyg (Validering, Dimensioner)</li>
+    <li><strong>Company switcher</strong> at sidebar top — dropdown with company name + org number</li>
+    <li><strong>Page header</strong> — Fraunces heading + company/year context line</li>
+    <li><strong>Stat cards</strong> — overview page shows key metrics at a glance</li>
+    <li><strong>Warm beige background</strong> (#f0e9df), white cards, 1.5px borders, 18-20px radius</li>
+  </ul>
+</div>

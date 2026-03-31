@@ -1,0 +1,201 @@
+<h2>Key Data Views</h2>
+<p class="subtitle">The core accounting views — Balansrapport, Verifikationer, Validering</p>
+
+<!-- Balansrapport -->
+<div class="mockup" style="margin-bottom: 2rem;">
+  <div class="mockup-header">Balansrapport — Balance Sheet</div>
+  <div class="mockup-body" style="background: #f0e9df; padding: 24px;">
+
+    <!-- FY selector -->
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+      <div style="padding: 8px 16px; background: white; border: 1.5px solid #d9cec4; border-radius: 9999px; font-size: 13px; font-weight: 600; color: #1a0f09;">
+        2025-01-01 — 2025-12-31 ▼
+      </div>
+    </div>
+
+    <!-- Report table -->
+    <div style="background: white; border: 1.5px solid #d9cec4; border-radius: 18px; overflow: hidden;">
+      <table style="width: 100%; border-collapse: collapse; font-size: 13px;">
+        <thead>
+          <tr style="background: #f8f4ef;">
+            <th style="text-align: left; padding: 12px 16px; font-weight: 700; color: #1a0f09; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase;">Konto</th>
+            <th style="text-align: left; padding: 12px 16px; font-weight: 700; color: #1a0f09; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase;">Kontonamn</th>
+            <th style="text-align: right; padding: 12px 16px; font-weight: 700; color: #1a0f09; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase;">Ing. balans</th>
+            <th style="text-align: right; padding: 12px 16px; font-weight: 700; color: #1a0f09; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase;">Period</th>
+            <th style="text-align: right; padding: 12px 16px; font-weight: 700; color: #1a0f09; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase;">Utg. balans</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Group header -->
+          <tr style="background: #1a0f09;">
+            <td colspan="5" style="padding: 10px 16px; font-family: 'Fraunces', Georgia, serif; font-weight: 700; color: white; font-size: 14px;">TILLGÅNGAR</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px 16px; color: #7a6358; font-weight: 600;">1510</td>
+            <td style="padding: 8px 16px; color: #362318;">Kundfordringar</td>
+            <td style="padding: 8px 16px; text-align: right; color: #362318; font-variant-numeric: tabular-nums;">245 000,00</td>
+            <td style="padding: 8px 16px; text-align: right; color: #362318; font-variant-numeric: tabular-nums;">38 500,00</td>
+            <td style="padding: 8px 16px; text-align: right; color: #362318; font-weight: 600; font-variant-numeric: tabular-nums;">283 500,00</td>
+          </tr>
+          <tr style="background: #faf8f5;">
+            <td style="padding: 8px 16px; color: #7a6358; font-weight: 600;">1930</td>
+            <td style="padding: 8px 16px; color: #362318;">Företagskonto/checkkonto/affärskonto</td>
+            <td style="padding: 8px 16px; text-align: right; color: #362318; font-variant-numeric: tabular-nums;">1 204 567,89</td>
+            <td style="padding: 8px 16px; text-align: right; color: #362318; font-variant-numeric: tabular-nums;">523 412,34</td>
+            <td style="padding: 8px 16px; text-align: right; color: #362318; font-weight: 600; font-variant-numeric: tabular-nums;">1 727 980,23</td>
+          </tr>
+          <!-- Subtotal -->
+          <tr style="border-top: 2px solid #d9cec4;">
+            <td colspan="2" style="padding: 10px 16px; font-weight: 700; color: #1a0f09;">SUMMA TILLGÅNGAR</td>
+            <td style="padding: 10px 16px; text-align: right; font-weight: 700; color: #1a0f09; font-variant-numeric: tabular-nums;">2 847 190,47</td>
+            <td style="padding: 10px 16px; text-align: right; font-weight: 700; color: #1a0f09; font-variant-numeric: tabular-nums;">1 105 000,00</td>
+            <td style="padding: 10px 16px; text-align: right; font-weight: 700; color: #f04e3e; font-variant-numeric: tabular-nums; font-family: 'Fraunces', Georgia, serif; font-size: 15px;">3 952 190,47</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Voucher Browser -->
+<div class="mockup" style="margin-bottom: 2rem;">
+  <div class="mockup-header">Verifikationer — Voucher Browser</div>
+  <div class="mockup-body" style="background: #f0e9df; padding: 24px;">
+
+    <!-- Filters -->
+    <div style="display: flex; gap: 10px; margin-bottom: 16px;">
+      <input type="text" placeholder="Sök verifikation..." style="flex: 1; padding: 10px 16px; border: 1.5px solid #d9cec4; border-radius: 9999px; background: white; font-size: 13px; outline: none; font-family: 'DM Sans', sans-serif;">
+      <div style="padding: 10px 16px; background: white; border: 1.5px solid #d9cec4; border-radius: 9999px; font-size: 13px; color: #7a6358;">Serie: Alla ▼</div>
+      <div style="padding: 10px 16px; background: white; border: 1.5px solid #d9cec4; border-radius: 9999px; font-size: 13px; color: #7a6358;">2025-01 — 2025-12 ▼</div>
+    </div>
+
+    <!-- Voucher list -->
+    <div style="background: white; border: 1.5px solid #d9cec4; border-radius: 18px; overflow: hidden;">
+      <!-- Voucher row (collapsed) -->
+      <div style="padding: 14px 16px; border-bottom: 1px solid #f0e9df; display: flex; align-items: center; gap: 12px; cursor: pointer;">
+        <div style="width: 48px; height: 28px; background: #f0e9df; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: #1a0f09;">A 23</div>
+        <div style="flex: 1;">
+          <div style="font-size: 14px; font-weight: 500; color: #1a0f09;">Kundfaktura #1042</div>
+          <div style="font-size: 12px; color: #7a6358;">2025-03-15</div>
+        </div>
+        <div style="font-size: 14px; font-weight: 600; color: #362318; font-variant-numeric: tabular-nums;">12 500,00</div>
+        <div style="font-size: 12px; color: #7a6358;">▶</div>
+      </div>
+
+      <!-- Voucher row (expanded) -->
+      <div style="border-bottom: 1px solid #f0e9df;">
+        <div style="padding: 14px 16px; display: flex; align-items: center; gap: 12px; background: #fce0dd; cursor: pointer;">
+          <div style="width: 48px; height: 28px; background: white; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: #c93526;">A 24</div>
+          <div style="flex: 1;">
+            <div style="font-size: 14px; font-weight: 600; color: #1a0f09;">Leverantörsfaktura Telia</div>
+            <div style="font-size: 12px; color: #7a6358;">2025-03-18</div>
+          </div>
+          <div style="font-size: 14px; font-weight: 600; color: #362318; font-variant-numeric: tabular-nums;">3 750,00</div>
+          <div style="font-size: 12px; color: #c93526;">▼</div>
+        </div>
+        <!-- Expanded rows -->
+        <div style="padding: 0 16px 14px; background: #fef9f8;">
+          <table style="width: 100%; font-size: 13px; border-collapse: collapse;">
+            <tr style="color: #7a6358;">
+              <td style="padding: 6px 0; width: 80px; font-weight: 600;">6212</td>
+              <td style="padding: 6px 0;">Mobiltelefon</td>
+              <td style="padding: 6px 0; text-align: right; font-variant-numeric: tabular-nums;">3 000,00</td>
+              <td style="padding: 6px 0; text-align: right; font-variant-numeric: tabular-nums; width: 100px;"></td>
+            </tr>
+            <tr style="color: #7a6358;">
+              <td style="padding: 6px 0; font-weight: 600;">2640</td>
+              <td style="padding: 6px 0;">Ingående moms</td>
+              <td style="padding: 6px 0; text-align: right; font-variant-numeric: tabular-nums;">750,00</td>
+              <td style="padding: 6px 0; text-align: right; font-variant-numeric: tabular-nums;"></td>
+            </tr>
+            <tr style="color: #7a6358;">
+              <td style="padding: 6px 0; font-weight: 600;">2440</td>
+              <td style="padding: 6px 0;">Leverantörsskulder</td>
+              <td style="padding: 6px 0; text-align: right; font-variant-numeric: tabular-nums;"></td>
+              <td style="padding: 6px 0; text-align: right; font-variant-numeric: tabular-nums;">3 750,00</td>
+            </tr>
+            <tr style="border-top: 1.5px solid #d9cec4; font-weight: 600; color: #1a0f09;">
+              <td colspan="2" style="padding: 8px 0;">Summa</td>
+              <td style="padding: 8px 0; text-align: right; font-variant-numeric: tabular-nums;">3 750,00</td>
+              <td style="padding: 8px 0; text-align: right; font-variant-numeric: tabular-nums;">3 750,00</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- Another collapsed row -->
+      <div style="padding: 14px 16px; display: flex; align-items: center; gap: 12px; cursor: pointer;">
+        <div style="width: 48px; height: 28px; background: #f0e9df; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: #1a0f09;">B 12</div>
+        <div style="flex: 1;">
+          <div style="font-size: 14px; font-weight: 500; color: #1a0f09;">Löner mars 2025</div>
+          <div style="font-size: 12px; color: #7a6358;">2025-03-25</div>
+        </div>
+        <div style="font-size: 14px; font-weight: 600; color: #362318; font-variant-numeric: tabular-nums;">145 000,00</div>
+        <div style="font-size: 12px; color: #7a6358;">▶</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Validation Dashboard -->
+<div class="mockup" style="margin-bottom: 2rem;">
+  <div class="mockup-header">Validering — Validation Dashboard</div>
+  <div class="mockup-body" style="background: #f0e9df; padding: 24px;">
+
+    <!-- Overall score -->
+    <div style="text-align: center; margin-bottom: 24px;">
+      <div style="font-family: 'Fraunces', Georgia, serif; font-size: 48px; font-weight: 900; color: #2d7a4f; line-height: 1;">10<span style="font-size: 24px; color: #7a6358;">/10</span></div>
+      <div style="font-size: 14px; color: #7a6358; margin-top: 4px;">Alla kontroller godkända</div>
+    </div>
+
+    <!-- Check grid -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 24px;">
+      <div style="background: white; border: 1.5px solid #d9cec4; border-radius: 12px; padding: 14px 16px; display: flex; align-items: center; gap: 10px;">
+        <div style="width: 24px; height: 24px; background: #2d7a4f; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+          <span style="color: white; font-size: 13px; font-weight: bold;">✓</span>
+        </div>
+        <div>
+          <div style="font-size: 13px; font-weight: 600; color: #1a0f09;">Kontoantal</div>
+          <div style="font-size: 11px; color: #7a6358;">87 konton (förväntat ≥ 87)</div>
+        </div>
+      </div>
+      <div style="background: white; border: 1.5px solid #d9cec4; border-radius: 12px; padding: 14px 16px; display: flex; align-items: center; gap: 10px;">
+        <div style="width: 24px; height: 24px; background: #2d7a4f; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+          <span style="color: white; font-size: 13px; font-weight: bold;">✓</span>
+        </div>
+        <div>
+          <div style="font-size: 13px; font-weight: 600; color: #1a0f09;">Verifikatsbalans</div>
+          <div style="font-size: 11px; color: #7a6358;">Alla 406 ver. balanserar</div>
+        </div>
+      </div>
+      <div style="background: white; border: 1.5px solid #d9cec4; border-radius: 12px; padding: 14px 16px; display: flex; align-items: center; gap: 10px;">
+        <div style="width: 24px; height: 24px; background: #2d7a4f; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+          <span style="color: white; font-size: 13px; font-weight: bold;">✓</span>
+        </div>
+        <div>
+          <div style="font-size: 13px; font-weight: 600; color: #1a0f09;">Ingående balanser (IB)</div>
+          <div style="font-size: 11px; color: #7a6358;">Alla belopp matchar</div>
+        </div>
+      </div>
+      <div style="background: white; border: 1.5px solid #d9cec4; border-radius: 12px; padding: 14px 16px; display: flex; align-items: center; gap: 10px;">
+        <div style="width: 24px; height: 24px; background: #2d7a4f; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+          <span style="color: white; font-size: 13px; font-weight: bold;">✓</span>
+        </div>
+        <div>
+          <div style="font-size: 13px; font-weight: 600; color: #1a0f09;">Utgående balanser (UB)</div>
+          <div style="font-size: 11px; color: #7a6358;">Alla belopp matchar</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fortnox compare section -->
+    <div style="background: white; border: 1.5px solid #d9cec4; border-radius: 18px; padding: 20px;">
+      <div style="font-family: 'Fraunces', Georgia, serif; font-size: 16px; font-weight: 700; color: #1a0f09; margin-bottom: 12px;">Fortnox-jämförelse</div>
+      <div style="border: 2px dashed #d9cec4; border-radius: 12px; padding: 32px; text-align: center;">
+        <div style="font-size: 28px; margin-bottom: 8px;">📄</div>
+        <div style="font-size: 14px; color: #362318; font-weight: 500;">Dra och släpp en Fortnox-rapport (HTML)</div>
+        <div style="font-size: 12px; color: #7a6358; margin-top: 4px;">Balansrapport, Resultatrapport, Huvudbok eller Verifikationslista</div>
+      </div>
+    </div>
+  </div>
+</div>

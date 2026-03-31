@@ -1,0 +1,1710 @@
+{
+  "name": "BAS 2026 K2",
+  "accounts": [
+    {
+      "account_number": 1010,
+      "name": "Balanserade utgifter",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1030,
+      "name": "Patent",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1039,
+      "name": "Ackumulerade avskrivningar på patent",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1060,
+      "name": "Hyresrätter, tomträtter och liknande",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1069,
+      "name": "Ackumulerade avskrivningar på hyresrätter, tomträtter och liknande",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1070,
+      "name": "Goodwill",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1078,
+      "name": "Ackumulerade nedskrivningar på goodwill",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1079,
+      "name": "Ackumulerade avskrivningar på goodwill",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1090,
+      "name": "Övriga immateriella anl.tillg",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1099,
+      "name": "Ack avskrivningar på övr imm anl.tillg",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1110,
+      "name": "Byggnader",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1118,
+      "name": "Ackumulerade nedskrivningar på byggnader",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1119,
+      "name": "Ackumulerade avskrivningar på byggnader",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1130,
+      "name": "Mark",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1150,
+      "name": "Markanläggningar",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1158,
+      "name": "Ackumulerade nedskrivningar på markanläggningar",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1159,
+      "name": "Ackumulerade avskrivningar på markanläggningar",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1210,
+      "name": "Maskiner och andra tekniska anläggningar",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1219,
+      "name": "Ackumulerade avskrivningar på maskiner och andra tekniska anläggningar",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1220,
+      "name": "Inventarier och verktyg",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1229,
+      "name": "Ackumulerade avskrivningar på inventarier och verktyg",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1240,
+      "name": "Bilar och andra transportmedel",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1249,
+      "name": "Ackumulerade avskrivningar på bilar och andra transportmedel",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1250,
+      "name": "Datorer",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1259,
+      "name": "Ackumulerade avskrivningar på datorer",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1290,
+      "name": "Övriga materiella anläggningstillgångar",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1291,
+      "name": "Konst och liknande tillgångar",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1299,
+      "name": "Ackumulerade avskrivningar på övriga materiella anläggningstillgångar",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1350,
+      "name": "Andelar och värdepapper i andra företag",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1370,
+      "name": "Uppskjuten skattefordran",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1380,
+      "name": "Andra långfristiga fordringar",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1383,
+      "name": "Lämnade depositioner, långfristiga",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1410,
+      "name": "Lager av råvaror",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1419,
+      "name": "Förändring av lager av råvaror",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1440,
+      "name": "Produkter i arbete",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1449,
+      "name": "Förändring av produkter i arbete",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1450,
+      "name": "Lager av färdiga varor",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1459,
+      "name": "Förändring av lager av färdiga varor",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1460,
+      "name": "Lager av handelsvaror",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1469,
+      "name": "Förändring av lager av handelsvaror",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1470,
+      "name": "Pågående arbeten",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1479,
+      "name": "Förändring av pågående arbeten",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1480,
+      "name": "Förskott för varor och tjänster",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1490,
+      "name": "Övriga lagertillgångar",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1510,
+      "name": "Kundfordringar",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1512,
+      "name": "Belånade kundfordringar (factoring)",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1515,
+      "name": "Osäkra kundfordringar",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1519,
+      "name": "Nedskrivning av kundfordringar",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1580,
+      "name": "Fordringar för kontokort och kuponger",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1610,
+      "name": "Kortfristiga fordringar hos anställda",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1630,
+      "name": "Avräkning för skatter och avgifter (skattekonto)",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1640,
+      "name": "Skattefordringar",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1650,
+      "name": "Fordran moms",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1680,
+      "name": "Placering i kortfristiga räntepapper",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1684,
+      "name": "Kortfristiga fordringar hos leverantörer",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1710,
+      "name": "Förutbetalda hyreskostnader",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1720,
+      "name": "Förutbetalda leasingavgifter, kortfristig del",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1730,
+      "name": "Förutbetalda försäkringspremier",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1740,
+      "name": "Förutbetalda räntekostnader",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1750,
+      "name": "Upplupna hyresinkomster",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1760,
+      "name": "Upplupna ränteintäkter",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1790,
+      "name": "Övriga förutbetalda kostnader och upplupna intäkter",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1810,
+      "name": "Andelar i börsnoterade företag",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1880,
+      "name": "Andra kortfristiga placeringar",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1890,
+      "name": "Nedskrivning av kortfristiga placeringar",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1910,
+      "name": "Kassa",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1920,
+      "name": "Bank, PlusGiro",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1930,
+      "name": "Företagskonto/checkkonto/affärskonto",
+      "account_type": "T"
+    },
+    {
+      "account_number": 1940,
+      "name": "Bank, Övriga bankkonto",
+      "account_type": "T"
+    },
+    {
+      "account_number": 2010,
+      "name": "Eget kapital, delägare 1",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2011,
+      "name": "Egna varuuttag",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2013,
+      "name": "Övriga egna uttag",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2017,
+      "name": "Årets kapitaltillskott",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2018,
+      "name": "Övriga egna insättningar",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2019,
+      "name": "Årets resultat, delägare 1",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2020,
+      "name": "Eget kapital, delägare 2",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2081,
+      "name": "Aktiekapital",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2083,
+      "name": "Medlemsinsatser",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2085,
+      "name": "Uppskrivningsfond",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2086,
+      "name": "Reservfond",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2090,
+      "name": "Fritt eget kapital",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2091,
+      "name": "Balanserad vinst eller förlust",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2093,
+      "name": "Erhållna aktieägartillskott",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2098,
+      "name": "Vinst eller förlust från föregående år",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2099,
+      "name": "Redovisat resultat",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2123,
+      "name": "Periodiseringsfond TAX 2003",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2124,
+      "name": "Periodiseringsfond TAX 2004",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2125,
+      "name": "Periodiseringsfond 2015",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2126,
+      "name": "Periodiseringsfond 2016",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2127,
+      "name": "Periodiseringsfond 2017",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2128,
+      "name": "Periodiseringsfond vid 2008 års taxering",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2129,
+      "name": "Periodiseringsfond vid 2009 års taxering",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2150,
+      "name": "Ackumulerade överavskrivningar",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2210,
+      "name": "Avsättningar för pensioner enligt tryggandelagen",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2220,
+      "name": "Avsättningar för garantier",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2290,
+      "name": "Övriga avsättningar",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2330,
+      "name": "Checkräkningskredit",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2350,
+      "name": "Andra långfristiga skulder till kreditinstitut",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2390,
+      "name": "Övriga långfristiga skulder",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2393,
+      "name": "Lån från närstående personer, långfristig del",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2410,
+      "name": "Andra kortfristiga låneskulder till kreditinstitut",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2420,
+      "name": "Förskott från kunder",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2440,
+      "name": "Leverantörsskulder",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2480,
+      "name": "Checkräkningskredit, kortfristig",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2490,
+      "name": "Övriga kortfristiga skulder till kreditinstitut, kunder och leverantörer",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2510,
+      "name": "Skatteskulder",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2611,
+      "name": "Utgående moms på försäljning inom Sverige, 25 %",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2612,
+      "name": "Utgående moms på egna uttag, 25 %",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2613,
+      "name": "Utgående moms för uthyrning, 25 %",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2614,
+      "name": "Utgående moms omvänd skattskyldighet, 25 %",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2615,
+      "name": "Utgående moms import av varor, 25 %",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2621,
+      "name": "Utgående moms på försäljning inom Sverige, 12 %",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2622,
+      "name": "Utgående moms på egna uttag, 12 %",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2624,
+      "name": "Utgående moms omvänd skattskyldighet, 12 %",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2631,
+      "name": "Utgående moms på försäljning inom Sverige, 6 %",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2632,
+      "name": "Utgående moms på egna uttag, 6 %",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2634,
+      "name": "Utgående moms omvänd skattskyldighet, 6 %",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2641,
+      "name": "Debiterad ingående moms",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2642,
+      "name": "Debiterad ingående moms i anslutning till frivillig skattskyldighet",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2645,
+      "name": "Beräknad ingående moms på förvärv från utlandet",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2647,
+      "name": "Ingående moms omvänd skattskyldighet varor och tjänster i Sverige",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2649,
+      "name": "Ingående moms, blandad verksamhet",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2650,
+      "name": "Redovisningskonto för moms",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2710,
+      "name": "Personalens källskatt",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2730,
+      "name": "Lagstadgade sociala avgifter och särskild löneskatt",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2731,
+      "name": "Avräkning lagstadgade sociala avgifter",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2740,
+      "name": "Avtalade sociala avgifter",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2790,
+      "name": "Övriga löneavdrag",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2811,
+      "name": "Avräkning för factoring",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2820,
+      "name": "Kortfristiga skulder till anställda",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2840,
+      "name": "Kortfristiga låneskulder",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2890,
+      "name": "Övriga kortfristiga skulder",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2893,
+      "name": "Skulder till närstående personer, kortfristig del",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2910,
+      "name": "Upplupna löner",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2920,
+      "name": "Upplupna semesterlöner",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2940,
+      "name": "Upplupna lagstadgade sociala och andra avgifter",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2950,
+      "name": "Upplupna avtalade sociala avgifter",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2960,
+      "name": "Upplupna räntekostnader",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2970,
+      "name": "Förutbetalda hyresinkomster",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2990,
+      "name": "Övriga upplupna kostnader och förutbetalda intäkter",
+      "account_type": "S"
+    },
+    {
+      "account_number": 2999,
+      "name": "Övr uppl kostn/förutbet intäkter",
+      "account_type": "S"
+    },
+    {
+      "account_number": 3000,
+      "name": "Försäljning inom Sverige",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3001,
+      "name": "Försäljning inom Sverige, 25 % moms",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3002,
+      "name": "Försäljning inom Sverige, 12 % moms",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3003,
+      "name": "Försäljning inom Sverige, 6 % moms",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3004,
+      "name": "Försäljning inom Sverige, momsfri",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3048,
+      "name": "Försäljning av tjänster til anat eu land, moms fritt",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3100,
+      "name": "Försäljning av varor utanför Sverige",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3105,
+      "name": "Försäljning varor till land utanför EU",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3106,
+      "name": "Försäljning varor till annat EU-land, momspliktig",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3108,
+      "name": "Försäljning varor till annat EU-land, momsfri",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3200,
+      "name": "Försäljning VMB och omvänd moms",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3211,
+      "name": "Försäljning positiv VMB 25 %",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3231,
+      "name": "Försäljning inom byggsektorn, omvänd skattskyldighet moms",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3300,
+      "name": "Försäljning av tjänster utanför Sverige",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3305,
+      "name": "Försäljning tjänster till land utanför EU",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3308,
+      "name": "Försäljning tjänster till annat EU-land",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3400,
+      "name": "Försäljning, egna uttag",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3401,
+      "name": "Egna uttag momspliktiga, 25 %",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3404,
+      "name": "Egna uttag, momsfria",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3500,
+      "name": "Fakturerade kostnader (gruppkonto)",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3510,
+      "name": "Fakturerat emballage",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3520,
+      "name": "Fakturerade frakter",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3540,
+      "name": "Faktureringsavgifter",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3600,
+      "name": "Rörelsens sidointäkter (gruppkonto)",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3730,
+      "name": "Lämnade rabatter",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3740,
+      "name": "Öres- och kronutjämning",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3800,
+      "name": "Aktiverat arbete för egen räkning (gruppkonto)",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3900,
+      "name": "Övriga rörelseintäkter (gruppkonto)",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3913,
+      "name": "Frivilligt momspliktiga hyresintäkter",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3960,
+      "name": "Valutakursvinster på fordringar och skulder av rörelsekaraktär",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3970,
+      "name": "Vinst vid avyttring av immateriella och materiella anläggningstillgångar",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3971,
+      "name": "Vinst vid avyttring av immateriella anläggningstillgångar",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3972,
+      "name": "Vinst vid avyttring av byggnader och mark",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3973,
+      "name": "Vinst vid avyttring av maskiner och inventarier",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3980,
+      "name": "Erhållna offentliga stöd m.m.",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3990,
+      "name": "Övriga ersättningar och intäkter",
+      "account_type": "I"
+    },
+    {
+      "account_number": 3999,
+      "name": "Övriga rörelseintäkter",
+      "account_type": "I"
+    },
+    {
+      "account_number": 4000,
+      "name": "Inköp av varor från Sverige",
+      "account_type": "K"
+    },
+    {
+      "account_number": 4010,
+      "name": "Inköp av varor och material",
+      "account_type": "K"
+    },
+    {
+      "account_number": 4200,
+      "name": "Sålda varor VMB",
+      "account_type": "K"
+    },
+    {
+      "account_number": 4211,
+      "name": "Sålda varor positiv VMB 25 %",
+      "account_type": "K"
+    },
+    {
+      "account_number": 4400,
+      "name": "Momspliktiga inköp i Sverige",
+      "account_type": "K"
+    },
+    {
+      "account_number": 4415,
+      "name": "Inköpta varor i Sverige, omvänd skattskyldighet, 25 % moms",
+      "account_type": "K"
+    },
+    {
+      "account_number": 4500,
+      "name": "Övriga momspliktiga inköp",
+      "account_type": "K"
+    },
+    {
+      "account_number": 4515,
+      "name": "Inköp av varor från annat EU-land, 25 %",
+      "account_type": "K"
+    },
+    {
+      "account_number": 4535,
+      "name": "Inköp av tjänster från annat EU-land, 25 %",
+      "account_type": "K"
+    },
+    {
+      "account_number": 4545,
+      "name": "Import av varor, 25 % moms",
+      "account_type": "K"
+    },
+    {
+      "account_number": 4599,
+      "name": "Justering, omvänd moms",
+      "account_type": "K"
+    },
+    {
+      "account_number": 4600,
+      "name": "Legoarbeten och underentreprenader (gruppkonto)",
+      "account_type": "K"
+    },
+    {
+      "account_number": 4700,
+      "name": "Reduktion av inköpspriser (gruppkonto)",
+      "account_type": "K"
+    },
+    {
+      "account_number": 4900,
+      "name": "Förändring av lager (gruppkonto)",
+      "account_type": "K"
+    },
+    {
+      "account_number": 4910,
+      "name": "Förändring av lager av råvaror",
+      "account_type": "K"
+    },
+    {
+      "account_number": 4940,
+      "name": "Förändring av produkter i arbete",
+      "account_type": "K"
+    },
+    {
+      "account_number": 4950,
+      "name": "Förändring av lager av färdiga varor",
+      "account_type": "K"
+    },
+    {
+      "account_number": 4960,
+      "name": "Förändring av lager av handelsvaror",
+      "account_type": "K"
+    },
+    {
+      "account_number": 4970,
+      "name": "Förändring av pågående arbeten, nedlagda kostnader",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5010,
+      "name": "Lokalhyra",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5020,
+      "name": "El för belysning",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5030,
+      "name": "Värme hyrd lokal",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5040,
+      "name": "Vatten och avlopp",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5060,
+      "name": "Städning, renhållning hyrd lokal",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5070,
+      "name": "Reparation och underhåll av lokaler",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5090,
+      "name": "Övr kostnader hyrd lokal",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5120,
+      "name": "El för belysning",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5130,
+      "name": "Värme",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5160,
+      "name": "Städning och renhållning",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5170,
+      "name": "Reparation och underhåll av fastighet",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5210,
+      "name": "Hyra av maskiner och andra tekniska anläggningar",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5220,
+      "name": "Hyra av inventarier och verktyg",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5300,
+      "name": "Energikostnader (gruppkonto)",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5410,
+      "name": "Förbrukningsinventarier",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5420,
+      "name": "Programvaror",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5460,
+      "name": "Förbrukningsmaterial",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5480,
+      "name": "Arbetskläder och skyddsmaterial",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5500,
+      "name": "Reparation och underhåll (gruppkonto)",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5520,
+      "name": "Reparation och underhåll av inventarier, verktyg och datorer m.m.",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5600,
+      "name": "Kostnader för transportmedel (gruppkonto)",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5611,
+      "name": "Drivmedel för personbilar",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5612,
+      "name": "Försäkring och skatt för personbilar",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5613,
+      "name": "Reparation och underhåll av personbilar",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5615,
+      "name": "Leasing av personbilar",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5616,
+      "name": "Trängselskatt, avdragsgill",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5619,
+      "name": "Övriga personbilskostnader",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5690,
+      "name": "Övriga kostnader för transportmedel",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5700,
+      "name": "Frakter och transporter (gruppkonto)",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5710,
+      "name": "Frakter, transporter och försäkringar vid varudistribution",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5800,
+      "name": "Resekostnader (gruppkonto)",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5810,
+      "name": "Biljetter",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5820,
+      "name": "Hyrbilskostnader",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5831,
+      "name": "Kost och logi i Sverige",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5900,
+      "name": "Reklam och PR (gruppkonto)",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5910,
+      "name": "Annonsering",
+      "account_type": "K"
+    },
+    {
+      "account_number": 5990,
+      "name": "Övriga kostnader för reklam och PR",
+      "account_type": "K"
+    },
+    {
+      "account_number": 6040,
+      "name": "Kontokortsavgifter",
+      "account_type": "K"
+    },
+    {
+      "account_number": 6060,
+      "name": "Kreditförsäljningskostnader",
+      "account_type": "K"
+    },
+    {
+      "account_number": 6071,
+      "name": "Representation, avdragsgill",
+      "account_type": "K"
+    },
+    {
+      "account_number": 6072,
+      "name": "Representation, ej avdragsgill",
+      "account_type": "K"
+    },
+    {
+      "account_number": 6090,
+      "name": "Övriga försäljningskostnader",
+      "account_type": "K"
+    },
+    {
+      "account_number": 6100,
+      "name": "Kontorsmateriel och trycksaker (gruppkonto)",
+      "account_type": "K"
+    },
+    {
+      "account_number": 6110,
+      "name": "Kontorsmateriel",
+      "account_type": "K"
+    },
+    {
+      "account_number": 6210,
+      "name": "Telekommunikation",
+      "account_type": "K"
+    },
+    {
+      "account_number": 6212,
+      "name": "Mobiltelefon",
+      "account_type": "K"
+    },
+    {
+      "account_number": 6230,
+      "name": "Datakommunikation",
+      "account_type": "K"
+    },
+    {
+      "account_number": 6250,
+      "name": "Postbefordran",
+      "account_type": "K"
+    },
+    {
+      "account_number": 6310,
+      "name": "Företagsförsäkringar",
+      "account_type": "K"
+    },
+    {
+      "account_number": 6350,
+      "name": "Förluster på kundfordringar",
+      "account_type": "K"
+    },
+    {
+      "account_number": 6390,
+      "name": "Övriga riskkostnader",
+      "account_type": "K"
+    },
+    {
+      "account_number": 6410,
+      "name": "Styrelsearvoden som inte är lön",
+      "account_type": "K"
+    },
+    {
+      "account_number": 6420,
+      "name": "Ersättningar till revisor",
+      "account_type": "K"
+    },
+    {
+      "account_number": 6530,
+      "name": "Redovisningstjänster",
+      "account_type": "K"
+    },
+    {
+      "account_number": 6540,
+      "name": "IT-tjänster",
+      "account_type": "K"
+    },
+    {
+      "account_number": 6550,
+      "name": "Konsultarvoden",
+      "account_type": "K"
+    },
+    {
+      "account_number": 6560,
+      "name": "Serviceavgifter till branschorganisationer",
+      "account_type": "K"
+    },
+    {
+      "account_number": 6570,
+      "name": "Bankkostnader",
+      "account_type": "K"
+    },
+    {
+      "account_number": 6590,
+      "name": "Övriga externa tjänster",
+      "account_type": "K"
+    },
+    {
+      "account_number": 6800,
+      "name": "Inhyrd personal (gruppkonto)",
+      "account_type": "K"
+    },
+    {
+      "account_number": 6970,
+      "name": "Tidningar, tidskrifter och facklitteratur",
+      "account_type": "K"
+    },
+    {
+      "account_number": 6980,
+      "name": "Föreningsavgifter",
+      "account_type": "K"
+    },
+    {
+      "account_number": 6981,
+      "name": "Föreningsavgifter, avdragsgilla",
+      "account_type": "K"
+    },
+    {
+      "account_number": 6982,
+      "name": "Föreningsavgifter, ej avdragsgilla",
+      "account_type": "K"
+    },
+    {
+      "account_number": 6991,
+      "name": "Övriga externa kostnader, avdragsgilla",
+      "account_type": "K"
+    },
+    {
+      "account_number": 6992,
+      "name": "Övriga externa kostnader, ej avdragsgilla",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7010,
+      "name": "Löner till kollektivanställda",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7090,
+      "name": "Förändring av semesterlöneskuld",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7210,
+      "name": "Löner till tjänstemän",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7220,
+      "name": "Löner till företagsledare",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7240,
+      "name": "Styrelsearvoden",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7290,
+      "name": "Förändring av semesterlöneskuld",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7310,
+      "name": "Kontanta extraersättningar",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7321,
+      "name": "Skattefria traktamenten, Sverige",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7322,
+      "name": "Skattepliktiga traktamenten, Sverige",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7323,
+      "name": "Skattefria traktamenten, utlandet",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7324,
+      "name": "Skattepliktiga traktamenten, utlandet",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7331,
+      "name": "Skattefria bilersättningar",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7332,
+      "name": "Skattepliktiga bilersättningar",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7380,
+      "name": "Kostnader för förmåner till anställda",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7385,
+      "name": "Kostnader för fri bil",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7390,
+      "name": "Övriga kostnadsersättningar och förmåner",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7399,
+      "name": "Motkontering av förmån",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7410,
+      "name": "Pensionsförsäkringspremier",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7411,
+      "name": "Kollektiv pensionsförsäkring",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7490,
+      "name": "Övriga pensionskostnader",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7510,
+      "name": "Lagstadgade sociala avgifter",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7511,
+      "name": "Sociala avgifter för löner och ersättningar",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7512,
+      "name": "Arbetsgivaravgifter för förmånsvärden",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7519,
+      "name": "Arbetsgivaravgifter för semester- och löneskulder",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7520,
+      "name": "Arbetsgivaravgifter (nya pensionssystemet)",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7530,
+      "name": "Särskild löneskatt",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7560,
+      "name": "Arbetsgivaravgifter under 26 år",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7570,
+      "name": "Premier för arbetsmarknadsförsäkringar",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7580,
+      "name": "Gruppförsäkringspremier",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7600,
+      "name": "Övriga personalkostnader (gruppkonto)",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7610,
+      "name": "Utbildning",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7621,
+      "name": "Sjuk- och hälsovård, avdragsgill",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7622,
+      "name": "Sjuk- och hälsovård, ej avdragsgill",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7631,
+      "name": "Personalrepresentation, avdragsgill",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7632,
+      "name": "Personalrepresentation, ej avdragsgill",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7690,
+      "name": "Övriga personalkostnader",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7710,
+      "name": "Nedskrivningar av immateriella anläggningstillgångar",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7720,
+      "name": "Nedskrivningar av byggnader och mark",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7730,
+      "name": "Nedskrivningar av maskiner och inventarier",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7810,
+      "name": "Avskrivningar på immateriella anläggningstillgångar",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7813,
+      "name": "Avskrivningar på patent",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7817,
+      "name": "Avskrivningar på goodwill",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7820,
+      "name": "Avskrivningar på byggnader och markanläggningar",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7821,
+      "name": "Avskrivningar på byggnader",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7824,
+      "name": "Avskrivningar på markanläggningar",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7830,
+      "name": "Avskrivningar på maskiner och inventarier",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7831,
+      "name": "Avskrivningar på maskiner och andra tekniska anläggningar",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7832,
+      "name": "Avskrivningar på inventarier och verktyg",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7834,
+      "name": "Avskrivningar på bilar och andra transportmedel",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7835,
+      "name": "Avskrivningar på datorer",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7960,
+      "name": "Valutakursförluster på fordringar och skulder av rörelsekaraktär",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7970,
+      "name": "Förlust vid avyttring av immateriella och materiella anläggningstillgångar",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7971,
+      "name": "Förlust vid avyttring av immateriella anläggningstillgångar",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7972,
+      "name": "Förlust vid avyttring av byggnader och mark",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7973,
+      "name": "Förlust vid avyttring av maskiner och inventarier",
+      "account_type": "K"
+    },
+    {
+      "account_number": 7990,
+      "name": "Övriga rörelsekostnader",
+      "account_type": "K"
+    },
+    {
+      "account_number": 8210,
+      "name": "Utdelningar på andelar i andra företag",
+      "account_type": "I"
+    },
+    {
+      "account_number": 8220,
+      "name": "Resultat vid försäljning av värdepapper i och långfristiga fordringar hos andra företag",
+      "account_type": "I"
+    },
+    {
+      "account_number": 8250,
+      "name": "Ränteintäkter från långfristiga fordringar hos och värdepapper i andra företag",
+      "account_type": "I"
+    },
+    {
+      "account_number": 8270,
+      "name": "Nedskrivningar av innehav av andelar i och långfristiga fordringar hos andra företag",
+      "account_type": "I"
+    },
+    {
+      "account_number": 8310,
+      "name": "Ränteintäkter från omsättningstillgångar",
+      "account_type": "I"
+    },
+    {
+      "account_number": 8314,
+      "name": "Skattefria ränteintäkter",
+      "account_type": "I"
+    },
+    {
+      "account_number": 8330,
+      "name": "Valutakursdifferenser på kortfristiga fordringar och placeringar",
+      "account_type": "I"
+    },
+    {
+      "account_number": 8340,
+      "name": "Utdelningar på kortfristiga placeringar",
+      "account_type": "I"
+    },
+    {
+      "account_number": 8350,
+      "name": "Resultat vid försäljning av kortfristiga placeringar",
+      "account_type": "I"
+    },
+    {
+      "account_number": 8390,
+      "name": "Övriga finansiella intäkter",
+      "account_type": "I"
+    },
+    {
+      "account_number": 8410,
+      "name": "Räntekostnader för långfristiga skulder",
+      "account_type": "K"
+    },
+    {
+      "account_number": 8413,
+      "name": "Räntekostnader för checkräkningskredit",
+      "account_type": "K"
+    },
+    {
+      "account_number": 8420,
+      "name": "Räntekostnader för kortfristiga skulder",
+      "account_type": "K"
+    },
+    {
+      "account_number": 8422,
+      "name": "Dröjsmålsräntor för leverantörsskulder",
+      "account_type": "K"
+    },
+    {
+      "account_number": 8423,
+      "name": "Räntekostnader för skatter och avgifter",
+      "account_type": "K"
+    },
+    {
+      "account_number": 8430,
+      "name": "Valutakursdifferenser på skulder",
+      "account_type": "K"
+    },
+    {
+      "account_number": 8811,
+      "name": "Avsättning till periodiseringsfond",
+      "account_type": "S"
+    },
+    {
+      "account_number": 8819,
+      "name": "Återföring från periodiseringsfond",
+      "account_type": "S"
+    },
+    {
+      "account_number": 8850,
+      "name": "Förändring av överavskrivningar",
+      "account_type": "S"
+    },
+    {
+      "account_number": 8910,
+      "name": "Skatt som belastar årets resultat",
+      "account_type": "K"
+    },
+    {
+      "account_number": 8990,
+      "name": "Resultat",
+      "account_type": "K"
+    },
+    {
+      "account_number": 8999,
+      "name": "Redovisat resultat",
+      "account_type": "K"
+    }
+  ]
+}

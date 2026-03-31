@@ -1,0 +1,101 @@
+<h2>Which architecture for the accounting frontend?</h2>
+<p class="subtitle">Three approaches — click the one that feels right</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)" style="border-left: 4px solid #2d7a4f;">
+    <div class="letter" style="background: #2d7a4f;">A</div>
+    <div class="content">
+      <h3>SPA + Direct Supabase + Thin Import Server ⭐ Recommended</h3>
+      <p>React SPA reads directly from Supabase (14 tables + 2 SQL report functions already tested). A minimal Hono server handles only SIE4 file import and Fortnox PDF parsing (requires Node.js for iconv-lite + cheerio).</p>
+      <div style="margin-top: 12px; font-size: 13px; line-height: 1.6;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+          <div>
+            <strong style="color: #2d7a4f;">Pros</strong>
+            <ul style="margin: 4px 0; padding-left: 16px;">
+              <li>Simplest reads — browser → Supabase directly</li>
+              <li>Report SQL functions callable via <code>client.rpc()</code></li>
+              <li>Server is ~100 lines, reuses existing pipeline</li>
+              <li>Can add server endpoints later if needed</li>
+            </ul>
+          </div>
+          <div>
+            <strong style="color: #c93526;">Cons</strong>
+            <ul style="margin: 4px 0; padding-left: 16px;">
+              <li>Complex queries (Huvudbok) awkward in supabase-js</li>
+              <li>Still need a server process for import</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Full-Stack with Hono API</h3>
+      <p>React frontend + Hono REST API for everything. API wraps all DB queries. Same pattern as AI-REDOVISNING. Frontend never touches Supabase directly.</p>
+      <div style="margin-top: 12px; font-size: 13px; line-height: 1.6;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+          <div>
+            <strong style="color: #2d7a4f;">Pros</strong>
+            <ul style="margin: 4px 0; padding-left: 16px;">
+              <li>Full control over every query</li>
+              <li>Server computes running balances, subtotals</li>
+              <li>Proven AI-REDOVISNING pattern</li>
+            </ul>
+          </div>
+          <div>
+            <strong style="color: #c93526;">Cons</strong>
+            <ul style="margin: 4px 0; padding-left: 16px;">
+              <li>2× boilerplate (route handler + client hook for every query)</li>
+              <li>Extra latency: browser → Hono → Supabase</li>
+              <li>More code to maintain</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>SPA + Supabase Edge Functions</h3>
+      <p>Same as A for reads, but Edge Functions for import and validation. No separate server.</p>
+      <div style="margin-top: 12px; font-size: 13px; line-height: 1.6;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+          <div>
+            <strong style="color: #2d7a4f;">Pros</strong>
+            <ul style="margin: 4px 0; padding-left: 16px;">
+              <li>No server process to manage</li>
+              <li>Serverless scaling</li>
+            </ul>
+          </div>
+          <div>
+            <strong style="color: #c93526;">Cons</strong>
+            <ul style="margin: 4px 0; padding-left: 16px;">
+              <li>iconv-lite Buffer compat issues in Deno</li>
+              <li>cheerio (~1.5MB) near 2MB Edge limit</li>
+              <li>Harder to debug locally</li>
+              <li>Cold start latency</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="margin-top: 2rem;">
+  <h3>Data flow comparison</h3>
+  <div class="mockup">
+    <div class="mockup-header">Approach A (Recommended)</div>
+    <div class="mockup-body" style="font-family: monospace; font-size: 13px; line-height: 2;">
+      <div>📂 SIE4 file → <strong>Import Server</strong> (Hono, 2 endpoints) → Supabase</div>
+      <div>📊 All reads → <strong>Browser</strong> → Supabase directly (supabase-js)</div>
+      <div>📋 Reports → <strong>Browser</strong> → <code>client.rpc('report_balansrapport')</code></div>
+      <div>✅ Validation → <strong>Browser</strong> runs checks + <strong>Server</strong> parses Fortnox PDF</div>
+    </div>
+  </div>
+</div>

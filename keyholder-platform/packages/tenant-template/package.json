@@ -1,0 +1,7 @@
+{
+  "name": "@keyholder/tenant-template",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.ts",
+  "files": ["migrations", "edge-functions", "seed"]
+}
