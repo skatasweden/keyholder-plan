@@ -655,14 +655,168 @@ CREATE TABLE chat_messages (
 
 ---
 
-## 11. Known Limitations (MVP)
+## 11. Custom Pages — User-Built Financial Tools
+
+Users can ask Claude to create custom pages that become part of their dashboard. This is the bridge between "chat-only" (Level B) and "full Lovable" (Level C) — scoped to financial tools within the existing dashboard shell.
+
+### How It Works
+
+```
+User: "Build me a page that shows cash flow forecast 90 days ahead
+       based on outstanding invoices and recurring expenses"
+
+Claude:
+  1. Generates a React component (TSX + Tailwind)
+  2. Generates the SQL queries / edge function for the data
+  3. Shows preview in chat
+  4. User approves -> page is saved and appears in sidebar
+```
+
+### Architecture
+
+Custom pages are stored as code in the tenant's Supabase database — not deployed as static files:
+
+```sql
+-- Added to tenant template schema
+CREATE TABLE custom_pages (
+  id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  slug text UNIQUE NOT NULL,          -- URL: /dashboard/pages/{slug}
+  title text NOT NULL,                -- Sidebar label
+  description text,                   -- What this page does
+  component_code text NOT NULL,       -- TSX source code
+  icon text DEFAULT 'file-text',      -- Lucide icon name
+  sort_order integer DEFAULT 0,
+  created_by uuid,                    -- user who created it
+  created_at timestamptz DEFAULT now(),
+  updated_at timestamptz DEFAULT now()
+);
+```
+
+### Rendering
+
+Custom pages render via a **sandboxed iframe** approach:
+
+```
+/dashboard/pages/[slug]
+  1. Fetch component_code from custom_pages table
+  2. Bundle on-the-fly using esbuild (server-side) or in-browser via Sucrase
+  3. Render in sandboxed iframe with:
+     - Read-only Supabase client (tenant anon key)
+     - Tailwind CSS + shadcn/ui pre-loaded
+     - No access to parent window or other tenants
+  4. Component receives props: { supabase, companyInfo, financialYear }
+```
+
+### What Claude Generates
+
+Each custom page is a self-contained React component:
+
+```tsx
+// Example: Cash Flow Forecast page
+import { useEffect, useState } from 'react'
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
+import { BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts'
+
+export default function CashFlowForecast({ supabase, financialYear }) {
+  const [data, setData] = useState([])
+
+  useEffect(() => {
+    async function load() {
+      // Query outstanding invoices
+      const { data: invoices } = await supabase
+        .from('invoices')
+        .select('due_date, total, balance')
+        .gt('balance', 0)
+
+      // Query recurring expenses (last 3 months pattern)
+      const { data: expenses } = await supabase
+        .rpc('get_recurring_expenses', { months: 3 })
+
+      // Build 90-day forecast...
+      setData(buildForecast(invoices, expenses))
+    }
+    load()
+  }, [])
+
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle>Cash Flow Forecast — 90 days</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <BarChart data={data} width={800} height={400}>
+          <XAxis dataKey="week" />
+          <YAxis />
+          <Tooltip />
+          <Bar dataKey="inflow" fill="#22c55e" />
+          <Bar dataKey="outflow" fill="#ef4444" />
+        </BarChart>
+      </CardContent>
+    </Card>
+  )
+}
+```
+
+### Available Libraries (pre-loaded in sandbox)
+
+- `react`, `react-dom` — UI framework
+- `recharts` — Charts and graphs
+- `@supabase/supabase-js` — Database access
+- Tailwind CSS + shadcn/ui — Styling and components
+- `date-fns` — Date formatting
+- `lucide-react` — Icons
+
+### User Experience
+
+Custom pages appear in the sidebar under a "My Tools" section:
+
+```
+Sidebar:
+  Chat                    <- primary
+  ---
+  My Tools               <- custom pages
+    Cash Flow Forecast
+    Invoice Aging Report
+    Monthly Close Checklist
+    Supplier Risk Score
+  ---
+  Edge Functions          <- scheduled checks
+  Settings
+  Billing
+```
+
+Users can:
+- Create pages via chat ("Build me a page that...")
+- Edit pages via chat ("Change the cash flow page to show weekly instead of daily")
+- Delete pages via chat or settings
+- Reorder pages in sidebar
+
+### Credit Cost
+
+| Action | Credits |
+|--------|---------|
+| Generate new page | ~3-5 |
+| Edit existing page | ~2 |
+| Delete page | 0 |
+
+### Security
+
+- Pages render in a sandboxed iframe (no access to parent window)
+- Only read-only Supabase client provided (anon key, RLS enforced)
+- No network access outside Supabase
+- No access to other tenants
+- Component code is sanitized before storage (no eval, no dynamic imports)
+
+---
+
+## 12. Known Limitations (MVP)
 
 1. **No undo for bookings** — Claude can book a credit voucher to "undo", but no magic undo button
 2. **Edge functions only editable via chat** — or via Supabase dashboard directly
 3. **No SIE4 export yet** — import only
 4. **Fortnox sync is v2** — MVP is SIE4 import + manual booking via chat
 5. **Max 1 company per account on Starter** — Pro for more
-6. **No frontend generation yet (Level C)** — MVP is Level B (SQL + reports + edge functions)
+6. **Custom pages are sandboxed** — rendered in iframe, no full app generation (Level C) yet
 7. **Provisioning takes ~60s** — Supabase project creation is not instant
 8. **Supabase Management API rate limit** — 120 req/min global, limits parallel onboarding
 
